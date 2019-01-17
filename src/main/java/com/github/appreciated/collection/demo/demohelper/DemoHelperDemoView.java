@@ -1,4 +1,4 @@
-package com.github.appreciated.collection.demohelper;
+package com.github.appreciated.collection.demo.demohelper;
 
 import com.github.appreciated.demo.helper.DemoHelperView;
 import com.github.appreciated.demo.helper.view.devices.DeviceSwitchView;

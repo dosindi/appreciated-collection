@@ -2,7 +2,7 @@ package com.github.appreciated.collection;
 
 import com.github.appreciated.card.RippleClickableCard;
 import com.github.appreciated.card.content.IconItem;
-import com.github.appreciated.collection.demohelper.DemoHelperDemoView;
+import com.github.appreciated.collection.demo.demohelper.DemoHelperDemoView;
 import com.github.appreciated.demo.helper.DemoHelperView;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.html.Image;
