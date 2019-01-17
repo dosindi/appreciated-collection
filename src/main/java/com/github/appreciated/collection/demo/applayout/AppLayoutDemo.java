@@ -4,6 +4,7 @@ package com.github.appreciated.collection.demo.applayout;
 import com.github.appreciated.collection.component.Embed;
 import com.github.appreciated.collection.demo.applayout.views.View1;
 import com.github.appreciated.demo.helper.DemoHelperView;
+import com.github.appreciated.demo.helper.view.devices.DeviceType;
 import com.github.appreciated.demo.helper.view.devices.PhoneView;
 import com.github.appreciated.demo.helper.view.entity.CodeExample;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
@@ -19,7 +20,7 @@ public class AppLayoutDemo extends VerticalLayout {
                 .withHorizontalHeader("AppLayout", "A responsive layout that allows you to create modern Menus quickly", "./frontend/images/applayout/app-layout-logo.png")
                 .withDevice(new PhoneView(new Embed(View1.class).withFullSize()), "Optimized for small screens")
                 .withParagraph("Behaviours", "The AppLayout has by default multiple Behaviours availabe. Try to set them via the menu in the demo above and below")
-                .withStylableDevice(new Embed(View1.class).withFullSize())
+                .withStylableDevice(new Embed(View1.class).withFullSize(), DeviceType.TABLET_LANDSCAPE)
                 .withStep("Add dependency", "Add the dependency to your POM",
                         new CodeExample("<dependency>\n" +
                                 "    <groupId>com.github.appreciated</groupId>\n" +

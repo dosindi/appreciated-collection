@@ -44,7 +44,7 @@ public class MainAppLayout extends AppLayoutRouterLayout {
         badge.bind(menuEntry.getBadge());
 
         return AppLayoutBuilder
-                .get(Behaviour.LEFT_RESPONSIVE)
+                .get(Behaviour.LEFT_RESPONSIVE_HYBRID)
                 .withTitle("App Layout")
                 .withAppBar(AppBarBuilder
                         .get()
