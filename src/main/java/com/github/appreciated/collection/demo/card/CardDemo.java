@@ -39,8 +39,7 @@ public class CardDemo extends VerticalLayout {
                 .withStep("Add dependency", "Add the dependency to your POM",
                         new CodeExample("install", "xml", "Maven"))
                 .resetCounterStep()
-                .withParagraph("Some code examples")
-                .withStep("Add card to your view", "You can add cards to your View the following way",
+                .withStep("Some code examples", "You can add cards to your View the following way",
                         new CodeExample("Card card = new Card(\n" +
                                 "        new IconItem(img, title, description)\n" +
                                 ");", "java", "Java"),
