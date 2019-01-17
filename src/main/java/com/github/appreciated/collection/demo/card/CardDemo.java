@@ -27,7 +27,7 @@ public class CardDemo extends VerticalLayout {
                                 "They should be easy to scan for relevant and actionable information. Elements, like text and images, should be placed on them in a way that clearly indicates hierarchy.\"\n" +
                                 "- material.io",
                         "./frontend/images/no-logo.png"
-                ).withDeviceParagraph(
+                ).withDevice(
                         new PhoneView(getExampleCards()),
                         "Bring Material Cards to your application")
                 .withStep("Add dependency", "Add the dependency to your POM",
