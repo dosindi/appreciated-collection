@@ -46,50 +46,25 @@ public class MainAppLayout extends AppLayoutRouterLayout {
         return AppLayoutBuilder
                 .get(Behaviour.LEFT_RESPONSIVE_HYBRID)
                 .withTitle("App Layout")
-                .withAppBar(AppBarBuilder
-                        .get()
+                .withAppBar(AppBarBuilder.get()
                         .add(new AppBarNotificationButton(VaadinIcon.BELL, notifications))
                         .build())
-                .withAppMenu(LeftAppMenuBuilder
-                        .get()
-                        .addToSection(new MenuHeaderComponent("Menu-Header",
-                                "Version 2.0.4",
-                                "./frontend/images/applayout/app-layout-logo.png"
-                        ), HEADER)
-                        .addToSection(new LeftClickableComponent("Clickable Entry",
-                                VaadinIcon.COG.create(),
-                                clickEvent -> Notification.show("onClick ...")
-                        ), HEADER)
+                .withAppMenu(LeftAppMenuBuilder.get()
+                        .addToSection(new MenuHeaderComponent("Menu-Header", "Version 2.0.4", "./frontend/images/applayout/app-layout-logo.png"), HEADER)
+                        .addToSection(new LeftClickableComponent("Clickable Entry", VaadinIcon.COG.create(), clickEvent -> Notification.show("onClick ...")), HEADER)
                         .add(new LeftNavigationComponent("Home", VaadinIcon.HOME.create(), View1.class))
                         .add(new LeftNavigationComponent("Grid", VaadinIcon.TABLE.create(), GridTest.class))
-                        .add(LeftSubMenuBuilder
-                                .get("My Submenu", VaadinIcon.PLUS.create())
-                                .add(LeftSubMenuBuilder
-                                        .get("My Submenu", VaadinIcon.PLUS.create())
-                                        .add(new LeftNavigationComponent("Charts",
-                                                VaadinIcon.SPLINE_CHART.create(),
-                                                View2.class
-                                        ))
-                                        .add(new LeftNavigationComponent("Contact",
-                                                VaadinIcon.CONNECT.create(),
-                                                View3.class
-                                        ))
-                                        .add(new LeftNavigationComponent("More",
-                                                VaadinIcon.COG.create(),
-                                                View4.class
-                                        ))
+                        .add(LeftSubMenuBuilder.get("My Submenu", VaadinIcon.PLUS.create())
+                                .add(LeftSubMenuBuilder.get("My Submenu", VaadinIcon.PLUS.create())
+                                        .add(new LeftNavigationComponent("Charts", VaadinIcon.SPLINE_CHART.create(), View2.class))
+                                        .add(new LeftNavigationComponent("Contact", VaadinIcon.CONNECT.create(), View3.class))
+                                        .add(new LeftNavigationComponent("More", VaadinIcon.COG.create(), View4.class))
                                         .build())
-                                .add(new LeftNavigationComponent("Contact1",
-                                        VaadinIcon.CONNECT.create(),
-                                        View3.class
-                                ))
+                                .add(new LeftNavigationComponent("Contact1", VaadinIcon.CONNECT.create(), View3.class))
                                 .add(new LeftNavigationComponent("More1", VaadinIcon.COG.create(), View5.class))
                                 .build())
                         .add(menuEntry)
-                        .addToSection(new LeftClickableComponent("Clickable Entry",
-                                VaadinIcon.COG.create(),
-                                clickEvent -> Notification.show("onClick ...")
-                        ), FOOTER)
+                        .addToSection(new LeftClickableComponent("Clickable Entry", VaadinIcon.COG.create(), clickEvent -> Notification.show("onClick ...")), FOOTER)
                         .build())
                 .build();
     }
