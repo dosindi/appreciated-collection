@@ -24,8 +24,8 @@ public class AppLayoutDemo extends VerticalLayout {
                 .withStep("Add dependency", "Add the dependency to your POM",
                         new CodeExample("<dependency>\n" +
                                 "    <groupId>com.github.appreciated</groupId>\n" +
-                                "    <artifactId>card</artifactId>\n" +
-                                "    <version>0.7.0</version>\n" +
+                                "    <artifactId>app-layout-addon</artifactId>\n" +
+                                "    <version>2.0.4</version>\n" +
                                 "</dependency>", "xml", "Maven"))
                 .withStep("Add dependency", "Add the dependency to your POM",
                         new CodeExample("install", "xml", "Maven")
