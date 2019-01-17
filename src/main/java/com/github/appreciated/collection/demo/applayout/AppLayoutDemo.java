@@ -17,10 +17,10 @@ public class AppLayoutDemo extends VerticalLayout {
 
     public AppLayoutDemo() {
         add(new DemoHelperView()
-                .withHorizontalHeader("AppLayout", "A responsive layout that allows you to create modern Menus quickly", "./frontend/images/no-logo.png")
-                .withDeviceParagraph(new PhoneView(new Embed(View1.class)), "Optimized for small screens")
+                .withHorizontalHeader("AppLayout", "A responsive layout that allows you to create modern Menus quickly", "./frontend/images/applayout/app-layout-logo.png")
+                .withDeviceParagraph(new PhoneView(new Embed(View1.class).withFullSize()), "Optimized for small screens")
                 .withParagraph("Behaviours", "The AppLayout has by default multiple Behaviours availabe. Try to set them via the menu in the demo above and below")
-                .withDevice(new TabletView(new Embed(View1.class)))
+                .withDevice(new TabletView(new Embed(View1.class).withFullSize()))
                 .withStep("Add dependency", "Add the dependency to your POM",
                         new CodeExample("<dependency>\n" +
                                 "    <groupId>com.github.appreciated</groupId>\n" +

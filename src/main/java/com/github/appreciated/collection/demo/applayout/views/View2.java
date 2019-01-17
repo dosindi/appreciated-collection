@@ -4,7 +4,7 @@ import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.router.Route;
 
-@Route(value = "app-layout/demo/view2", layout = MainAppLayout.class)
+@Route(value = "app-layout-demo/view2", layout = MainAppLayout.class)
 public class View2 extends AbstractView {
 
     public View2() {

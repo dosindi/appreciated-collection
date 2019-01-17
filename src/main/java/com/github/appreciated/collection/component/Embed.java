@@ -1,11 +1,14 @@
 package com.github.appreciated.collection.component;
 
-import com.vaadin.flow.component.*;
+import com.vaadin.flow.component.Component;
+import com.vaadin.flow.component.HtmlContainer;
+import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.router.Route;
 
 @Tag("embed")
 public class Embed extends HtmlContainer {
-    private static final PropertyDescriptor<String, String> srcDescriptor = PropertyDescriptors.attributeWithDefault("src", "", false);
+
+    private boolean sizeFull;
 
     public Embed() {
     }
@@ -18,16 +21,17 @@ public class Embed extends HtmlContainer {
         this.setSrc(src);
     }
 
-    public void removeSrc() {
-        this.getElement().removeAttribute("src");
-    }
-
     public String getSrc() {
-        return this.get(srcDescriptor);
+        return getElement().getAttribute("src");
     }
 
-    public void setSrc(String href) {
-        this.set(srcDescriptor, href);
+    public void setSrc(String src) {
+        getElement().setAttribute("src", src);
+    }
+
+    public Embed withFullSize() {
+        setSizeFull();
+        return this;
     }
 
 }
