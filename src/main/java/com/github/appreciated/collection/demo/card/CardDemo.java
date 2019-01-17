@@ -70,9 +70,9 @@ public class CardDemo extends VerticalLayout {
         Image img = new Image(imagePath, title);
         img.setWidth("50px");
         img.setHeight("50px");
-Card card = new Card(
-        new IconItem(img, title, description)
-);
+        Card card = new Card(
+                new IconItem(img, title, description)
+        );
         card.setWidth("100%");
         return card;
     }
