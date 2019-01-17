@@ -25,7 +25,7 @@ public class MainView extends VerticalLayout {
                 "Welcome to the Appreciated Collection",
                 "./frontend/images/no-logo.png"
                 ).withComponent(new HorizontalLayout(
-                        getCard("./frontend/images/no-logo.png", "Demo Helper Addon", "A addon that helps you creating beautiful addon demos in no time", DemoHelperDemoView.class),
+                        getCard("./frontend/images/demohelper/demo-helper-logo.png", "Demo Helper Addon", "A addon that helps you creating beautiful addon demos in no time", DemoHelperDemoView.class),
                         getCard("./frontend/images/no-logo.png", "Card Addon", "A addon that brings cards to Vaadin Flow", CardDemo.class),
                         getCard("./frontend/images/no-logo.png", "Iron Collapse Addon", "A addon that brings Iron Collapse to Vaadin Flow", IronCollapseDemo.class))
                 )
