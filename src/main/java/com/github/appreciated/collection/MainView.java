@@ -28,7 +28,7 @@ public class MainView extends VerticalLayout {
                 getCard("./frontend/images/no-logo.png", "Card Addon", "A addon that brings cards to Vaadin Flow", CardDemo.class),
                 getCard("./frontend/images/no-logo.png", "Iron Collapse Addon", "A addon that brings Iron Collapse to Vaadin Flow", IronCollapseDemo.class)
         );
-        layout.setJustifyContentMode(JustifyContentMode.BETWEEN);
+        layout.setJustifyContentMode(JustifyContentMode.CENTER);
         layout.setFlexWrap(CssFlexLayout.FlexWrap.WRAP);
         add(new DemoHelperView()
                 .withVerticalHeader("Appreciated Collection",
