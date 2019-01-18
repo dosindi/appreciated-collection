@@ -27,10 +27,10 @@ public class AppLayoutDemo extends VerticalLayout {
                                 "    <artifactId>app-layout-addon</artifactId>\n" +
                                 "    <version>2.0.4</version>\n" +
                                 "</dependency>", "xml", "Maven"))
-                .withStep("Install dependency", "Install the dependency by runner the following maven goal",
+                .withStep("Install dependency", "Install the dependency by running the following Maven goal",
                         new CodeExample("install", "xml", "Maven")
                 )
-                .withStep("Add AppLayoutRouterLayout", "Create a RouterLayout that extends AppLayoutRouterLayout. Initalize here the AppLayout, the RouterLayout can then be reused in every View",
+                .withStep("Add App-Layout-Router-Layout Class", "Create a RouterLayout that extends AppLayoutRouterLayout. Initalize here the AppLayout, the RouterLayout can then be reused in every View",
                         new CodeExample("@Push\n" +
                                 "@Viewport(\"width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes\")\n" +
                                 "public class MainAppLayout extends AppLayoutRouterLayout {\n" +
