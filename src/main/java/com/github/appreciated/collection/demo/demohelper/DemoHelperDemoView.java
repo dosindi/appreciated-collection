@@ -10,20 +10,17 @@ import com.github.appreciated.demo.helper.view.entity.CssVariable;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
-import com.vaadin.flow.component.page.BodySize;
 import com.vaadin.flow.component.radiobutton.RadioButtonGroup;
 import com.vaadin.flow.router.Route;
 
 @Route("demo-helper/")
-@BodySize(height = "100%", width = "100%")
-public class DemoHelperDemoView extends VerticalLayout {
+public class DemoHelperDemoView extends DemoHelperView {
 
     public DemoHelperDemoView() {
-        add(new DemoHelperView()
-                .withVerticalHeader("VerticalHeaderView",
-                        "I can display a header and an optionally an image or a subtitle",
-                        "./frontend/images/demohelper/demo-helper-logo.png"
-                )
+        withVerticalHeader("VerticalHeaderView",
+                "I can display a header and an optionally an image or a subtitle",
+                "./frontend/images/demohelper/demo-helper-logo.png"
+        )
                 .withHorizontalHeader("HorizontalHeaderView",
                         "I can display a header and optionally an image or I am suited for longer description texts. Additionally I may contain Components which are display beneath the description that can be used to display f.e. links",
                         "./frontend/images/demohelper/demo-helper-logo.png",
@@ -79,11 +76,7 @@ public class DemoHelperDemoView extends VerticalLayout {
                                 "        new VerticalLayout(new Button(\"Tablet\")), \n" +
                                 "        new VerticalLayout(new Button(\"Handheld\"))\n" +
                                 ");", "java", "Java")
-                )
-        );
-        setSizeFull();
-        setPadding(false);
-        setMargin(false);
+                );
     }
 
     VerticalLayout getDeviceContent(String text) {

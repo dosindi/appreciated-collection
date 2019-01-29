@@ -16,16 +16,15 @@ import com.vaadin.flow.router.Route;
 
 @Route("iron-collapse/")
 @BodySize(height = "100%", width = "100%")
-public class IronCollapseDemo extends VerticalLayout {
+public class IronCollapseDemo extends DemoHelperView {
 
     public IronCollapseDemo() {
-        add(new DemoHelperView()
-                .withHorizontalHeader("Iron Collapse",
-                        "A Component that allows the user to show and hide Content",
-                        "./frontend/images/no-logo.png"
-                ).withDevice(
-                        new PhoneView(getExample()),
-                        "Try it out!")
+        withHorizontalHeader("Iron Collapse",
+                "A Component that allows the user to show and hide Content",
+                "./frontend/images/no-logo.png"
+        ).withDevice(
+                new PhoneView(getExample()),
+                "Try it out!")
                 .withStep("Add dependency", "Add the dependency by adding it to your POM",
                         new CodeExample("<dependency>\n" +
                                 "    <groupId>com.github.appreciated</groupId>\n" +
@@ -38,8 +37,7 @@ public class IronCollapseDemo extends VerticalLayout {
                 .resetCounterStep()
                 .withStep("Some code examples", "You can add Iron Collapse to your View the following way",
                         new CodeExample("", "java", "Java")
-                )
-        );
+                );
     }
 
     private Component getExample() {

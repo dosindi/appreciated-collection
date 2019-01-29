@@ -17,19 +17,18 @@ import com.vaadin.flow.router.Route;
 
 @Route("card/")
 @BodySize(height = "100%", width = "100%")
-public class CardDemo extends VerticalLayout {
+public class CardDemo extends DemoHelperView {
 
     public CardDemo() {
-        add(new DemoHelperView()
-                .withHorizontalHeader("Card",
-                        "\"Cards are surfaces that display content and actions on a single topic.\n" +
-                                "\n" +
-                                "They should be easy to scan for relevant and actionable information. Elements, like text and images, should be placed on them in a way that clearly indicates hierarchy.\"\n" +
-                                "- material.io",
-                        "./frontend/images/no-logo.png"
-                ).withDevice(
-                        new PhoneView(getExampleCards()),
-                        "Bring Material Cards to your application")
+        withHorizontalHeader("Card",
+                "\"Cards are surfaces that display content and actions on a single topic.\n" +
+                        "\n" +
+                        "They should be easy to scan for relevant and actionable information. Elements, like text and images, should be placed on them in a way that clearly indicates hierarchy.\"\n" +
+                        "- material.io",
+                "./frontend/images/no-logo.png"
+        ).withDevice(
+                new PhoneView(getExampleCards()),
+                "Bring Material Cards to your application")
                 .withStep("Add dependency", "Add the dependency to your POM",
                         new CodeExample("<dependency>\n" +
                                 "    <groupId>com.github.appreciated</groupId>\n" +
@@ -49,8 +48,7 @@ public class CardDemo extends VerticalLayout {
                         new CodeExample("RippleClickableCard card = new RippleClickableCard(\n" +
                                 "        new IconItem(img, title, description)\n" +
                                 ");", "java", "Java")
-                )
-        );
+                );
     }
 
     private Component getExampleCards() {
