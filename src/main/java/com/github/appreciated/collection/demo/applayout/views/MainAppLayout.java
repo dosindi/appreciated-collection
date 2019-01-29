@@ -50,7 +50,7 @@ public class MainAppLayout extends AppLayoutRouterLayout {
                         .add(new AppBarNotificationButton(VaadinIcon.BELL, notifications))
                         .build())
                 .withAppMenu(LeftAppMenuBuilder.get()
-                        .addToSection(new MenuHeaderComponent("Menu-Header", "Version 2.0.4", "./frontend/images/applayout/app-layout-logo.png"), HEADER)
+                        .addToSection(new MenuHeaderComponent("Menu-Header", "Version 2.0.5", "./frontend/images/applayout/app-layout-logo.png"), HEADER)
                         .addToSection(new LeftClickableComponent("Clickable Entry", VaadinIcon.COG.create(), clickEvent -> Notification.show("onClick ...")), HEADER)
                         .add(new LeftNavigationComponent("Home", VaadinIcon.HOME.create(), View1.class))
                         .add(new LeftNavigationComponent("Grid", VaadinIcon.TABLE.create(), GridTest.class))

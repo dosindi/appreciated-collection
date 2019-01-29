@@ -23,7 +23,7 @@ public class AppLayoutDemo extends DemoHelperView {
                         new CodeExample("<dependency>\n" +
                                 "    <groupId>com.github.appreciated</groupId>\n" +
                                 "    <artifactId>app-layout-addon</artifactId>\n" +
-                                "    <version>2.0.4</version>\n" +
+                                "    <version>2.0.5</version>\n" +
                                 "</dependency>", "xml", "Maven"))
                 .withStep("Install dependency", "Install the dependency by running the following Maven goal",
                         new CodeExample("install", "xml", "Maven")
@@ -53,7 +53,7 @@ public class AppLayoutDemo extends DemoHelperView {
                                 "                        .add(new AppBarNotificationButton(VaadinIcon.BELL, notifications))\n" +
                                 "                        .build())\n" +
                                 "                .withAppMenu(LeftAppMenuBuilder.get()\n" +
-                                "                        .addToSection(new MenuHeaderComponent(\"Menu-Header\", \"Version 2.0.4\", \"./frontend/images/applayout/app-layout-logo.png\"), HEADER)\n" +
+                                "                        .addToSection(new MenuHeaderComponent(\"Menu-Header\", \"Version 2.0.5\", \"./frontend/images/applayout/app-layout-logo.png\"), HEADER)\n" +
                                 "                        .addToSection(new LeftClickableComponent(\"Clickable Entry\", VaadinIcon.COG.create(), clickEvent -> Notification.show(\"onClick ...\")), HEADER)\n" +
                                 "                        .add(new LeftNavigationComponent(\"Home\", VaadinIcon.HOME.create(), View1.class))\n" +
                                 "                        .add(new LeftNavigationComponent(\"Grid\", VaadinIcon.TABLE.create(), GridTest.class))\n" +
