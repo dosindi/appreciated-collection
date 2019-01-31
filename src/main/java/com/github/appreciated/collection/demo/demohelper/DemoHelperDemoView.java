@@ -53,7 +53,7 @@ public class DemoHelperDemoView extends DemoHelperView {
                         new CodeExample("<dependency>\n" +
                                 "    <groupId>com.github.appreciated</groupId>\n" +
                                 "    <artifactId>demo-helper-view</artifactId>\n" +
-                                "    <version>2.0.0-RC4</version>\n" +
+                                "    <version>2.0.2</version>\n" +
                                 "</dependency>", "xml", "Maven")
                 )
                 .withStep("I am also a StepView",
