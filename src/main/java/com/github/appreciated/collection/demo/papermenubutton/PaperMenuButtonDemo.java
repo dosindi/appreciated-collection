@@ -25,14 +25,14 @@ public class PaperMenuButtonDemo extends DemoHelperView {
                 .withStep("Add dependency", "Add the dependency by adding it to your POM",
                         new CodeExample("<dependency>\n" +
                                 "    <groupId>com.github.appreciated</groupId>\n" +
-                                "    <artifactId>prism-element</artifactId>\n" +
-                                "    <version>0.5</version>\n" +
+                                "    <artifactId>vaadin-paper-menu-button</artifactId>\n" +
+                                "    <version>1.0.0</version>\n" +
                                 "</dependency>", "xml", "Maven"))
                 .withStep("Install dependency", "Install the dependency by running the following Maven goal",
                         new CodeExample("install", "xml", "Maven")
                 )
                 .resetCounterStep()
-                .withStep("Some code examples", "Add Paper Color to your View",
+                .withStep("Some code examples", "Add a PaperMenuButton to your View",
                         new CodeExample("PaperMenuButton paperMenuButton = new PaperMenuButton(new Button(\"Test\"), < Your Content Component >));", "java", "Java")
                 );
     }
