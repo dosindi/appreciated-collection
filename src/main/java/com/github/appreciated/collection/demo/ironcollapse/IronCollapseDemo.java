@@ -2,13 +2,13 @@ package com.github.appreciated.collection.demo.ironcollapse;
 
 
 import com.github.appreciated.IronCollapse;
+import com.github.appreciated.collection.demo.component.ExampleContent;
 import com.github.appreciated.demo.helper.DemoHelperView;
 import com.github.appreciated.demo.helper.view.devices.Orientation;
 import com.github.appreciated.demo.helper.view.devices.TabletView;
 import com.github.appreciated.demo.helper.view.entity.CodeExample;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.button.Button;
-import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.page.BodySize;
 import com.vaadin.flow.router.Route;
@@ -42,13 +42,7 @@ public class IronCollapseDemo extends DemoHelperView {
     }
 
     private Component getExample() {
-        VerticalLayout collapseContent = new VerticalLayout(new Label("< Your Content >"));
-        collapseContent.getStyle().set("border", "1px solid var(--lumo-primary-color)");
-        collapseContent.setWidth("400px");
-        collapseContent.setHeight("400px");
-        collapseContent.setAlignItems(Alignment.CENTER);
-        collapseContent.setJustifyContentMode(JustifyContentMode.CENTER);
-        IronCollapse collapse = new IronCollapse(collapseContent);
+        IronCollapse collapse = new IronCollapse(new ExampleContent());
         return new VerticalLayout(new Button("Click me!", event -> collapse.toggle()), collapse);
     }
 
