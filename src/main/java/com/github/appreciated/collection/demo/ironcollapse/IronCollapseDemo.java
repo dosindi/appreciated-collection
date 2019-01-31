@@ -19,7 +19,7 @@ public class IronCollapseDemo extends DemoHelperView {
 
     public IronCollapseDemo() {
         withHorizontalHeader("Iron Collapse",
-                "A Component that allows the user to show and hide Content",
+                "A Component that allows to show and hide Content",
                 "./frontend/images/no-logo.png")
                 .withDevice(new TabletView(getExample()).withOrientation(Orientation.PORTRAIT), "Clicking on the Button opens/closes the IronCollapse")
                 .withStep("Add dependency", "Add the dependency by adding it to your POM",
