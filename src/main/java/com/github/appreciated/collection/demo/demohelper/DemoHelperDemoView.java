@@ -104,7 +104,7 @@ public class DemoHelperDemoView extends DemoHelperView {
                                 "        new CodeExample(\"<dependency>\\n\" +\n" +
                                 "                \"    <groupId>com.github.appreciated</groupId>\\n\" +\n" +
                                 "                \"    <artifactId>demo-helper-view</artifactId>\\n\" +\n" +
-                                "                \"    <version>2.0.0-RC4</version>\\n\" +\n" +
+                                "                \"    <version>2.0.0</version>\\n\" +\n" +
                                 "                \"</dependency>\", \"xml\", \"Maven\")\n" +
                                 ")\n" +
                                 ".withStep(\"I am also a StepView\",\n" +
@@ -122,7 +122,6 @@ public class DemoHelperDemoView extends DemoHelperView {
         group.setItems("Test");
         content.add(new Button("Test"), group);
         content.setSizeFull();
-        content.getElement().getStyle().set("background", "white");
         return content;
     }
 
