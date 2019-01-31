@@ -6,7 +6,11 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
 public class ExampleContent extends VerticalLayout {
     public ExampleContent() {
-        add(new Label("< Your Content >"));
+        this("Your Content");
+    }
+
+    public ExampleContent(String label) {
+        add(new Label("< " + label + " >"));
         getStyle().set("border", "1px solid var(--lumo-primary-color)");
         setWidth("400px");
         setHeight("400px");
