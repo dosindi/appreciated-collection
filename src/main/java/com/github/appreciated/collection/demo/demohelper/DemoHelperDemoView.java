@@ -1,7 +1,6 @@
 package com.github.appreciated.collection.demo.demohelper;
 
 import com.github.appreciated.demo.helper.DemoHelperView;
-import com.github.appreciated.demo.helper.view.devices.DeviceSwitchView;
 import com.github.appreciated.demo.helper.view.devices.LaptopView;
 import com.github.appreciated.demo.helper.view.devices.PhoneView;
 import com.github.appreciated.demo.helper.view.devices.TabletView;
@@ -26,14 +25,13 @@ public class DemoHelperDemoView extends DemoHelperView {
                         "./frontend/images/demohelper/demo-helper-logo.png",
                         new Button("Click Me!")
                 )
-                .withComponent(new DeviceSwitchView(getDeviceContent("< I belong to a DeviceSwitchView I can display content inside a css rendered device which can be switched around >")).withStyleableVariables(new CssVariable("--lumo-primary-text-color"), new CssVariable("--lumo-primary-color")))
+                .withParagraph("I am a ParagraphView", "I can display a header and a description")
+                .withStylableDevice(getDeviceContent("< I'm a StylableDevice I display content and my css variables can be edited beside me >"), new CssVariable("--lumo-primary-text-color"), new CssVariable("--lumo-primary-color"))
+                .withThemeableAndStylableDevice(getDeviceContent("< I'm a ThemeableAndStylableDevice my theme can be switch by pressing the switch above. I display content and my css variables can be edited beside me >"), new CssVariable("--lumo-primary-text-color"), new CssVariable("--lumo-primary-color"))
                 .withDevices(
                         new TabletView(getDeviceContent("< I belong to a TabletView an display content inside a css rendered tablet >")),
                         new PhoneView(getDeviceContent("< I also belong to a PhoneView an display content inside a css rendered phone >"))
                 )
-                .withParagraph("I am a ParagraphView", "I can display a header and a description")
-                .withStylableDevice(getDeviceContent("< I'm a StylableDevice I display content and my css variables can be edited beside me >"), new CssVariable("--lumo-primary-text-color"), new CssVariable("--lumo-primary-color"))
-                .withThemeableAndStylableDevice(getDeviceContent("< I'm a ThemeableAndStylableDevice my theme can be switch by pressing the switch above. I display content and my css variables can be edited beside me >"), new CssVariable("--lumo-primary-text-color"), new CssVariable("--lumo-primary-color"))
                 .withDevice(new PhoneView(
                                 getDeviceContent("< I belong to a PhoneView I display content inside a css rendered phone >")),
                         "Also I can show a optional message beside the PhoneView"
