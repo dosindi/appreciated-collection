@@ -7,10 +7,11 @@ import com.github.appreciated.collection.demo.card.CardDemo;
 import com.github.appreciated.collection.demo.demohelper.DemoHelperDemoView;
 import com.github.appreciated.collection.demo.ironcollapse.IronCollapseDemo;
 import com.github.appreciated.collection.demo.papercolor.PaperColorDemo;
+import com.github.appreciated.collection.demo.papermenubutton.PaperMenuButtonDemo;
+import com.github.appreciated.collection.demo.paperripple.PaperRippleDemo;
 import com.github.appreciated.collection.demo.prismelement.PrismElementDemo;
 import com.github.appreciated.demo.helper.DemoHelperView;
 import com.github.appreciated.demo.helper.view.components.layout.CssFlexLayout;
-import com.github.appreciated.papermenubutton.PaperMenuButton;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
@@ -30,7 +31,8 @@ public class MainView extends VerticalLayout {
                 getCard("./frontend/images/demohelper/demo-helper-logo.png", "Demo Helper Addon", "A addon that helps you creating beautiful addon demos in no time", DemoHelperDemoView.class),
                 getCard("./frontend/images/no-logo.png", "Card Addon", "A addon that brings cards to Vaadin Flow", CardDemo.class),
                 getCard("./frontend/images/no-logo.png", "Paper Color Addon", "A color picker addon for Vaadin Flow", PaperColorDemo.class),
-                getCard("./frontend/images/no-logo.png", "PaperMenuButton", "A addon that can open a popup on click", PaperMenuButton.class),
+                getCard("./frontend/images/no-logo.png", "PaperMenuButton", "A addon that can open a popup on click", PaperMenuButtonDemo.class),
+                getCard("./frontend/images/no-logo.png", "PaperRipple", "A addon that can open a popup on click", PaperRippleDemo.class),
                 getCard("./frontend/images/no-logo.png", "Prism-Element Addon", "A code/syntax highlighter addon for Vaadin Flow", PrismElementDemo.class),
                 getCard("./frontend/images/no-logo.png", "Iron Collapse Addon", "A addon that brings Iron Collapse to Vaadin Flow", IronCollapseDemo.class)
         );
