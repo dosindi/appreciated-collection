@@ -122,13 +122,14 @@
 
     <build>
         <resources>
+            <!-- Including the Java files directly to allow to access the code directly at runtime -->
             <resource>
                 <directory>src/main/java</directory>
                 <includes>
                     <include>**/*.java</include>
                 </includes>
             </resource>
-
+            <!-- Including the pom.xml to allow to access the dependencies and their versions at runtime -->
             <resource>
                 <directory>./</directory>
                 <includes>
