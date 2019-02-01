@@ -1,6 +1,6 @@
 package com.github.appreciated.collection.code;
 
-import com.github.appreciated.collection.demo.applayout.code.YourAppLayoutRouterLayout;
+import com.github.appreciated.collection.demo.applayout.codeexample.YourAppLayoutRouterLayout;
 
 import java.io.BufferedReader;
 import java.io.IOException;
