@@ -3,6 +3,7 @@ package com.github.appreciated.collection;
 import com.github.appreciated.card.RippleClickableCard;
 import com.github.appreciated.card.content.IconItem;
 import com.github.appreciated.collection.demo.applayout.AppLayoutDemo;
+import com.github.appreciated.collection.demo.calculatedcolorhelper.CalculatedColorHelperDemo;
 import com.github.appreciated.collection.demo.card.CardDemo;
 import com.github.appreciated.collection.demo.demohelper.DemoHelperDemoView;
 import com.github.appreciated.collection.demo.ironcollapse.IronCollapseDemo;
@@ -34,7 +35,8 @@ public class MainView extends VerticalLayout {
                 getCard("./frontend/images/no-logo.png", "PaperMenuButton", "A addon that can open a popup on click", PaperMenuButtonDemo.class),
                 getCard("./frontend/images/no-logo.png", "PaperRipple", "A addon that can open a popup on click", PaperRippleDemo.class),
                 getCard("./frontend/images/no-logo.png", "Prism-Element Addon", "A code/syntax highlighter addon for Vaadin Flow", PrismElementDemo.class),
-                getCard("./frontend/images/no-logo.png", "Iron Collapse Addon", "A addon that brings Iron Collapse to Vaadin Flow", IronCollapseDemo.class)
+                getCard("./frontend/images/no-logo.png", "Iron Collapse Addon", "A addon that brings Iron Collapse to Vaadin Flow", IronCollapseDemo.class),
+                getCard("./frontend/images/no-logo.png", "Calculated Color Helper Addon", "A addon that brings control over the css variables in Vaadin Flow", CalculatedColorHelperDemo.class)
         );
         layout.setJustifyContentMode(JustifyContentMode.CENTER);
         layout.setFlexWrap(CssFlexLayout.FlexWrap.WRAP);

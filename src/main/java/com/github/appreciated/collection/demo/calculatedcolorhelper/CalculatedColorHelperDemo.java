@@ -28,7 +28,7 @@ public class CalculatedColorHelperDemo extends DemoHelperView {
                 "./frontend/images/no-logo.png"
         ).withDevice(new TabletView(getExample()).withOrientation(Orientation.PORTRAIT), "Clicking on the Button opens/closes the IronCollapse")
                 .withStep("Add dependency", "Add the dependency by adding it to your POM",
-                        new CodeExample(new DependencyReader("iron-collapse").getDependencyString(), "xml", "Maven"))
+                        new CodeExample(new DependencyReader("calculated-color-helper").getDependencyString(), "xml", "Maven"))
                 .withStep("Install dependency", "Install the dependency by running the following Maven goal",
                         new CodeExample("install", "xml", "Maven")
                 )
@@ -79,7 +79,7 @@ public class CalculatedColorHelperDemo extends DemoHelperView {
 
         VerticalLayout testLayout = new VerticalLayout(
                 new Label("This box is the scope of the CalculatedColorHelper"),
-                new Button("See my Style"),
+                new Button("Check my Color"),
                 new Checkbox("test", true),
                 helper
         );
@@ -88,13 +88,13 @@ public class CalculatedColorHelperDemo extends DemoHelperView {
         VerticalLayout content = new VerticalLayout(testLayout,
                 new HorizontalLayout(
                         fieldPrimaryColor,
-                        new Button("Set", event -> helper.setCalculatedColor(LumoVariables.LUMO_PRIMARY_COLOR, fieldPrimaryColor.getValue()))
+                        new Button("Update", event -> helper.setCalculatedColor(LumoVariables.LUMO_PRIMARY_COLOR, fieldPrimaryColor.getValue()))
                 ),
                 new HorizontalLayout(
                         fieldTextColor,
-                        new Button("Set", event -> helper.setCalculatedColor(LumoVariables.LUMO_PRIMARY_TEXT_COLOR, fieldTextColor.getValue()))
+                        new Button("Update", event -> helper.setCalculatedColor(LumoVariables.LUMO_PRIMARY_TEXT_COLOR, fieldTextColor.getValue()))
                 ),
-                new Label("Note: Any valid css color can be set f.e. \"red\" or \"green\"")
+                new Label("Note: Any valid css color can be set in the TextFields f.e. \"red\" or \"green\"")
         );
         return content;
     }
