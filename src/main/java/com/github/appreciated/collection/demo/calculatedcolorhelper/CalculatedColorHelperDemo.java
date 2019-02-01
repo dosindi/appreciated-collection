@@ -2,6 +2,7 @@ package com.github.appreciated.collection.demo.calculatedcolorhelper;
 
 
 import com.github.appreciated.calc.color.helper.CalculatedColorHelper;
+import com.github.appreciated.calc.color.helper.LumoVariables;
 import com.github.appreciated.collection.maven.DependencyReader;
 import com.github.appreciated.demo.helper.DemoHelperView;
 import com.github.appreciated.demo.helper.view.devices.Orientation;
@@ -33,14 +34,14 @@ public class CalculatedColorHelperDemo extends DemoHelperView {
                 )
                 .resetCounterStep()
                 .withStep("Some code examples", "Add IronCollapse to your View",
-                        new CodeExample("TTextField fieldPrimaryColor = new TextField(\"--lumo-primary-color\");\n" +
-                                "TextField fieldTextColor = new TextField(\"--lumo-primary-text-color\");\n" +
+                        new CodeExample("TextField fieldPrimaryColor = new TextField(LumoVariables.LUMO_PRIMARY_COLOR);\n" +
+                                "TextField fieldTextColor = new TextField(LumoVariables.LUMO_PRIMARY_TEXT_COLOR);\n" +
                                 "CalculatedColorHelper helper = new CalculatedColorHelper();\n" +
                                 "\n" +
-                                "helper.getCalculatedColor(\"--lumo-primary-color\", value -> fieldPrimaryColor.setValue(value));\n" +
-                                "helper.getCalculatedColor(\"--lumo-primary-text-color\", value -> fieldTextColor.setValue(value));\n" +
+                                "helper.getCalculatedColor(LumoVariables.LUMO_PRIMARY_COLOR, value -> fieldPrimaryColor.setValue(value));\n" +
+                                "helper.getCalculatedColor(LumoVariables.LUMO_PRIMARY_TEXT_COLOR, value -> fieldTextColor.setValue(value));\n" +
                                 "\n" +
-                                "fieldPrimaryColor.addValueChangeListener(event -> helper.setCalculatedColor(\"--lumo-primary-color\", event.getValue()));\n" +
+                                "fieldPrimaryColor.addValueChangeListener(event -> helper.setCalculatedColor(LumoVariables.LUMO_PRIMARY_COLOR, event.getValue()));\n" +
                                 "fieldTextColor.addValueChangeListener(event -> helper.setCalculatedColor(\"--lumo-primary-text-color\", event.getValue()));\n" +
                                 "\n" +
                                 "VerticalLayout testLayout = new VerticalLayout(\n" +
@@ -54,11 +55,11 @@ public class CalculatedColorHelperDemo extends DemoHelperView {
                                 "VerticalLayout content = new VerticalLayout(testLayout,\n" +
                                 "        new HorizontalLayout(\n" +
                                 "                fieldPrimaryColor,\n" +
-                                "                new Button(\"Set\", event -> helper.setCalculatedColor(\"--lumo-primary-color\", fieldPrimaryColor.getValue()))\n" +
+                                "                new Button(\"Set\", event -> helper.setCalculatedColor(LumoVariables.LUMO_PRIMARY_COLOR, fieldPrimaryColor.getValue()))\n" +
                                 "        ),\n" +
                                 "        new HorizontalLayout(\n" +
                                 "                fieldTextColor,\n" +
-                                "                new Button(\"Set\", event -> helper.setCalculatedColor(\"--lumo-primary-text-color\", fieldTextColor.getValue()))\n" +
+                                "                new Button(\"Set\", event -> helper.setCalculatedColor(LumoVariables.LUMO_PRIMARY_TEXT_COLOR, fieldTextColor.getValue()))\n" +
                                 "        ),\n" +
                                 "        new Label(\"Note: Any valid css color can be set f.e. \\\"red\\\" or \\\"green\\\"\")\n" +
                                 ");", "java", "Java")
@@ -66,14 +67,14 @@ public class CalculatedColorHelperDemo extends DemoHelperView {
     }
 
     private Component getExample() {
-        TextField fieldPrimaryColor = new TextField("--lumo-primary-color");
-        TextField fieldTextColor = new TextField("--lumo-primary-text-color");
+        TextField fieldPrimaryColor = new TextField(LumoVariables.LUMO_PRIMARY_COLOR);
+        TextField fieldTextColor = new TextField(LumoVariables.LUMO_PRIMARY_TEXT_COLOR);
         CalculatedColorHelper helper = new CalculatedColorHelper();
 
-        helper.getCalculatedColor("--lumo-primary-color", value -> fieldPrimaryColor.setValue(value));
-        helper.getCalculatedColor("--lumo-primary-text-color", value -> fieldTextColor.setValue(value));
+        helper.getCalculatedColor(LumoVariables.LUMO_PRIMARY_COLOR, value -> fieldPrimaryColor.setValue(value));
+        helper.getCalculatedColor(LumoVariables.LUMO_PRIMARY_TEXT_COLOR, value -> fieldTextColor.setValue(value));
 
-        fieldPrimaryColor.addValueChangeListener(event -> helper.setCalculatedColor("--lumo-primary-color", event.getValue()));
+        fieldPrimaryColor.addValueChangeListener(event -> helper.setCalculatedColor(LumoVariables.LUMO_PRIMARY_COLOR, event.getValue()));
         fieldTextColor.addValueChangeListener(event -> helper.setCalculatedColor("--lumo-primary-text-color", event.getValue()));
 
         VerticalLayout testLayout = new VerticalLayout(
@@ -87,11 +88,11 @@ public class CalculatedColorHelperDemo extends DemoHelperView {
         VerticalLayout content = new VerticalLayout(testLayout,
                 new HorizontalLayout(
                         fieldPrimaryColor,
-                        new Button("Set", event -> helper.setCalculatedColor("--lumo-primary-color", fieldPrimaryColor.getValue()))
+                        new Button("Set", event -> helper.setCalculatedColor(LumoVariables.LUMO_PRIMARY_COLOR, fieldPrimaryColor.getValue()))
                 ),
                 new HorizontalLayout(
                         fieldTextColor,
-                        new Button("Set", event -> helper.setCalculatedColor("--lumo-primary-text-color", fieldTextColor.getValue()))
+                        new Button("Set", event -> helper.setCalculatedColor(LumoVariables.LUMO_PRIMARY_TEXT_COLOR, fieldTextColor.getValue()))
                 ),
                 new Label("Note: Any valid css color can be set f.e. \"red\" or \"green\"")
         );
