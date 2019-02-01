@@ -2,12 +2,11 @@ package com.github.appreciated.collection.code;
 
 import com.github.appreciated.collection.demo.applayout.code.YourAppLayoutRouterLayout;
 
+import java.io.BufferedReader;
 import java.io.IOException;
-import java.net.URISyntaxException;
+import java.io.InputStreamReader;
 import java.net.URL;
-import java.nio.file.FileSystemNotFoundException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -17,12 +16,18 @@ public class CodeExampleFormatter {
 
     public CodeExampleFormatter(String packagePath) {
         packagePath = packagePath.replaceAll("\\.", "/") + ".java";
-        URL path = getClass().getClassLoader().getResource(packagePath);
+        URL resource = getClass().getClassLoader().getResource(packagePath);
+        if (resource != null) {
+            try {
+                InputStreamReader reader = new InputStreamReader(resource.openStream(), StandardCharsets.UTF_8);
+                try (BufferedReader buffer = new BufferedReader(reader)) {
+                    classContent = buffer.lines().collect(Collectors.toList());
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
 
-        try {
-            classContent = Files.readAllLines(Paths.get(path.toURI()))
-                    .stream()
-                    .filter(s -> s.length() > 0)
+            classContent = classContent.stream().filter(s -> s.length() > 0)
                     .filter(s -> !s.startsWith("import") && !s.startsWith("package"))
                     .collect(Collectors.toList());
 
@@ -32,12 +37,6 @@ public class CodeExampleFormatter {
                     classContent.
                 }*/
             }
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (URISyntaxException e) {
-            e.printStackTrace();
-        } catch (FileSystemNotFoundException e) {
-            e.printStackTrace();
         }
     }
 
