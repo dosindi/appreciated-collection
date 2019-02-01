@@ -136,6 +136,13 @@
                     <include>pom.xml</include>
                 </includes>
             </resource>
+            <!-- It seems overwriting the resources above requires the define them again -->
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/**</include>
+                </includes>
+            </resource>
         </resources>
 
         <plugins>
