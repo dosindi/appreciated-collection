@@ -12,6 +12,7 @@ import com.github.appreciated.app.layout.component.appmenu.left.builder.LeftSubM
 import com.github.appreciated.app.layout.entity.DefaultBadgeHolder;
 import com.github.appreciated.app.layout.notification.DefaultNotificationHolder;
 import com.github.appreciated.app.layout.notification.component.AppBarNotificationButton;
+import com.github.appreciated.app.layout.notification.entitiy.DefaultNotification;
 import com.github.appreciated.app.layout.router.AppLayoutRouterLayout;
 import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.notification.Notification;
@@ -38,6 +39,10 @@ public class MainAppLayout extends AppLayoutRouterLayout {
     public AppLayout createAppLayoutInstance() {
         notifications = new DefaultNotificationHolder(newStatus -> {
         });
+        for (int i = 1; i < 6; i++) {
+            notifications.addNotification(new DefaultNotification("Test title" + i, "A rather long test description ..............." + i));
+        }
+
         badge = new DefaultBadgeHolder(5);
 
         LeftNavigationComponent menuEntry = new LeftNavigationComponent("Menu", VaadinIcon.MENU.create(), View6.class);
