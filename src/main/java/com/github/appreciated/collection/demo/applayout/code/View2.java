@@ -4,7 +4,7 @@ import com.github.appreciated.collection.demo.applayout.views.MainAppLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 
-@Route(value = "yourRoute2", layout = MainAppLayout.class)
+@Route(value = "/*RM your route 2 RM*/view2", layout = MainAppLayout.class)
 public class View2 extends VerticalLayout {
 
     public View2() {

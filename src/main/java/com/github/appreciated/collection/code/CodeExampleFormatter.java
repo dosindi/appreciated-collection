@@ -24,6 +24,13 @@ public class CodeExampleFormatter {
                     .filter(s -> s.length() > 0)
                     .filter(s -> !s.startsWith("import") && !s.startsWith("package"))
                     .collect(Collectors.toList());
+
+            for (int i = 0; i < classContent.size(); i++) {
+                String s = classContent.get(i);
+                /*if (s.contains("/*RM")){
+                    classContent.
+                }*/
+            }
         } catch (IOException e) {
             e.printStackTrace();
         } catch (URISyntaxException e) {
