@@ -21,7 +21,7 @@ public class PaperRippleDemo extends DemoHelperView {
         withHorizontalHeader("PaperRipple",
                 "Allows to give the user feedback when a component was clicked.",
                 "./frontend/images/no-logo.png")
-                .withDevice(new TabletView(getExample()).withOrientation(Orientation.PORTRAIT), "Some highlighting examples")
+                .withDevice(new TabletView(getExample()).withOrientation(Orientation.PORTRAIT))
                 .withStep("Add dependency", "Add the dependency by adding it to your POM",
                         new CodeExample("<dependency>\n" +
                                 "   <groupId>com.github.appreciated</groupId>\n" +
@@ -35,13 +35,16 @@ public class PaperRippleDemo extends DemoHelperView {
                 .withStep("Some code examples", "Add PaperRipple to your View",
                         new CodeExample("PaperRippleVerticalLayout layout = new PaperRippleVerticalLayout(< Your Content Component >);\n" +
                                 "layout.addClickListener(event -> Notification.show(\"I was clicked\"));\n" +
-                                "layout.setSizeUndefined();", "java", "Java")
+                                "layout.setMargin(false);" +
+                                "layout.setSizeUndefined();"
+                                , "java", "Java")
                 );
     }
 
     private Component getExample() {
         PaperRippleVerticalLayout layout = new PaperRippleVerticalLayout(new ExampleContent("Click me!"));
         layout.addClickListener(event -> Notification.show("I was clicked"));
+        layout.setMargin(false);
         layout.setSizeUndefined();
         return new VerticalLayout(layout);
     }
