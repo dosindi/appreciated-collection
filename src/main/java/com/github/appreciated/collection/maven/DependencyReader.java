@@ -35,6 +35,10 @@ public class DependencyReader {
                 .findFirst();
     }
 
+    public static void main(String[] args) {
+        System.out.println(new DependencyReader("card").artifactID);
+    }
+
     public String getDependencyString() {
         if (dependency.isPresent()) {
             Dependency dependency = this.dependency.get();
@@ -46,13 +50,5 @@ public class DependencyReader {
             return dependencyString;
         }
         return null;
-    }
-
-    public static void main(String[] args) {
-        try {
-            new DependencyReader("test").getClass().getClassLoader().getResource("DependencyReader").openStream();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 }
