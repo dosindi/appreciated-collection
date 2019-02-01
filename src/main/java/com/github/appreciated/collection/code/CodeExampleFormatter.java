@@ -5,6 +5,7 @@ import com.github.appreciated.collection.demo.applayout.code.YourAppLayoutRouter
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.nio.file.FileSystemNotFoundException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
@@ -35,6 +36,8 @@ public class CodeExampleFormatter {
             e.printStackTrace();
         } catch (URISyntaxException e) {
             e.printStackTrace();
+        } catch (FileSystemNotFoundException e) {
+            e.printStackTrace();
         }
     }
 
@@ -44,8 +47,10 @@ public class CodeExampleFormatter {
 
     public String getCodeExample() {
         String file = "";
-        for (String s : classContent) {
-            file += s + "\n";
+        if (classContent != null) {
+            for (String s : classContent) {
+                file += s + "\n";
+            }
         }
         return file;
     }
