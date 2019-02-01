@@ -33,11 +33,18 @@ public class CodeExampleFormatter {
 
             for (int i = 0; i < classContent.size(); i++) {
                 String s = classContent.get(i);
-                /*if (s.contains("/*RM")){
-                    classContent.
-                }*/
+                if (s.contains("/*RM")) {
+                    classContent.set(i, removeRM(s));
+                }
             }
         }
+    }
+
+    public String removeRM(String string) {
+        if (string.indexOf("/*RM") >= 0 && string.indexOf("RM*/") >= 0) {
+            return string.substring(0, string.indexOf("/*RM")) + string.substring(string.indexOf("RM*/") + "RM*/".length());
+        }
+        return string;
     }
 
     public static void main(String[] args) {
@@ -53,4 +60,6 @@ public class CodeExampleFormatter {
         }
         return file;
     }
+
+
 }
