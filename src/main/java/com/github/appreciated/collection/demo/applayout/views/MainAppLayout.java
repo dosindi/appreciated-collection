@@ -52,7 +52,7 @@ public class MainAppLayout extends AppLayoutRouterLayout {
                 .withAppMenu(LeftAppMenuBuilder.get()
                         .addToSection(new MenuHeaderComponent("Menu-Header", "Version 2.0.5", "./frontend/images/applayout/app-layout-logo.png"), HEADER)
                         .addToSection(new LeftClickableComponent("Clickable Entry", VaadinIcon.COG.create(), clickEvent -> Notification.show("onClick ...")), HEADER)
-                        .add(new LeftNavigationComponent("Home", VaadinIcon.HOME.create(), View1.class))
+                        .add(new LeftNavigationComponent("Home", VaadinIcon.HOME.create(), MainView.class))
                         .add(new LeftNavigationComponent("Grid", VaadinIcon.TABLE.create(), GridTest.class))
                         .add(LeftSubMenuBuilder.get("My Submenu", VaadinIcon.PLUS.create())
                                 .add(LeftSubMenuBuilder.get("My Submenu", VaadinIcon.PLUS.create())
