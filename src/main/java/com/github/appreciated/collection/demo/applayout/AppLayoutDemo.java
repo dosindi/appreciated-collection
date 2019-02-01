@@ -28,7 +28,7 @@ public class AppLayoutDemo extends DemoHelperView {
                 .withStep("Install dependency", "Install the dependency by running the following Maven goal",
                         new CodeExample("install", "xml", "Maven")
                 )
-                .withStep("Add App-Layout-Router-Layout Class", "Create a RouterLayout that extends AppLayoutRouterLayout. Initalize here the AppLayout, the RouterLayout can then be reused in every View",
+                .withStep("Add App-Layout-Router-Layout Class", "Create a Class that extends AppLayoutRouterLayout and implement the missing methods as shown in the example. The AppLayoutRouterLayout can then be reused in every View by setting it in the Route annotation.",
                         new CodeExample("@Push\n" +
                                 "@Viewport(\"width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes\")\n" +
                                 "public class MainAppLayout extends AppLayoutRouterLayout {\n" +
@@ -72,11 +72,20 @@ public class AppLayoutDemo extends DemoHelperView {
                                 "                .build();\n" +
                                 "    }\n" +
                                 "}", "java", "Java")
-                ).withStep("Create a View with a @Route Annotation", "Create a View that contains a @Route Annotation that leads to a specific Path. As soon you navigate to this path the App Layout will be visible",
+                ).withStep("Create a View with a @Route Annotation", "Create a View that contains a @Route Annotation that leads to a specific Path and also has the Class you create above as \"layout=...\". As soon you navigate to the path set in the Annotation this view wrapped by the AppLayout will be visible",
                 new CodeExample("@Route(value = \"\", layout = MainAppLayout.class)\n" +
                         "public class View1 extends VerticalLayout {\n" +
                         "\n" +
                         "    public View1() {\n" +
+                        "       // Add the content for this path\n" +
+                        "    }\n" +
+                        "\n" +
+                        "}", "java", "Java"),
+                new CodeExample("@Route(value = \"view2\", layout = MainAppLayout.class)\n" +
+                        "public class View2 extends VerticalLayout {\n" +
+                        "\n" +
+                        "    public View2() {\n" +
+                        "       // Add the content for this path\n" +
                         "    }\n" +
                         "\n" +
                         "}", "java", "Java")
