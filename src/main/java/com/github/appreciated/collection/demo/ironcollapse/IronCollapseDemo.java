@@ -3,12 +3,14 @@ package com.github.appreciated.collection.demo.ironcollapse;
 
 import com.github.appreciated.IronCollapse;
 import com.github.appreciated.collection.demo.component.ExampleContent;
+import com.github.appreciated.collection.maven.DependencyReader;
 import com.github.appreciated.demo.helper.DemoHelperView;
 import com.github.appreciated.demo.helper.view.devices.Orientation;
 import com.github.appreciated.demo.helper.view.devices.TabletView;
 import com.github.appreciated.demo.helper.view.entity.CodeExample;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.page.BodySize;
 import com.vaadin.flow.router.Route;
@@ -23,11 +25,7 @@ public class IronCollapseDemo extends DemoHelperView {
                 "./frontend/images/no-logo.png")
                 .withDevice(new TabletView(getExample()).withOrientation(Orientation.PORTRAIT), "Clicking on the Button opens/closes the IronCollapse")
                 .withStep("Add dependency", "Add the dependency by adding it to your POM",
-                        new CodeExample("<dependency>\n" +
-                                "    <groupId>com.github.appreciated</groupId>\n" +
-                                "    <artifactId>iron-collapse</artifactId>\n" +
-                                "    <version>0.6</version>\n" +
-                                "</dependency>", "xml", "Maven"))
+                        new CodeExample(new DependencyReader("iron-collapse").getDependencyString(), "xml", "Maven"))
                 .withStep("Install dependency", "Install the dependency by running the following Maven goal",
                         new CodeExample("install", "xml", "Maven")
                 )
@@ -43,7 +41,7 @@ public class IronCollapseDemo extends DemoHelperView {
 
     private Component getExample() {
         IronCollapse collapse = new IronCollapse(new ExampleContent());
-        return new VerticalLayout(new Button("Click me!", event -> collapse.toggle()), collapse);
+        return new VerticalLayout(new Button("Click me!", event -> collapse.toggle()), collapse, new Label("Some Content below"));
     }
 
 }

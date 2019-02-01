@@ -5,6 +5,7 @@ import com.github.appreciated.card.Card;
 import com.github.appreciated.card.ClickableCard;
 import com.github.appreciated.card.RippleClickableCard;
 import com.github.appreciated.card.content.IconItem;
+import com.github.appreciated.collection.maven.DependencyReader;
 import com.github.appreciated.demo.helper.DemoHelperView;
 import com.github.appreciated.demo.helper.view.devices.PhoneView;
 import com.github.appreciated.demo.helper.view.entity.CodeExample;
@@ -30,11 +31,7 @@ public class CardDemo extends DemoHelperView {
                 new PhoneView(getExampleCards()),
                 "Bring Material Cards to your application")
                 .withStep("Add dependency", "Add the dependency to your POM",
-                        new CodeExample("<dependency>\n" +
-                                "    <groupId>com.github.appreciated</groupId>\n" +
-                                "    <artifactId>card</artifactId>\n" +
-                                "    <version>0.7.0</version>\n" +
-                                "</dependency>", "xml", "Maven"))
+                        new CodeExample(new DependencyReader("card").getDependencyString(), "xml", "Maven"))
                 .withStep("Add dependency", "Add the dependency to your POM",
                         new CodeExample("install", "xml", "Maven"))
                 .resetCounterStep()

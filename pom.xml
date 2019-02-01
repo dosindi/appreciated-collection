@@ -113,6 +113,11 @@
             <artifactId>paper-ripple</artifactId>
             <version>1.0</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.maven</groupId>
+            <artifactId>maven-model</artifactId>
+            <version>3.6.0</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -133,8 +138,7 @@
                             <goal>copy-resources</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>${basedir}/src/main/resources/com/github/appreciated/collection/maven
-                            </outputDirectory>
+                            <outputDirectory>${basedir}/src/main/resources/</outputDirectory>
                             <resources>
                                 <resource>
                                     <directory>${basedir}</directory>

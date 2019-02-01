@@ -1,5 +1,6 @@
 package com.github.appreciated.collection.demo.demohelper;
 
+import com.github.appreciated.collection.maven.DependencyReader;
 import com.github.appreciated.demo.helper.DemoHelperView;
 import com.github.appreciated.demo.helper.view.devices.LaptopView;
 import com.github.appreciated.demo.helper.view.devices.PhoneView;
@@ -48,11 +49,7 @@ public class DemoHelperDemoView extends DemoHelperView {
                 .withDevice(new LaptopView(getDeviceContent("< I belong to a LaptopView I display content inside a css rendered laptop >")))
                 .withStep("I am a StepView",
                         "I display a header step number (1,2,3,4,5) which is automatically generated, also a description and one or multiple code examples",
-                        new CodeExample("<dependency>\n" +
-                                "    <groupId>com.github.appreciated</groupId>\n" +
-                                "    <artifactId>demo-helper-view</artifactId>\n" +
-                                "    <version>2.0.2</version>\n" +
-                                "</dependency>", "xml", "Maven")
+                        new CodeExample(new DependencyReader("demo-helper-view").getDependencyString(), "xml", "Maven")
                 )
                 .withStep("I am also a StepView",
                         "And I contain a single code example",

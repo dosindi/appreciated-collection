@@ -3,6 +3,7 @@ package com.github.appreciated.collection.demo.applayout;
 
 import com.github.appreciated.collection.component.Embed;
 import com.github.appreciated.collection.demo.applayout.views.View1;
+import com.github.appreciated.collection.maven.DependencyReader;
 import com.github.appreciated.demo.helper.DemoHelperView;
 import com.github.appreciated.demo.helper.view.devices.DeviceType;
 import com.github.appreciated.demo.helper.view.devices.PhoneView;
@@ -20,11 +21,7 @@ public class AppLayoutDemo extends DemoHelperView {
                 .withParagraph("Behaviours", "The AppLayout has by default multiple Behaviours availabe. Try to set them via the menu in the demo above and below")
                 .withStylableDevice(new Embed(View1.class).withFullSize(), DeviceType.TABLET_LANDSCAPE)
                 .withStep("Add dependency", "Add the dependency by adding it to your POM",
-                        new CodeExample("<dependency>\n" +
-                                "    <groupId>com.github.appreciated</groupId>\n" +
-                                "    <artifactId>app-layout-addon</artifactId>\n" +
-                                "    <version>2.0.5</version>\n" +
-                                "</dependency>", "xml", "Maven"))
+                        new CodeExample(new DependencyReader("app-layout-addon").getDependencyString(), "xml", "Maven"))
                 .withStep("Install dependency", "Install the dependency by running the following Maven goal",
                         new CodeExample("install", "xml", "Maven")
                 )
