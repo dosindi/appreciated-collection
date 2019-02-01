@@ -47,4 +47,12 @@ public class DependencyReader {
         }
         return null;
     }
+
+    public static void main(String[] args) {
+        try {
+            new DependencyReader("test").getClass().getClassLoader().getResource("DependencyReader").openStream();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
