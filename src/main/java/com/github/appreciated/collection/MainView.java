@@ -6,6 +6,7 @@ import com.github.appreciated.collection.demo.applayout.AppLayoutDemo;
 import com.github.appreciated.collection.demo.calculatedcolorhelper.CalculatedColorHelperDemo;
 import com.github.appreciated.collection.demo.card.CardDemo;
 import com.github.appreciated.collection.demo.demohelper.DemoHelperDemoView;
+import com.github.appreciated.collection.demo.gridlayout.GridLayoutDemo;
 import com.github.appreciated.collection.demo.ironcollapse.IronCollapseDemo;
 import com.github.appreciated.collection.demo.papercolor.PaperColorDemo;
 import com.github.appreciated.collection.demo.papermenubutton.PaperMenuButtonDemo;
@@ -30,6 +31,7 @@ public class MainView extends VerticalLayout {
         CssFlexLayout layout = new CssFlexLayout(
                 getCard("./frontend/images/applayout/app-layout-logo.png", "App Layout Addon", "A addon that allows you building responsive applications easily", AppLayoutDemo.class),
                 getCard("./frontend/images/demohelper/demo-helper-logo.png", "Demo Helper Addon", "A addon that helps you creating beautiful addon demos in no time", DemoHelperDemoView.class),
+                getCard("./frontend/images/no-logo.png", "Css Grid Layout Addon", "A addon that brings css grid to Vaadin Flow", GridLayoutDemo.class),
                 getCard("./frontend/images/no-logo.png", "Card Addon", "A addon that brings cards to Vaadin Flow", CardDemo.class),
                 getCard("./frontend/images/no-logo.png", "Paper Color Addon", "A color picker addon for Vaadin Flow", PaperColorDemo.class),
                 getCard("./frontend/images/no-logo.png", "PaperMenuButton", "A addon that can open a popup on click", PaperMenuButtonDemo.class),
