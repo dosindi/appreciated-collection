@@ -26,11 +26,11 @@ public class GridLayoutDemo extends DemoHelperView {
                 .withStep("Add dependency", "Add the dependency to your POM",
                         new CodeExample("install", "xml", "Maven"))
                 .resetCounterStep()
-                .withStep("How to init a FlexibleGridLayout", "You can create a flexible grid the following way",
+                .withStep("How to init a Flexible Grid Layout", "You can create a flexible grid the following way",
                         new CodeExample(new CodeExampleFormatter(FlexibleGridLayoutExample.class.getName()).getCodeExample(), "java", "Java")
-                ).withStep("How to init a AreaLayout", "You can create a area based layout the following way",
+                ).withStep("How to init a Area Layout", "You can create a area based layout the following way",
                 new CodeExample(new CodeExampleFormatter(AreaLayoutExample.class.getName()).getCodeExample(), "java", "Java")
-        ).withStep("How to use the CssGridLayout directly a AreaLayout", "You can use the css grid directly the following way",
+        ).withStep("How to use the css grid directly", "You can use the css grid directly the following way",
                 new CodeExample(new CodeExampleFormatter(CssGridLayoutExample1.class.getName()).getCodeExample(), "java", "Java"),
                 new CodeExample(new CodeExampleFormatter(CssGridLayoutExample1.class.getName()).getCodeExample(), "java", "Java")
         );

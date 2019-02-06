@@ -5,11 +5,13 @@ import com.github.appreciated.css.grid.GridLayoutComponent;
 import com.github.appreciated.css.grid.sizes.Flex;
 import com.github.appreciated.layout.FluentGridLayout;
 import com.vaadin.flow.component.Component;
+import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
-public class CssGridLayoutExample1 extends FluentGridLayout {
+public class CssGridLayoutExample1 extends VerticalLayout {
     public CssGridLayoutExample1() {
         Component alignTestComponent = new ExampleCard();
-        withTemplateRows(new Flex(1), new Flex(1), new Flex(1))
+        FluentGridLayout layout = new FluentGridLayout()
+                .withTemplateRows(new Flex(1), new Flex(1), new Flex(1))
                 .withTemplateColumns(new Flex(1), new Flex(1), new Flex(1))
                 .withColumnAlign(alignTestComponent, GridLayoutComponent.ColumnAlign.END)
                 .withRowAlign(alignTestComponent, GridLayoutComponent.RowAlign.END)
@@ -17,7 +19,9 @@ public class CssGridLayoutExample1 extends FluentGridLayout {
                 .withRowAndColumn(new ExampleCard(), 2, 1)
                 .withRowAndColumn(new ExampleCard(), 2, 2)
                 .withRowAndColumn(new ExampleCard(), 1, 3, 3, 3);
-        setSizeFull();
+        layout.setSizeFull();
         getStyle().set("overflow", "auto");
+        setSizeFull();
+        add(layout);
     }
 }
