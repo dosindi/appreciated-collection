@@ -4,6 +4,7 @@ import com.github.appreciated.card.ClickableCard;
 import com.github.appreciated.card.content.IconItem;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.Image;
+import com.vaadin.flow.component.notification.Notification;
 
 public class ExampleCard extends ClickableCard {
     public ExampleCard() {
@@ -11,6 +12,7 @@ public class ExampleCard extends ClickableCard {
         img.setWidth("50px");
         img.setHeight("50px");
         add(new IconItem(img, "A Clickable Card", " with Hover effect"));
+        addClickListener(event -> Notification.show("You clicked me"));
         add(new Div());
         setSizeFull();
     }

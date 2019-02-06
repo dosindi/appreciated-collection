@@ -18,7 +18,7 @@ public class GridLayoutDemo extends DemoHelperView {
 
     public GridLayoutDemo() {
         withHorizontalHeader("Css Grid Layout",
-                "Creating flexible layouts should be easy",
+                "Create flexible layouts easily by using a advanced api",
                 "./frontend/images/no-logo.png"
         ).withThemeableAndStylableDevice(new FlexibleGridLayoutExample(), DeviceType.TABLET_LANDSCAPE)
                 .withStep("Add dependency", "Add the dependency to your POM",
