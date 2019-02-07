@@ -20,7 +20,6 @@ public class CssGridLayoutExample1 extends VerticalLayout {
                 .withRowAndColumn(new ExampleCard(), 2, 2)
                 .withRowAndColumn(new ExampleCard(), 1, 3, 3, 3);
         layout.setSizeFull();
-        getStyle().set("overflow", "auto");
         setSizeFull();
         add(layout);
     }
