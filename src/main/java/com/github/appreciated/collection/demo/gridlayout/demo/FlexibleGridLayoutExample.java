@@ -22,6 +22,7 @@ public class FlexibleGridLayoutExample extends HorizontalLayout {
                 )
                 .withPadding(true)
                 .withSpacing(true)
+                .withAutoFlow(GridLayoutComponent.AutoFlow.ROW_DENSE)
                 .withOverflow(GridLayoutComponent.Overflow.AUTO);
         layout.setSizeFull();
         setSizeFull();
