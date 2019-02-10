@@ -20,7 +20,7 @@ public class GridLayoutDemo extends DemoHelperView {
     public GridLayoutDemo() {
         withHorizontalHeader("Css Grid Layout",
                 "Create flexible layouts easily by using an advanced api",
-                "./frontend/images/no-logo.png"
+                "./frontend/images/gridlayout/grid-layout-logo.png"
         ).withThemeableAndStylableDevice(new FlexibleGridLayoutExample(), DeviceType.TABLET_LANDSCAPE)
                 .withStep("Add dependency", "Add the dependency to your POM",
                         new CodeExample(new DependencyReader("vaadin-css-grid").getDependencyString(), "xml", "Maven"))
