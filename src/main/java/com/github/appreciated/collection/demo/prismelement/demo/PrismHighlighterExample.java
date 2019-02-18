@@ -7,10 +7,10 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
 public class PrismHighlighterExample extends VerticalLayout {
     public PrismHighlighterExample() {
-        PrismHighlighter javaCode = new PrismHighlighter(" String a = \"Test1234\";\n" +
-                "        String b = \"Test1234\";\n" +
-                "        String c = \"Test1234\";\n" +
-                "        String d = \"Test1234\";", Language.java);
+        PrismHighlighter javaCode = new PrismHighlighter("String a = \"Test1234\";\n" +
+                "String b = \"Test1234\";\n" +
+                "String c = \"Test1234\";\n" +
+                "String d = \"Test1234\";", Language.java);
 
         PrismHighlighter xml = new PrismHighlighter("<dependency>\n" +
                 "    <groupId>com.github.appreciated</groupId>\n" +
