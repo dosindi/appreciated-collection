@@ -1,7 +1,7 @@
 package com.github.appreciated.collection.demo.papercolor;
 
 
-import com.github.appreciated.collection.maven.DependencyReader;
+import com.github.appreciated.collection.maven.AppreciatedDependencyReader;
 import com.github.appreciated.demo.helper.DemoHelperView;
 import com.github.appreciated.demo.helper.view.devices.Orientation;
 import com.github.appreciated.demo.helper.view.devices.TabletView;
@@ -10,6 +10,7 @@ import com.github.appreciated.papercolor.PaperColorPicker;
 import com.github.appreciated.papercolor.PaperColorPickerAdvanced;
 import com.github.appreciated.papercolor.textfield.PaperColorAdvancedTextField;
 import com.github.appreciated.papercolor.textfield.PaperColorTextField;
+import com.github.appreciated.prism.element.Language;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.page.BodySize;
@@ -25,16 +26,16 @@ public class PaperColorDemo extends DemoHelperView {
                 "./frontend/images/no-logo.png")
                 .withDevice(new TabletView(getExample()).withOrientation(Orientation.PORTRAIT), "Choose some colors")
                 .withStep("Add dependency", "Add the dependency by adding it to your POM",
-                        new CodeExample(new DependencyReader("paper-color").getDependencyString(), "xml", "Maven"))
+                        new CodeExample(new AppreciatedDependencyReader("paper-color").getDependencyString(), Language.markup, "Maven"))
                 .withStep("Install dependency", "Install the dependency by running the following Maven goal",
-                        new CodeExample("install", "xml", "Maven")
+                        new CodeExample("install", Language.markup, "Maven")
                 )
                 .resetCounterStep()
                 .withStep("Some code examples", "Add Paper Color to your View",
                         new CodeExample("PaperColorTextField field = new PaperColorTextField();\n" +
                                 "PaperColorAdvancedTextField advancedTextField = new PaperColorAdvancedTextField();\n" +
                                 "PaperColorPicker picker = new PaperColorPicker();\n" +
-                                "PaperColorPickerAdvanced pickerAdvanced = new PaperColorPickerAdvanced();", "java", "Java")
+                                "PaperColorPickerAdvanced pickerAdvanced = new PaperColorPickerAdvanced();", Language.java, "java")
                 );
     }
 

@@ -2,11 +2,12 @@ package com.github.appreciated.collection.demo.paperripple;
 
 
 import com.github.appreciated.collection.demo.component.ExampleContent;
-import com.github.appreciated.collection.maven.DependencyReader;
+import com.github.appreciated.collection.maven.AppreciatedDependencyReader;
 import com.github.appreciated.demo.helper.DemoHelperView;
 import com.github.appreciated.demo.helper.view.devices.Orientation;
 import com.github.appreciated.demo.helper.view.devices.TabletView;
 import com.github.appreciated.demo.helper.view.entity.CodeExample;
+import com.github.appreciated.prism.element.Language;
 import com.github.appreciated.ripple.PaperRippleVerticalLayout;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.notification.Notification;
@@ -24,9 +25,9 @@ public class PaperRippleDemo extends DemoHelperView {
                 "./frontend/images/no-logo.png")
                 .withDevice(new TabletView(getExample()).withOrientation(Orientation.PORTRAIT))
                 .withStep("Add dependency", "Add the dependency by adding it to your POM",
-                        new CodeExample(new DependencyReader("paper-ripple").getDependencyString(), "xml", "Maven"))
+                        new CodeExample(new AppreciatedDependencyReader("paper-ripple").getDependencyString(), Language.markup, "Maven"))
                 .withStep("Install dependency", "Install the dependency by running the following Maven goal",
-                        new CodeExample("install", "xml", "Maven")
+                        new CodeExample("install", Language.markup, "Maven")
                 )
                 .resetCounterStep()
                 .withStep("Some code examples", "Add PaperRipple to your View",
@@ -34,7 +35,7 @@ public class PaperRippleDemo extends DemoHelperView {
                                 "layout.addClickListener(event -> Notification.show(\"I was clicked\"));\n" +
                                 "layout.setMargin(false);" +
                                 "layout.setSizeUndefined();"
-                                , "java", "Java")
+                                , Language.java, "java")
                 );
     }
 

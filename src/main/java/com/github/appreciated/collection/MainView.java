@@ -46,7 +46,7 @@ public class MainView extends VerticalLayout {
                 .withVerticalHeader("Appreciated Collection",
                         "Welcome to the Appreciated Collection",
                         "./frontend/images/no-logo.png"
-                ).withComponent(layout)
+                ).with(layout)
         );
     }
 

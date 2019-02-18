@@ -2,12 +2,13 @@ package com.github.appreciated.collection.demo.papermenubutton;
 
 
 import com.github.appreciated.collection.demo.component.ExampleContent;
-import com.github.appreciated.collection.maven.DependencyReader;
+import com.github.appreciated.collection.maven.AppreciatedDependencyReader;
 import com.github.appreciated.demo.helper.DemoHelperView;
 import com.github.appreciated.demo.helper.view.devices.Orientation;
 import com.github.appreciated.demo.helper.view.devices.TabletView;
 import com.github.appreciated.demo.helper.view.entity.CodeExample;
 import com.github.appreciated.papermenubutton.PaperMenuButton;
+import com.github.appreciated.prism.element.Language;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
@@ -24,13 +25,13 @@ public class PaperMenuButtonDemo extends DemoHelperView {
                 "./frontend/images/no-logo.png")
                 .withDevice(new TabletView(getExample()).withOrientation(Orientation.PORTRAIT), "Some  examples")
                 .withStep("Add dependency", "Add the dependency by adding it to your POM",
-                        new CodeExample(new DependencyReader("vaadin-paper-menu-button").getDependencyString(), "xml", "Maven"))
+                        new CodeExample(new AppreciatedDependencyReader("vaadin-paper-menu-button").getDependencyString(), Language.markup, "Maven"))
                 .withStep("Install dependency", "Install the dependency by running the following Maven goal",
-                        new CodeExample("install", "xml", "Maven")
+                        new CodeExample("install", Language.markup, "Maven")
                 )
                 .resetCounterStep()
                 .withStep("Some code examples", "Add a PaperMenuButton to your View",
-                        new CodeExample("PaperMenuButton paperMenuButton = new PaperMenuButton(new Button(\"Test\"), < Your Content Component >));", "java", "Java")
+                        new CodeExample("PaperMenuButton paperMenuButton = new PaperMenuButton(new Button(\"Test\"), < Your Content Component >));", Language.java, "java")
                 );
     }
 

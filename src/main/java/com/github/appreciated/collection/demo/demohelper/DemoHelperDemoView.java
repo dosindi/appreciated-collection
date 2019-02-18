@@ -1,12 +1,13 @@
 package com.github.appreciated.collection.demo.demohelper;
 
-import com.github.appreciated.collection.maven.DependencyReader;
+import com.github.appreciated.collection.maven.AppreciatedDependencyReader;
 import com.github.appreciated.demo.helper.DemoHelperView;
 import com.github.appreciated.demo.helper.view.devices.LaptopView;
 import com.github.appreciated.demo.helper.view.devices.PhoneView;
 import com.github.appreciated.demo.helper.view.devices.TabletView;
 import com.github.appreciated.demo.helper.view.entity.CodeExample;
 import com.github.appreciated.demo.helper.view.entity.CssVariable;
+import com.github.appreciated.prism.element.Language;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
@@ -49,11 +50,11 @@ public class DemoHelperDemoView extends DemoHelperView {
                 .withDevice(new LaptopView(getDeviceContent("< I belong to a LaptopView I display content inside a css rendered laptop >")))
                 .withStep("I am a StepView",
                         "I display a header step number (1,2,3,4,5) which is automatically generated, also a description and one or multiple code examples",
-                        new CodeExample(new DependencyReader("demo-helper-view").getDependencyString(), "xml", "Maven")
+                        new CodeExample(new AppreciatedDependencyReader("demo-helper-view").getDependencyString(), Language.markup, "Maven")
                 )
                 .withStep("I am also a StepView",
                         "And I contain a single code example",
-                        new CodeExample("clean install", "xml", "Maven")
+                        new CodeExample("clean install", Language.markup, "Maven")
                 )
                 .withStep("I am also a StepView", "And I contain multiple code examples",
                         new CodeExample("@Route(\"demo-helper/\")\n" +
@@ -62,7 +63,7 @@ public class DemoHelperDemoView extends DemoHelperView {
                                 "    public DemoHelperDemoView() {\n" +
                                 "    }\n" +
                                 "\n" +
-                                "}", "java", "Java"),
+                                "}", Language.java, "java"),
                         new CodeExample("withVerticalHeader(\"VerticalHeaderView\",\n" +
                                 "        \"I can display a header and an optionally an image or a subtitle\",\n" +
                                 "        \"./frontend/images/demohelper/demo-helper-logo.png\"\n" +
@@ -71,7 +72,7 @@ public class DemoHelperDemoView extends DemoHelperView {
                                 "        \"I can display a header and optionally an image or I am suited for longer description texts. Additionally I may contain Components which are display beneath the description that can be used to display f.e. links\",\n" +
                                 "        \"./frontend/images/demohelper/demo-helper-logo.png\",\n" +
                                 "        new Button(\"Click Me!\")\n" +
-                                ")", "java", "Java"),
+                                ")", Language.java, "java"),
                         new CodeExample(".withComponent(new DeviceSwitchView(getDeviceContent(\"< I belong to a DeviceSwitchView I can display content inside a css rendered device which can be switched around >\")).withStyleableVariables(new CssVariable(\"--lumo-primary-text-color\"), new CssVariable(\"--lumo-primary-color\")))\n" +
                                 ".withDevices(\n" +
                                 "        new TabletView(getDeviceContent(\"< I belong to a TabletView an display content inside a css rendered tablet >\")),\n" +
@@ -105,7 +106,7 @@ public class DemoHelperDemoView extends DemoHelperView {
                                 ".withStep(\"I am also a StepView\",\n" +
                                 "        \"And I contain a single code example\",\n" +
                                 "        new CodeExample(\"clean install\", \"xml\", \"Maven\")\n" +
-                                ")", "java", "Java")
+                                ")", Language.java, "java")
                 );
     }
 

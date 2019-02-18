@@ -3,11 +3,12 @@ package com.github.appreciated.collection.demo.calculatedcolorhelper;
 
 import com.github.appreciated.calc.color.helper.CalculatedColorHelper;
 import com.github.appreciated.calc.color.helper.LumoVariables;
-import com.github.appreciated.collection.maven.DependencyReader;
+import com.github.appreciated.collection.maven.AppreciatedDependencyReader;
 import com.github.appreciated.demo.helper.DemoHelperView;
 import com.github.appreciated.demo.helper.view.devices.Orientation;
 import com.github.appreciated.demo.helper.view.devices.TabletView;
 import com.github.appreciated.demo.helper.view.entity.CodeExample;
+import com.github.appreciated.prism.element.Language;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.checkbox.Checkbox;
@@ -28,9 +29,9 @@ public class CalculatedColorHelperDemo extends DemoHelperView {
                 "./frontend/images/no-logo.png"
         ).withDevice(new TabletView(getExample()).withOrientation(Orientation.PORTRAIT))
                 .withStep("Add dependency", "Add the dependency by adding it to your POM",
-                        new CodeExample(new DependencyReader("calculated-color-helper").getDependencyString(), "xml", "Maven"))
+                        new CodeExample(new AppreciatedDependencyReader("calculated-color-helper").getDependencyString(), Language.markup, "Maven"))
                 .withStep("Install dependency", "Install the dependency by running the following Maven goal",
-                        new CodeExample("install", "xml", "Maven")
+                        new CodeExample("install", Language.markup, "Maven")
                 )
                 .resetCounterStep()
                 .withStep("Some code examples", "Add IronCollapse to your View",
@@ -59,7 +60,7 @@ public class CalculatedColorHelperDemo extends DemoHelperView {
                                 "                new Button(\"Update\", event -> helper.setCalculatedColor(LumoVariables.LUMO_PRIMARY_TEXT_COLOR, fieldTextColor.getValue()))\n" +
                                 "        ),\n" +
                                 "        new Label(\"Note: Any valid css color can be set in the TextFields f.e. \\\"red\\\" or \\\"green\\\"\")\n" +
-                                ");", "java", "Java")
+                                ");", Language.java, "java")
                 );
     }
 

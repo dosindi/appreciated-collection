@@ -5,10 +5,11 @@ import com.github.appreciated.card.Card;
 import com.github.appreciated.card.ClickableCard;
 import com.github.appreciated.card.RippleClickableCard;
 import com.github.appreciated.card.content.IconItem;
-import com.github.appreciated.collection.maven.DependencyReader;
+import com.github.appreciated.collection.maven.AppreciatedDependencyReader;
 import com.github.appreciated.demo.helper.DemoHelperView;
 import com.github.appreciated.demo.helper.view.devices.PhoneView;
 import com.github.appreciated.demo.helper.view.entity.CodeExample;
+import com.github.appreciated.prism.element.Language;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.notification.Notification;
@@ -31,20 +32,20 @@ public class CardDemo extends DemoHelperView {
                 new PhoneView(getExampleCards()),
                 "Bring Material Cards to your application")
                 .withStep("Add dependency", "Add the dependency to your POM",
-                        new CodeExample(new DependencyReader("card").getDependencyString(), "xml", "Maven"))
+                        new CodeExample(new AppreciatedDependencyReader("card").getDependencyString(), Language.markup, "Maven"))
                 .withStep("Add dependency", "Add the dependency to your POM",
-                        new CodeExample("install", "xml", "Maven"))
+                        new CodeExample("install", Language.markup, "Maven"))
                 .resetCounterStep()
                 .withStep("Some code examples", "You can add cards to your View the following way",
                         new CodeExample("Card card = new Card(\n" +
                                 "        new IconItem(img, title, description)\n" +
-                                ");", "java", "Java"),
+                                ");", Language.java, "java"),
                         new CodeExample("ClickableCard card = new ClickableCard(\n" +
                                 "        new IconItem(img, title, description)\n" +
-                                ");", "java", "Java"),
+                                ");", Language.java, "java"),
                         new CodeExample("RippleClickableCard card = new RippleClickableCard(\n" +
                                 "        new IconItem(img, title, description)\n" +
-                                ");", "java", "Java")
+                                ");", Language.java, "java")
                 );
     }
 

@@ -3,11 +3,12 @@ package com.github.appreciated.collection.demo.ironcollapse;
 
 import com.github.appreciated.IronCollapse;
 import com.github.appreciated.collection.demo.component.ExampleContent;
-import com.github.appreciated.collection.maven.DependencyReader;
+import com.github.appreciated.collection.maven.AppreciatedDependencyReader;
 import com.github.appreciated.demo.helper.DemoHelperView;
 import com.github.appreciated.demo.helper.view.devices.Orientation;
 import com.github.appreciated.demo.helper.view.devices.TabletView;
 import com.github.appreciated.demo.helper.view.entity.CodeExample;
+import com.github.appreciated.prism.element.Language;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.Label;
@@ -25,9 +26,9 @@ public class IronCollapseDemo extends DemoHelperView {
                 "./frontend/images/no-logo.png")
                 .withDevice(new TabletView(getExample()).withOrientation(Orientation.PORTRAIT), "Clicking on the Button opens/closes the IronCollapse")
                 .withStep("Add dependency", "Add the dependency by adding it to your POM",
-                        new CodeExample(new DependencyReader("iron-collapse").getDependencyString(), "xml", "Maven"))
+                        new CodeExample(new AppreciatedDependencyReader("iron-collapse").getDependencyString(), Language.markup, "Maven"))
                 .withStep("Install dependency", "Install the dependency by running the following Maven goal",
-                        new CodeExample("install", "xml", "Maven")
+                        new CodeExample("install", Language.markup, "Maven")
                 )
                 .resetCounterStep()
                 .withStep("Some code examples", "Add IronCollapse to your View",
@@ -35,7 +36,7 @@ public class IronCollapseDemo extends DemoHelperView {
                                 "collapseContent.getStyle().set(\"border\", \"1px solid var(--lumo-primary-color)\");\n" +
                                 "collapseContent.setWidth(\"400px\");\n" +
                                 "collapseContent.setHeight(\"400px\");\n" +
-                                "IronCollapse collapse = new IronCollapse(collapseContent);", "java", "Java")
+                                "IronCollapse collapse = new IronCollapse(collapseContent);", Language.java, "java")
                 );
     }
 
