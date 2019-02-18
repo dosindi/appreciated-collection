@@ -12,8 +12,13 @@ import com.github.appreciated.collection.demo.papercolor.PaperColorDemo;
 import com.github.appreciated.collection.demo.papermenubutton.PaperMenuButtonDemo;
 import com.github.appreciated.collection.demo.paperripple.PaperRippleDemo;
 import com.github.appreciated.collection.demo.prismelement.PrismElementDemo;
+import com.github.appreciated.css.grid.GridLayoutComponent;
+import com.github.appreciated.css.grid.sizes.Flex;
+import com.github.appreciated.css.grid.sizes.Length;
+import com.github.appreciated.css.grid.sizes.MinMax;
+import com.github.appreciated.css.grid.sizes.Repeat;
 import com.github.appreciated.demo.helper.DemoHelperView;
-import com.github.appreciated.demo.helper.view.components.layout.CssFlexLayout;
+import com.github.appreciated.layout.FlexibleGridLayout;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
@@ -28,20 +33,27 @@ import com.vaadin.flow.server.PWA;
 public class MainView extends VerticalLayout {
 
     public MainView() {
-        CssFlexLayout layout = new CssFlexLayout(
-                getCard("./frontend/images/applayout/app-layout-logo.png", "App Layout Addon", "A addon that allows you building responsive applications easily", AppLayoutDemo.class),
-                getCard("./frontend/images/demohelper/demo-helper-logo.png", "Demo Helper Addon", "A addon that helps you creating beautiful addon demos in no time", DemoHelperDemoView.class),
-                getCard("./frontend/images/gridlayout/grid-layout-logo.png", "Css Grid Layout Addon", "A addon that brings css grid to Vaadin Flow", GridLayoutDemo.class),
-                getCard("./frontend/images/no-logo.png", "Card Addon", "A addon that brings cards to Vaadin Flow", CardDemo.class),
-                getCard("./frontend/images/no-logo.png", "Paper Color Addon", "A color picker addon for Vaadin Flow", PaperColorDemo.class),
-                getCard("./frontend/images/no-logo.png", "PaperMenuButton", "A addon that can open a popup on click", PaperMenuButtonDemo.class),
-                getCard("./frontend/images/no-logo.png", "PaperRipple", "A addon that can open a popup on click", PaperRippleDemo.class),
-                getCard("./frontend/images/no-logo.png", "Prism-Element Addon", "A code/syntax highlighter addon for Vaadin Flow", PrismElementDemo.class),
-                getCard("./frontend/images/no-logo.png", "Iron Collapse Addon", "A addon that brings Iron Collapse to Vaadin Flow", IronCollapseDemo.class),
-                getCard("./frontend/images/no-logo.png", "Calculated Color Helper Addon", "A addon that brings control over the css variables in Vaadin Flow", CalculatedColorHelperDemo.class)
-        );
-        layout.setJustifyContentMode(JustifyContentMode.CENTER);
-        layout.setFlexWrap(CssFlexLayout.FlexWrap.WRAP);
+
+        FlexibleGridLayout layout = new FlexibleGridLayout()
+                .withColumns(Repeat.RepeatMode.AUTO_FILL, new MinMax(new Length("310px"), new Flex(1)))
+                .withAutoRows(new Length("131px"))
+                .withItems(
+                        getCard("./frontend/images/applayout/app-layout-logo.png", "App Layout Addon", "A addon that allows you building responsive applications easily", AppLayoutDemo.class),
+                        getCard("./frontend/images/demohelper/demo-helper-logo.png", "Demo Helper Addon", "A addon that helps you creating beautiful addon demos in no time", DemoHelperDemoView.class),
+                        getCard("./frontend/images/gridlayout/grid-layout-logo.png", "Css Grid Layout Addon", "A addon that brings css grid to Vaadin Flow", GridLayoutDemo.class),
+                        getCard("./frontend/images/no-logo.png", "Card Addon", "A addon that brings cards to Vaadin Flow", CardDemo.class),
+                        getCard("./frontend/images/no-logo.png", "Paper Color Addon", "A color picker addon for Vaadin Flow", PaperColorDemo.class),
+                        getCard("./frontend/images/no-logo.png", "PaperMenuButton", "A addon that can open a popup on click", PaperMenuButtonDemo.class),
+                        getCard("./frontend/images/no-logo.png", "PaperRipple", "A addon that can open a popup on click", PaperRippleDemo.class),
+                        getCard("./frontend/images/no-logo.png", "Prism-Element Addon", "A code/syntax highlighter addon for Vaadin Flow", PrismElementDemo.class),
+                        getCard("./frontend/images/no-logo.png", "Iron Collapse Addon", "A addon that brings Iron Collapse to Vaadin Flow", IronCollapseDemo.class),
+                        getCard("./frontend/images/no-logo.png", "Calculated Color Helper Addon", "A addon that brings control over the css variables in Vaadin Flow", CalculatedColorHelperDemo.class)
+                )
+                .withPadding(true)
+                .withSpacing(true)
+                .withAutoFlow(GridLayoutComponent.AutoFlow.ROW_DENSE)
+                .withOverflow(GridLayoutComponent.Overflow.AUTO);
+        layout.setWidth("100%");
         add(new DemoHelperView()
                 .withVerticalHeader("Appreciated Collection",
                         "Welcome to the Appreciated Collection",
@@ -56,13 +68,11 @@ public class MainView extends VerticalLayout {
         img.setHeight("60px");
 
         IconItem item = new IconItem(img, title, description);
+        item.setSizeFull();
 
         RippleClickableCard card = new RippleClickableCard(
                 event -> getUI().ifPresent(ui -> ui.navigate(route.getAnnotation(Route.class).value())), item
-
         );
-        item.setWidth("310px");
-        item.setHeight("131px");
         card.getStyle().set("margin", "5px");
         return card;
     }
