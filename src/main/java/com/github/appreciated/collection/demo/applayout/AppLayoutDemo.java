@@ -2,9 +2,9 @@ package com.github.appreciated.collection.demo.applayout;
 
 
 import com.github.appreciated.collection.component.Embed;
-import com.github.appreciated.collection.demo.applayout.codeexample.View1;
-import com.github.appreciated.collection.demo.applayout.codeexample.View2;
-import com.github.appreciated.collection.demo.applayout.codeexample.YourAppLayoutRouterLayout;
+import com.github.appreciated.collection.demo.applayout.demo.View1;
+import com.github.appreciated.collection.demo.applayout.demo.View2;
+import com.github.appreciated.collection.demo.applayout.demo.YourAppLayoutRouterLayout;
 import com.github.appreciated.collection.demo.applayout.views.MainView;
 import com.github.appreciated.collection.maven.AppreciatedDependencyReader;
 import com.github.appreciated.demo.helper.DemoHelperView;

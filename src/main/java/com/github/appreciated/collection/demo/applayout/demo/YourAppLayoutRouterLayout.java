@@ -1,4 +1,4 @@
-package com.github.appreciated.collection.demo.applayout.codeexample;
+package com.github.appreciated.collection.demo.applayout.demo;
 
 import com.github.appreciated.app.layout.behaviour.AppLayout;
 import com.github.appreciated.app.layout.behaviour.Behaviour;
