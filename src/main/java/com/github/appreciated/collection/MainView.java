@@ -33,7 +33,6 @@ import com.vaadin.flow.server.PWA;
 public class MainView extends VerticalLayout {
 
     public MainView() {
-
         FlexibleGridLayout layout = new FlexibleGridLayout()
                 .withColumns(Repeat.RepeatMode.AUTO_FILL, new MinMax(new Length("310px"), new Flex(1)))
                 .withAutoRows(new Length("131px"))
