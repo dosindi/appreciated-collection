@@ -23,7 +23,7 @@ public class GridLayoutDemo extends DemoHelperView {
                 "./frontend/images/gridlayout/grid-layout-logo.png"
         ).withThemeableAndStylableDevice(new FlexibleGridLayoutExample(), DeviceType.TABLET_LANDSCAPE)
                 .withStep("Add dependency", "Add the dependency to your POM",
-                        new CodeExample(new AppreciatedDependencyReader("vaadin-css-grid").getDependencyString(), Language.markup, "Maven"))
+                        new CodeExample(new AppreciatedDependencyReader("vaadin-css-grid")))
                 .withStep("Add dependency", "Add the dependency to your POM",
                         new CodeExample("install", Language.markup, "Maven"))
                 .withStep("How to initialize a Flexible Grid Layout", "You can create a flexible grid the following way",

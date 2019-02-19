@@ -21,7 +21,7 @@ public class PaperColorDemo extends DemoHelperView {
                 "./frontend/images/no-logo.png")
                 .withDevice(new TabletView(new PaperColorExample()).withOrientation(Orientation.PORTRAIT), "Choose some colors")
                 .withStep("Add dependency", "Add the dependency by adding it to your POM",
-                        new CodeExample(new AppreciatedDependencyReader("paper-color").getDependencyString(), Language.markup, "Maven"))
+                        new CodeExample(new AppreciatedDependencyReader("paper-color")))
                 .withStep("Install dependency", "Install the dependency by running the following Maven goal",
                         new CodeExample("install", Language.markup, "Maven")
                 )

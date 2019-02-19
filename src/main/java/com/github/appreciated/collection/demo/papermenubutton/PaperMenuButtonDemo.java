@@ -21,7 +21,7 @@ public class PaperMenuButtonDemo extends DemoHelperView {
                 "./frontend/images/no-logo.png")
                 .withDevice(new TabletView(new PaperMenuButtonExample()).withOrientation(Orientation.PORTRAIT), "Some  examples")
                 .withStep("Add dependency", "Add the dependency by adding it to your POM",
-                        new CodeExample(new AppreciatedDependencyReader("vaadin-paper-menu-button").getDependencyString(), Language.markup, "Maven"))
+                        new CodeExample(new AppreciatedDependencyReader("vaadin-paper-menu-button")))
                 .withStep("Install dependency", "Install the dependency by running the following Maven goal",
                         new CodeExample("install", Language.markup, "Maven")
                 )

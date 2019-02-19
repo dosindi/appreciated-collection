@@ -25,7 +25,7 @@ public class AppLayoutDemo extends DemoHelperView {
                 .withParagraph("Behaviours", "The AppLayout has by default multiple Behaviours availabe. Try to set them via the menu in the demo above and below")
                 .withStylableDevice(new IFrame(MainView.class).withFullSize(), DeviceType.TABLET_LANDSCAPE)
                 .withStep("Add dependency", "Add the dependency by adding it to your POM",
-                        new CodeExample(new AppreciatedDependencyReader("app-layout-addon").getDependencyString(), Language.markup, "Maven"))
+                        new CodeExample(new AppreciatedDependencyReader("app-layout-addon")))
                 .withStep("Install dependency", "Install the dependency by running the following Maven goal",
                         new CodeExample("install", Language.markup, "Maven")
                 )

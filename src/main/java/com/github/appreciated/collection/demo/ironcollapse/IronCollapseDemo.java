@@ -21,7 +21,7 @@ public class IronCollapseDemo extends DemoHelperView {
                 "./frontend/images/no-logo.png")
                 .withDevice(new TabletView(new IronCollapseExample()).withOrientation(Orientation.PORTRAIT), "Clicking on the Button opens/closes the IronCollapse")
                 .withStep("Add dependency", "Add the dependency by adding it to your POM",
-                        new CodeExample(new AppreciatedDependencyReader("iron-collapse").getDependencyString(), Language.markup, "Maven"))
+                        new CodeExample(new AppreciatedDependencyReader("iron-collapse")))
                 .withStep("Install dependency", "Install the dependency by running the following Maven goal",
                         new CodeExample("install", Language.markup, "Maven")
                 )

@@ -29,7 +29,7 @@ public class CardDemo extends DemoHelperView {
                 new PhoneView(getExampleCards()),
                 "Bring Material Cards to your application")
                 .withStep("Add dependency", "Add the dependency to your POM",
-                        new CodeExample(new AppreciatedDependencyReader("card").getDependencyString(), Language.markup, "Maven"))
+                        new CodeExample(new AppreciatedDependencyReader("card")))
                 .withStep("Add dependency", "Add the dependency to your POM",
                         new CodeExample("install", Language.markup, "Maven"))
                 .resetCounterStep()
