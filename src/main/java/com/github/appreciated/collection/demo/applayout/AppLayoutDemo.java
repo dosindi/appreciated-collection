@@ -31,7 +31,7 @@ public class AppLayoutDemo extends DemoHelperView {
                 )
                 .withStep("Add App-Layout-Router-Layout Class", "Create a Class that extends AppLayoutRouterLayout and implement the missing methods as shown in the example. The AppLayoutRouterLayout can then be reused in every View by setting it in the Route annotation.",
                         new CodeExample(MyAppLayoutRouterLayout.class)
-                ).withStep("Create a View with a @Route Annotation", "Create a View that contains a @Route Annotation that leads to a specific Path and also has the Class you create above as \"layout=...\". As soon you navigate to the path set in the Annotation this view wrapped by the AppLayout will be visible",
+                ).withStep("Create a View with a @Route Annotation", "Create a View that contains a @Route Annotation that leads to a specific Path and also has the Class that was created above as \"layout=...\". If you now redeploy your application to the path set in the Annotation this view will be wrapped by the AppLayout",
                 new CodeExample(View1.class),
                 new CodeExample(View2.class)
         );
