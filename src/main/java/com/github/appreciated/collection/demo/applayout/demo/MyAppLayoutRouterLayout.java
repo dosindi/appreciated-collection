@@ -26,7 +26,7 @@ import static com.github.appreciated.app.layout.entity.Section.FOOTER;
 import static com.github.appreciated.app.layout.entity.Section.HEADER;
 
 @Push
-public class YourAppLayoutRouterLayout extends AppLayoutRouterLayout {
+public class MyAppLayoutRouterLayout extends AppLayoutRouterLayout {
     /**
      * Do not initialize here. This will lead to NPEs
      */

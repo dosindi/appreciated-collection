@@ -1,9 +1,9 @@
 package com.github.appreciated.collection.demo.applayout;
 
 
+import com.github.appreciated.collection.demo.applayout.demo.MyAppLayoutRouterLayout;
 import com.github.appreciated.collection.demo.applayout.demo.View1;
 import com.github.appreciated.collection.demo.applayout.demo.View2;
-import com.github.appreciated.collection.demo.applayout.demo.YourAppLayoutRouterLayout;
 import com.github.appreciated.collection.demo.applayout.views.MainView;
 import com.github.appreciated.collection.maven.AppreciatedDependencyReader;
 import com.github.appreciated.demo.helper.DemoHelperView;
@@ -30,7 +30,7 @@ public class AppLayoutDemo extends DemoHelperView {
                         new CodeExample("install", Language.markup, "Maven")
                 )
                 .withStep("Add App-Layout-Router-Layout Class", "Create a Class that extends AppLayoutRouterLayout and implement the missing methods as shown in the example. The AppLayoutRouterLayout can then be reused in every View by setting it in the Route annotation.",
-                        new CodeExample(YourAppLayoutRouterLayout.class)
+                        new CodeExample(MyAppLayoutRouterLayout.class)
                 ).withStep("Create a View with a @Route Annotation", "Create a View that contains a @Route Annotation that leads to a specific Path and also has the Class you create above as \"layout=...\". As soon you navigate to the path set in the Annotation this view wrapped by the AppLayout will be visible",
                 new CodeExample(View1.class),
                 new CodeExample(View2.class)
