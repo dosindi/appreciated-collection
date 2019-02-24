@@ -1,6 +1,5 @@
 package com.github.appreciated.collection.demo.applayout.demo;
 
-import com.github.appreciated.app.layout.behaviour.AppLayout;
 import com.github.appreciated.app.layout.behaviour.Behaviour;
 import com.github.appreciated.app.layout.builder.AppLayoutBuilder;
 import com.github.appreciated.app.layout.component.appbar.AppBarBuilder;
@@ -33,8 +32,10 @@ public class MyAppLayoutRouterLayout extends AppLayoutRouterLayout {
     private DefaultNotificationHolder notifications;
     private DefaultBadgeHolder badge;
 
-    @Override
-    public AppLayout createAppLayoutInstance() {
+
+    public MyAppLayoutRouterLayout() {
+
+
         notifications = new DefaultNotificationHolder(newStatus -> {
         });
         badge = new DefaultBadgeHolder(5);
@@ -45,7 +46,7 @@ public class MyAppLayoutRouterLayout extends AppLayoutRouterLayout {
         LeftNavigationComponent menuEntry = new LeftNavigationComponent("Menu", VaadinIcon.MENU.create(), View6.class);
         badge.bind(menuEntry.getBadge());
 
-        return AppLayoutBuilder
+        init(AppLayoutBuilder
                 .get(Behaviour.LEFT_RESPONSIVE_HYBRID)
                 .withTitle("App Layout")
                 .withAppBar(AppBarBuilder.get()
@@ -67,8 +68,9 @@ public class MyAppLayoutRouterLayout extends AppLayoutRouterLayout {
                         .add(menuEntry)
                         .addToSection(new LeftClickableComponent("Clickable Entry", VaadinIcon.COG.create(), clickEvent -> Notification.show("onClick ...")), FOOTER)
                         .build())
-                .build();
+                .build());
     }
+
 }
 
 
