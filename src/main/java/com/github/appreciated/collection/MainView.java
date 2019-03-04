@@ -47,7 +47,7 @@ public class MainView extends VerticalLayout {
                         getCard("./frontend/images/no-logo.png", "PaperMenuButton", "A addon that can open a popup on click", PaperMenuButtonDemo.class),
                         getCard("./frontend/images/no-logo.png", "PaperRipple", "A addon that can open a popup on click", PaperRippleDemo.class),
                         getCard("./frontend/images/no-logo.png", "Prism-Element Addon", "A code/syntax highlighter addon for Vaadin Flow", PrismElementDemo.class),
-                        getCard("./frontend/images/no-logo.png", "Iron Collapse Addon", "A addon that brings Iron Collapse to Vaadin Flow", IronCollapseDemo.class),
+                        getCard("./frontend/images/ironcollapse/logo.png", "Iron Collapse Addon", "A addon that brings Iron Collapse to Vaadin Flow", IronCollapseDemo.class),
                         getCard("./frontend/images/colorhelper/logo.png", "Calculated Color Helper Addon", "A addon that brings control over the css variables in Vaadin Flow", CalculatedColorHelperDemo.class)
                 )
                 .withPadding(true)
