@@ -20,7 +20,7 @@ import com.vaadin.flow.router.Route;
 public class AppLayoutDemo extends DemoHelperView {
 
     public AppLayoutDemo() {
-        withHorizontalHeader("AppLayout", "A responsive layout that allows you to create modern Menus quickly", "./frontend/images/applayout/app-layout-logo.png")
+        withHorizontalHeader("AppLayout", "A responsive layout that allows you to create modern Menus quickly", "./frontend/images/applayout/logo.png")
                 .withDevice(new PhoneView(new RouteIFrame(MainView.class).withFullSize()), "Optimized for small screens")
                 .withParagraph("Behaviours", "The AppLayout has by default multiple Behaviours available. Try to set them via the menu in the demo above and below")
                 .withStylableDevice(new RouteIFrame(MainView.class).withFullSize(), DeviceType.TABLET_LANDSCAPE)

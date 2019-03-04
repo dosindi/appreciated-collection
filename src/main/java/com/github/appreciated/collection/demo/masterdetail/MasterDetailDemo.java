@@ -19,7 +19,7 @@ public class MasterDetailDemo extends DemoHelperView {
     public MasterDetailDemo() {
         withHorizontalHeader("Master/Detail View",
                 "\"The Master/Detail Pattern can be used to hide / reveal content if space is available.",
-                "./frontend/images/no-logo.png"
+                "./frontend/images/card/logo.png"
         ).withThemeableAndStylableDevice(new HasParameterRouteBrowser<>(MasterDemoView.class, 1), DeviceType.TABLET_LANDSCAPE)
                 .withStep("Add dependency", "Add the dependency to your POM",
                         new CodeExample(new AppreciatedDependencyReader("master-detail-view")))
