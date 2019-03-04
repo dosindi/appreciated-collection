@@ -18,7 +18,7 @@ public class PaperMenuButtonDemo extends DemoHelperView {
     public PaperMenuButtonDemo() {
         withHorizontalHeader("PaperMenuButton",
                 "Allows to open a popup on the click of a trigger Component. Similar to the PopupView",
-                "./frontend/images/no-logo.png")
+                "./frontend/images/menubutton/logo.png")
                 .withDevice(new TabletView(new PaperMenuButtonExample()).withOrientation(Orientation.PORTRAIT), "Some  examples")
                 .withStep("Add dependency", "Add the dependency by adding it to your POM",
                         new CodeExample(new AppreciatedDependencyReader("vaadin-paper-menu-button")))

@@ -18,7 +18,7 @@ public class PrismElementDemo extends DemoHelperView {
     public PrismElementDemo() {
         withHorizontalHeader("Prism Element",
                 "Provides code/syntax highlighting by using prism",
-                "./frontend/images/no-logo.png")
+                "./frontend/images/prism/logo.png")
                 .withDevice(new TabletView(new PrismHighlighterExample()).withOrientation(Orientation.PORTRAIT), "Some highlighting examples")
                 .withStep("Add dependency", "Add the dependency by adding it to your POM",
                         new CodeExample(new AppreciatedDependencyReader("prism-element")))
