@@ -1,7 +1,7 @@
 package com.github.appreciated.collection.demo.demohelper.demo;
 
 import com.github.appreciated.demo.helper.DemoHelperView;
-import com.github.appreciated.demo.helper.view.devices.Browser;
+import com.github.appreciated.demo.helper.component.browser.RouteBrowser;
 import com.github.appreciated.demo.helper.view.devices.LaptopView;
 import com.github.appreciated.demo.helper.view.devices.PhoneView;
 import com.github.appreciated.demo.helper.view.devices.TabletView;
@@ -18,7 +18,7 @@ public class DemoHelperOtherExamples extends DemoHelperView {
     public DemoHelperOtherExamples() {
         withParagraph("I am a ParagraphView", "I can display a header and a description")
                 .withStylableDevice(getDeviceContent("< I'm a StylableDevice I display content and my css variables can be edited beside me >"), new CssVariable("--lumo-primary-text-color"), new CssVariable("--lumo-primary-color"))
-                .withStylableDevice(new Browser(OtherContent.class), new CssVariable("--lumo-primary-text-color"), new CssVariable("--lumo-primary-color"))
+                .withStylableDevice(new RouteBrowser(OtherContent.class), new CssVariable("--lumo-primary-text-color"), new CssVariable("--lumo-primary-color"))
                 .withThemeableAndStylableDevice(getDeviceContent("< I'm a ThemeableAndStylableDevice my theme can be switch by pressing the switch above. I display content and my css variables can be edited beside me >"), new CssVariable("--lumo-primary-text-color"), new CssVariable("--lumo-primary-color"))
                 .withDevices(
                         new TabletView(getDeviceContent("< I belong to a TabletView an display content inside a css rendered tablet >")),
