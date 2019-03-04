@@ -5,7 +5,7 @@ import com.github.appreciated.collection.demo.masterdetail.demo.DetailDemoView;
 import com.github.appreciated.collection.demo.masterdetail.demo.MasterDemoView;
 import com.github.appreciated.collection.maven.AppreciatedDependencyReader;
 import com.github.appreciated.demo.helper.DemoHelperView;
-import com.github.appreciated.demo.helper.component.iframe.HasParameterRouteIFrame;
+import com.github.appreciated.demo.helper.component.browser.HasParameterRouteBrowser;
 import com.github.appreciated.demo.helper.view.devices.DeviceType;
 import com.github.appreciated.demo.helper.view.entity.CodeExample;
 import com.github.appreciated.prism.element.Language;
@@ -17,19 +17,18 @@ import com.vaadin.flow.router.Route;
 public class MasterDetailDemo extends DemoHelperView {
 
     public MasterDetailDemo() {
-        withHorizontalHeader("Card",
-                "\"Cards are surfaces that display content and actions on a single topic.\n" +
+        withHorizontalHeader("Master/Detail View",
+                "\"The Master/Detail Pattern can be used to hide / reveal content if space is available.\n" +
                         "\n" +
-                        "They should be easy to scan for relevant and actionable information. Elements, like text and images, should be placed on them in a way that clearly indicates hierarchy.\"\n" +
-                        "- material.io",
+                        "This pattern can be found a lot in messenger apps. This addons assists you in creating this kind of views",
                 "./frontend/images/no-logo.png"
-        ).withThemeableAndStylableDevice(new HasParameterRouteIFrame<>(MasterDemoView.class, 1), DeviceType.TABLET_LANDSCAPE)
+        ).withThemeableAndStylableDevice(new HasParameterRouteBrowser<>(MasterDemoView.class, 1), DeviceType.TABLET_LANDSCAPE)
                 .withStep("Add dependency", "Add the dependency to your POM",
-                        new CodeExample(new AppreciatedDependencyReader("card")))
+                        new CodeExample(new AppreciatedDependencyReader("master-detail-view")))
                 .withStep("Add dependency", "Add the dependency to your POM",
                         new CodeExample("install", Language.markup, "Maven"))
                 .resetCounterStep()
-                .withStep("Some code examples", "You can add cards to your View the following way",
+                .withStep("Some code examples", "You can setup a master Detail View the following way",
                         new CodeExample(MasterDemoView.class),
                         new CodeExample(DetailDemoView.class)
                 );
