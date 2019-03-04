@@ -38,17 +38,17 @@ public class MainView extends VerticalLayout {
                 .withColumns(Repeat.RepeatMode.AUTO_FILL, new MinMax(new Length("320px"), new Flex(1)))
                 .withAutoRows(new Length("131px"))
                 .withItems(
-                        getCard("./frontend/images/applayout/app-layout-logo.png", "App Layout Addon", "A addon that allows you building responsive applications easily", AppLayoutDemo.class),
-                        getCard("./frontend/images/demohelper/demo-helper-logo.png", "Demo Helper Addon", "A addon that helps you creating beautiful addon demos in no time", DemoHelperDemoView.class),
-                        getCard("./frontend/images/gridlayout/grid-layout-logo.png", "Css Grid Layout Addon", "A addon that brings css grid to Vaadin Flow", GridLayoutDemo.class),
-                        getCard("./frontend/images/no-logo.png", "Card Addon", "A addon that brings cards to Vaadin Flow", CardDemo.class),
-                        getCard("./frontend/images/no-logo.png", "Master/Detail View Addon", "A addon that brings the Master/Detail Pattern to Vaadin Flow", MasterDetailDemo.class),
+                        getCard("./frontend/images/applayout/logo.png", "App Layout Addon", "A addon that allows you building responsive applications easily", AppLayoutDemo.class),
+                        getCard("./frontend/images/demohelper/logo.png", "Demo Helper Addon", "A addon that helps you creating beautiful addon demos in no time", DemoHelperDemoView.class),
+                        getCard("./frontend/images/gridlayout/logo.png", "Css Grid Layout Addon", "A addon that brings css grid to Vaadin Flow", GridLayoutDemo.class),
+                        getCard("./frontend/images/card/logo.png", "Card Addon", "A addon that brings cards to Vaadin Flow", CardDemo.class),
+                        getCard("./frontend/images/masterdetail/logo.png", "Master/Detail View Addon", "A addon that brings the Master/Detail Pattern to Vaadin Flow", MasterDetailDemo.class),
                         getCard("./frontend/images/no-logo.png", "Paper Color Addon", "A color picker addon for Vaadin Flow", PaperColorDemo.class),
                         getCard("./frontend/images/no-logo.png", "PaperMenuButton", "A addon that can open a popup on click", PaperMenuButtonDemo.class),
                         getCard("./frontend/images/no-logo.png", "PaperRipple", "A addon that can open a popup on click", PaperRippleDemo.class),
                         getCard("./frontend/images/no-logo.png", "Prism-Element Addon", "A code/syntax highlighter addon for Vaadin Flow", PrismElementDemo.class),
                         getCard("./frontend/images/no-logo.png", "Iron Collapse Addon", "A addon that brings Iron Collapse to Vaadin Flow", IronCollapseDemo.class),
-                        getCard("./frontend/images/no-logo.png", "Calculated Color Helper Addon", "A addon that brings control over the css variables in Vaadin Flow", CalculatedColorHelperDemo.class)
+                        getCard("./frontend/images/colorhelper/logo.png", "Calculated Color Helper Addon", "A addon that brings control over the css variables in Vaadin Flow", CalculatedColorHelperDemo.class)
                 )
                 .withPadding(true)
                 .withSpacing(true)

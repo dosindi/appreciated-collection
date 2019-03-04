@@ -18,7 +18,7 @@ public class CalculatedColorHelperDemo extends DemoHelperView {
     public CalculatedColorHelperDemo() {
         withVerticalHeader("Calculated Color Helper",
                 "This addon was created to get/set the value of a css variable in a specific scope",
-                "./frontend/images/no-logo.png"
+                "./frontend/images/colorhelper/logo.png"
         ).withDevice(new TabletView(new CalculatedColorHelperExample()).withOrientation(Orientation.PORTRAIT))
                 .withStep("Add dependency", "Add the dependency by adding it to your POM",
                         new CodeExample(new AppreciatedDependencyReader("calculated-color-helper")))
