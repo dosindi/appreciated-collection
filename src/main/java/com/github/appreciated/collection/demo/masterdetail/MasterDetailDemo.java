@@ -18,9 +18,7 @@ public class MasterDetailDemo extends DemoHelperView {
 
     public MasterDetailDemo() {
         withHorizontalHeader("Master/Detail View",
-                "\"The Master/Detail Pattern can be used to hide / reveal content if space is available.\n" +
-                        "\n" +
-                        "This pattern can be found a lot in messenger apps. This addons assists you in creating this kind of views",
+                "\"The Master/Detail Pattern can be used to hide / reveal content if space is available.",
                 "./frontend/images/no-logo.png"
         ).withThemeableAndStylableDevice(new HasParameterRouteBrowser<>(MasterDemoView.class, 1), DeviceType.TABLET_LANDSCAPE)
                 .withStep("Add dependency", "Add the dependency to your POM",
