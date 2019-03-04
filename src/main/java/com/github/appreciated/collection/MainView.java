@@ -58,7 +58,7 @@ public class MainView extends VerticalLayout {
         add(new DemoHelperView()
                 .withVerticalHeader("Appreciated Collection",
                         "Welcome to the Appreciated Collection",
-                        "./frontend/images/no-logo.png"
+                        "./frontend/images/collection/logo.png"
                 ).with(layout)
         );
     }
