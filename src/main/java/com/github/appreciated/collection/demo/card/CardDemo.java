@@ -42,9 +42,9 @@ public class CardDemo extends DemoHelperView {
 
     private Component getExampleCards() {
         VerticalLayout vl = new VerticalLayout(
-                new CardExample("./frontend/images/no-logo.png", "A Plain Card", "I contain stuff!"),
-                new ClickableCardExample("./frontend/images/no-logo.png", "A Clickable Card", " with Hover effect"),
-                new RippleClickableCardExample("./frontend/images/no-logo.png", "A Clickable Card", " with \"Ripple\" effect and \"hover\" effect")
+                new CardExample("./frontend/images/logo.png", "A Plain Card", "I contain stuff!"),
+                new ClickableCardExample("./frontend/images/logo.png", "A Clickable Card", " with Hover effect"),
+                new RippleClickableCardExample("./frontend/images/logo.png", "A Clickable Card", " with \"Ripple\" effect and \"hover\" effect")
         );
         vl.setMargin(false);
         vl.setPadding(true);

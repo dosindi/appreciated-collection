@@ -18,7 +18,7 @@ public class PaperRippleDemo extends DemoHelperView {
     public PaperRippleDemo() {
         withHorizontalHeader("PaperRipple",
                 "Allows to give the user feedback when a component was clicked.",
-                "./frontend/images/no-logo.png")
+                "./frontend/images/ripple/logo.png")
                 .withDevice(new TabletView(new PaperRippleExample()).withOrientation(Orientation.PORTRAIT))
                 .withStep("Add dependency", "Add the dependency by adding it to your POM",
                         new CodeExample(new AppreciatedDependencyReader("paper-ripple")))
