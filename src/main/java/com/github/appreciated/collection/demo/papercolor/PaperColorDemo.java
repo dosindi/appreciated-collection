@@ -18,7 +18,7 @@ public class PaperColorDemo extends DemoHelperView {
     public PaperColorDemo() {
         withHorizontalHeader("Paper Color",
                 "A color picker Component based on l2t-paper-color",
-                "./frontend/images/no-logo.png")
+                "./frontend/images/color/logo.png")
                 .withDevice(new TabletView(new PaperColorExample()).withOrientation(Orientation.PORTRAIT), "Choose some colors")
                 .withStep("Add dependency", "Add the dependency by adding it to your POM",
                         new CodeExample(new AppreciatedDependencyReader("paper-color")))
