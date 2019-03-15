@@ -18,6 +18,7 @@ import com.vaadin.flow.router.Route;
 public class GridLayoutDemo extends DemoHelperView {
 
     public GridLayoutDemo() {
+        super("https://github.com/appreciated/vaadin-app-layout", "https://github.com/jcgueriaud/custom-media-query");
         withHorizontalHeader("Css Grid Layout",
                 "Create flexible layouts easily by using an advanced api",
                 "./frontend/images/gridlayout/logo.png"
@@ -35,6 +36,6 @@ public class GridLayoutDemo extends DemoHelperView {
                 .withStep("How to use the css grid directly", "You can use the css grid directly the following way",
                         new CodeExample(CssGridLayoutExample1.class),
                         new CodeExample(CssGridLayoutExample1.class)
-                );
+                ).withDependencyNotice();
     }
 }
