@@ -16,6 +16,7 @@ import com.vaadin.flow.component.radiobutton.RadioButtonGroup;
 public class DemoHelperOtherExamples extends DemoHelperView {
 
     public DemoHelperOtherExamples() {
+        super("https://github.com/appreciated/demo-helper-view", "https://github.com/appreciated/demo-helper-view");
         withParagraph("I am a ParagraphView", "I can display a header and a description")
                 .withStylableDevice(getDeviceContent("< I'm a StylableDevice I display content and my css variables can be edited beside me >"), new CssVariable("--lumo-primary-text-color"), new CssVariable("--lumo-primary-color"))
                 .withStylableDevice(new RouteBrowser(OtherContent.class), new CssVariable("--lumo-primary-text-color"), new CssVariable("--lumo-primary-color"))
@@ -48,7 +49,11 @@ public class DemoHelperOtherExamples extends DemoHelperView {
                 .withStep("I am also a StepView",
                         "And I contain a single code example",
                         new CodeExample("clean install", Language.markup, "Maven")
-                );
+                )
+                .withParagraph("The following is a Thanks View")
+                .withThanks()
+                .withParagraph("The following is a Dependency View")
+                .withDependencyNotice();
     }
 
     VerticalLayout getDeviceContent(String text) {

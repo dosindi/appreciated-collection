@@ -20,6 +20,7 @@ import com.vaadin.flow.router.Route;
 public class AppLayoutDemo extends DemoHelperView {
 
     public AppLayoutDemo() {
+        super("https://github.com/appreciated/vaadin-app-layout", "https://github.com/PolymerElements/app-layout");
         withHorizontalHeader("AppLayout", "A responsive layout that allows you to create modern Menus quickly", "./frontend/images/applayout/logo.png")
                 .withDevice(new PhoneView(new RouteIFrame(MainView.class).withFullSize()), "Optimized for small screens")
                 .withParagraph("Behaviours", "The AppLayout has by default multiple Behaviours available. Try to set them via the menu in the demo above and below")
@@ -34,7 +35,9 @@ public class AppLayoutDemo extends DemoHelperView {
                 ).withStep("Create a View with a @Route Annotation", "Create a View that contains a @Route Annotation that leads to a specific Path and also has the Class that was created above as \"layout=...\". If you now redeploy your application to the path set in the Annotation this view will be wrapped by the AppLayout",
                 new CodeExample(View1.class),
                 new CodeExample(View2.class)
-        );
+        )
+                .withThanks()
+                .withDependencyNotice();
     }
 
 }
