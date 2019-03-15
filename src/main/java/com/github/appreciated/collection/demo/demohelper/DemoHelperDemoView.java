@@ -22,6 +22,7 @@ import com.vaadin.flow.router.Route;
 public class DemoHelperDemoView extends DemoHelperView {
 
     public DemoHelperDemoView() {
+        super("https://github.com/appreciated/demo-helper-view", "https://github.com/appreciated/demo-helper-view");
         withVerticalHeader("VerticalHeaderView",
                 "I can display a header and an optionally an image or a subtitle",
                 "./frontend/images/demohelper/logo.png"
@@ -63,7 +64,11 @@ public class DemoHelperDemoView extends DemoHelperView {
                 .withStep("I am also a StepView", "And I contain multiple code examples",
                         new CodeExample(DemoHelperHeaderExample.class),
                         new CodeExample(DemoHelperOtherExamples.class)
-                );
+                )
+                .withParagraph("The following is a Thanks View")
+                .withThanks()
+                .withParagraph("The following is a Dependency View")
+                .withDependencyNotice();
     }
 
     VerticalLayout getDeviceContent(String text) {
