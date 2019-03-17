@@ -24,7 +24,16 @@ import com.vaadin.flow.router.Route;
 public class DemoHelperDemoView extends DemoHelperView {
 
     public DemoHelperDemoView() {
-        super(new GithubUrl("https://github.com/appreciated/demo-helper-view"), new GithubDependencies("https://github.com/appreciated/demo-helper-view"));
+        super(new GithubUrl("https://github.com/appreciated/vaadin-app-layout"),
+                new GithubDependencies(
+                        "https://github.com/OlliTietavainenVaadin/clipboardhelper",
+                        "https://github.com/appreciated/grid-layout",
+                        "https://github.com/appreciated/card",
+                        "https://github.com/appreciated/prism-element",
+                        "https://github.com/appreciated/paper-color",
+                        "https://github.com/appreciated/iron-collapse",
+                        "https://github.com/appreciated/calculated-color-helper")
+        );
         withVerticalHeader("VerticalHeaderView",
                 "I can display a header and an optionally an image or a subtitle",
                 "./frontend/images/demohelper/logo.png"
