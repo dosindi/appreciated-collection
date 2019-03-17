@@ -8,9 +8,11 @@ import com.github.appreciated.collection.demo.applayout.views.MainView;
 import com.github.appreciated.collection.maven.AppreciatedDependencyReader;
 import com.github.appreciated.demo.helper.DemoHelperView;
 import com.github.appreciated.demo.helper.component.iframe.RouteIFrame;
+import com.github.appreciated.demo.helper.entitiy.CodeExample;
+import com.github.appreciated.demo.helper.entitiy.GithubDependencies;
+import com.github.appreciated.demo.helper.entitiy.GithubUrl;
 import com.github.appreciated.demo.helper.view.devices.DeviceType;
 import com.github.appreciated.demo.helper.view.devices.PhoneView;
-import com.github.appreciated.demo.helper.view.entity.CodeExample;
 import com.github.appreciated.prism.element.Language;
 import com.vaadin.flow.component.page.BodySize;
 import com.vaadin.flow.router.Route;
@@ -20,7 +22,19 @@ import com.vaadin.flow.router.Route;
 public class AppLayoutDemo extends DemoHelperView {
 
     public AppLayoutDemo() {
-        super("https://github.com/appreciated/vaadin-app-layout", "https://github.com/PolymerElements/app-layout");
+        super(new GithubUrl("https://github.com/appreciated/vaadin-app-layout"),
+                new GithubDependencies(
+                        "https://github.com/PolymerElements/app-layout",
+                        "https://github.com/PolymerElements/iron-icons",
+                        "https://github.com/PolymerElements/paper-icon-button",
+                        "https://github.com/PolymerElements/paper-tabs",
+                        "https://github.com/PolymerElements/paper-card",
+                        "https://github.com/PolymerElements/paper-badge",
+                        "https://github.com/appreciated/vaadin-paper-menu-button",
+                        "https://github.com/appreciated/paper-ripple",
+                        "https://github.com/oyeharry/app-menu"
+                )
+        );
         withHorizontalHeader("AppLayout", "A responsive layout that allows you to create modern Menus quickly", "./frontend/images/applayout/logo.png")
                 .withDevice(new PhoneView(new RouteIFrame(MainView.class).withFullSize()), "Optimized for small screens")
                 .withParagraph("Behaviours", "The AppLayout has by default multiple Behaviours available. Try to set them via the menu in the demo above and below")

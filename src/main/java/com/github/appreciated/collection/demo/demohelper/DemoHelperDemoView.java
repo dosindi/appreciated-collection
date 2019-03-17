@@ -6,11 +6,13 @@ import com.github.appreciated.collection.demo.demohelper.demo.OtherContent;
 import com.github.appreciated.collection.maven.AppreciatedDependencyReader;
 import com.github.appreciated.demo.helper.DemoHelperView;
 import com.github.appreciated.demo.helper.component.browser.RouteBrowser;
+import com.github.appreciated.demo.helper.entitiy.CodeExample;
+import com.github.appreciated.demo.helper.entitiy.CssVariable;
+import com.github.appreciated.demo.helper.entitiy.GithubDependencies;
+import com.github.appreciated.demo.helper.entitiy.GithubUrl;
 import com.github.appreciated.demo.helper.view.devices.LaptopView;
 import com.github.appreciated.demo.helper.view.devices.PhoneView;
 import com.github.appreciated.demo.helper.view.devices.TabletView;
-import com.github.appreciated.demo.helper.view.entity.CodeExample;
-import com.github.appreciated.demo.helper.view.entity.CssVariable;
 import com.github.appreciated.prism.element.Language;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.Label;
@@ -22,7 +24,7 @@ import com.vaadin.flow.router.Route;
 public class DemoHelperDemoView extends DemoHelperView {
 
     public DemoHelperDemoView() {
-        super("https://github.com/appreciated/demo-helper-view", "https://github.com/appreciated/demo-helper-view");
+        super(new GithubUrl("https://github.com/appreciated/demo-helper-view"), new GithubDependencies("https://github.com/appreciated/demo-helper-view"));
         withVerticalHeader("VerticalHeaderView",
                 "I can display a header and an optionally an image or a subtitle",
                 "./frontend/images/demohelper/logo.png"

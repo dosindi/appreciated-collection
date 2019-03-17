@@ -7,8 +7,10 @@ import com.github.appreciated.collection.demo.gridlayout.demo.FlexibleGridLayout
 import com.github.appreciated.collection.demo.gridlayout.demo.FlexibleGridLayoutExample2;
 import com.github.appreciated.collection.maven.AppreciatedDependencyReader;
 import com.github.appreciated.demo.helper.DemoHelperView;
+import com.github.appreciated.demo.helper.entitiy.CodeExample;
+import com.github.appreciated.demo.helper.entitiy.GithubDependencies;
+import com.github.appreciated.demo.helper.entitiy.GithubUrl;
 import com.github.appreciated.demo.helper.view.devices.DeviceType;
-import com.github.appreciated.demo.helper.view.entity.CodeExample;
 import com.github.appreciated.prism.element.Language;
 import com.vaadin.flow.component.page.BodySize;
 import com.vaadin.flow.router.Route;
@@ -18,7 +20,7 @@ import com.vaadin.flow.router.Route;
 public class GridLayoutDemo extends DemoHelperView {
 
     public GridLayoutDemo() {
-        super("https://github.com/appreciated/vaadin-app-layout", "https://github.com/jcgueriaud/custom-media-query");
+        super(new GithubUrl("https://github.com/appreciated/vaadin-app-layout"), new GithubDependencies("https://github.com/jcgueriaud/custom-media-query"));
         withHorizontalHeader("Css Grid Layout",
                 "Create flexible layouts easily by using an advanced api",
                 "./frontend/images/gridlayout/logo.png"
