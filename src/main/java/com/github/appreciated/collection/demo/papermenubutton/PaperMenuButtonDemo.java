@@ -5,6 +5,8 @@ import com.github.appreciated.collection.demo.papermenubutton.demo.PaperMenuButt
 import com.github.appreciated.collection.maven.AppreciatedDependencyReader;
 import com.github.appreciated.demo.helper.DemoHelperView;
 import com.github.appreciated.demo.helper.entity.CodeExample;
+import com.github.appreciated.demo.helper.entity.GithubDependencies;
+import com.github.appreciated.demo.helper.entity.GithubUrl;
 import com.github.appreciated.demo.helper.view.devices.Orientation;
 import com.github.appreciated.demo.helper.view.devices.TabletView;
 import com.github.appreciated.prism.element.Language;
@@ -16,6 +18,7 @@ import com.vaadin.flow.router.Route;
 public class PaperMenuButtonDemo extends DemoHelperView {
 
     public PaperMenuButtonDemo() {
+        super(new GithubUrl("https://github.com/appreciated/vaadin-paper-menu-button"), new GithubDependencies("https://github.com/PolymerElements/paper-menu-button"));
         withHorizontalHeader("PaperMenuButton",
                 "Allows to open a popup on the click of a trigger Component. Similar to the PopupView",
                 "./frontend/images/menubutton/logo.png")
@@ -28,7 +31,7 @@ public class PaperMenuButtonDemo extends DemoHelperView {
                 .resetCounterStep()
                 .withStep("Some code examples", "Add a PaperMenuButton to your View",
                         new CodeExample(PaperMenuButtonExample.class)
-                );
+                ).withDependencyNotice();
     }
 
 }

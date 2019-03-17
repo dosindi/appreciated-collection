@@ -5,6 +5,8 @@ import com.github.appreciated.collection.demo.paperripple.demo.PaperRippleExampl
 import com.github.appreciated.collection.maven.AppreciatedDependencyReader;
 import com.github.appreciated.demo.helper.DemoHelperView;
 import com.github.appreciated.demo.helper.entity.CodeExample;
+import com.github.appreciated.demo.helper.entity.GithubDependencies;
+import com.github.appreciated.demo.helper.entity.GithubUrl;
 import com.github.appreciated.demo.helper.view.devices.Orientation;
 import com.github.appreciated.demo.helper.view.devices.TabletView;
 import com.github.appreciated.prism.element.Language;
@@ -16,6 +18,7 @@ import com.vaadin.flow.router.Route;
 public class PaperRippleDemo extends DemoHelperView {
 
     public PaperRippleDemo() {
+        super(new GithubUrl("https://github.com/appreciated/paper-ripple"), new GithubDependencies("https://github.com/PolymerElements/paper-ripple"));
         withHorizontalHeader("PaperRipple",
                 "Allows to give the user feedback when a component was clicked.",
                 "./frontend/images/ripple/logo.png")
@@ -28,6 +31,7 @@ public class PaperRippleDemo extends DemoHelperView {
                 .resetCounterStep()
                 .withStep("Some code examples", "Add PaperRipple to your View",
                         new CodeExample(PaperRippleExample.class)
-                );
+                )
+                .withDependencyNotice();
     }
 }

@@ -5,6 +5,8 @@ import com.github.appreciated.collection.demo.ironcollapse.demo.IronCollapseExam
 import com.github.appreciated.collection.maven.AppreciatedDependencyReader;
 import com.github.appreciated.demo.helper.DemoHelperView;
 import com.github.appreciated.demo.helper.entity.CodeExample;
+import com.github.appreciated.demo.helper.entity.GithubDependencies;
+import com.github.appreciated.demo.helper.entity.GithubUrl;
 import com.github.appreciated.demo.helper.view.devices.Orientation;
 import com.github.appreciated.demo.helper.view.devices.TabletView;
 import com.github.appreciated.prism.element.Language;
@@ -16,6 +18,7 @@ import com.vaadin.flow.router.Route;
 public class IronCollapseDemo extends DemoHelperView {
 
     public IronCollapseDemo() {
+        super(new GithubUrl("https://github.com/appreciated/iron-collapse"), new GithubDependencies("https://github.com/PolymerElements/iron-collapse"));
         withHorizontalHeader("Iron Collapse",
                 "A Component that allows to show and hide Content",
                 "./frontend/images/ironcollapse/logo.png")
@@ -28,7 +31,8 @@ public class IronCollapseDemo extends DemoHelperView {
                 .resetCounterStep()
                 .withStep("Some code examples", "Add IronCollapse to your View",
                         new CodeExample(IronCollapseExample.class)
-                );
+                )
+                .withDependencyNotice();
     }
 
 }

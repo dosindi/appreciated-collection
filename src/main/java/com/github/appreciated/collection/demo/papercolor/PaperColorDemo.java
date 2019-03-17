@@ -5,6 +5,8 @@ import com.github.appreciated.collection.demo.papercolor.demo.PaperColorExample;
 import com.github.appreciated.collection.maven.AppreciatedDependencyReader;
 import com.github.appreciated.demo.helper.DemoHelperView;
 import com.github.appreciated.demo.helper.entity.CodeExample;
+import com.github.appreciated.demo.helper.entity.GithubDependencies;
+import com.github.appreciated.demo.helper.entity.GithubUrl;
 import com.github.appreciated.demo.helper.view.devices.Orientation;
 import com.github.appreciated.demo.helper.view.devices.TabletView;
 import com.github.appreciated.prism.element.Language;
@@ -16,6 +18,7 @@ import com.vaadin.flow.router.Route;
 public class PaperColorDemo extends DemoHelperView {
 
     public PaperColorDemo() {
+        super(new GithubUrl("https://github.com/appreciated/paper-color"), new GithubDependencies("https://github.com/Link2Twenty/l2t-paper-color"));
         withHorizontalHeader("Paper Color",
                 "A color picker Component based on l2t-paper-color",
                 "./frontend/images/color/logo.png")
@@ -28,6 +31,6 @@ public class PaperColorDemo extends DemoHelperView {
                 .resetCounterStep()
                 .withStep("Some code examples", "Add Paper Color to your View",
                         new CodeExample(PaperColorExample.class)
-                );
+                ).withDependencyNotice();
     }
 }
