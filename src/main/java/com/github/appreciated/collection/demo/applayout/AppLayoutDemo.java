@@ -8,9 +8,9 @@ import com.github.appreciated.collection.demo.applayout.views.MainView;
 import com.github.appreciated.collection.maven.AppreciatedDependencyReader;
 import com.github.appreciated.demo.helper.DemoHelperView;
 import com.github.appreciated.demo.helper.component.iframe.RouteIFrame;
-import com.github.appreciated.demo.helper.entitiy.CodeExample;
-import com.github.appreciated.demo.helper.entitiy.GithubDependencies;
-import com.github.appreciated.demo.helper.entitiy.GithubUrl;
+import com.github.appreciated.demo.helper.entity.CodeExample;
+import com.github.appreciated.demo.helper.entity.GithubDependencies;
+import com.github.appreciated.demo.helper.entity.GithubUrl;
 import com.github.appreciated.demo.helper.view.devices.DeviceType;
 import com.github.appreciated.demo.helper.view.devices.PhoneView;
 import com.github.appreciated.prism.element.Language;
@@ -50,7 +50,7 @@ public class AppLayoutDemo extends DemoHelperView {
                 new CodeExample(View1.class),
                 new CodeExample(View2.class)
         )
-                .withThanks()
+                .withContributorNotice()
                 .withDependencyNotice();
     }
 

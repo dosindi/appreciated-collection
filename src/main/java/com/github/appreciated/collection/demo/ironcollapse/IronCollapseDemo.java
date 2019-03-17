@@ -4,7 +4,7 @@ package com.github.appreciated.collection.demo.ironcollapse;
 import com.github.appreciated.collection.demo.ironcollapse.demo.IronCollapseExample;
 import com.github.appreciated.collection.maven.AppreciatedDependencyReader;
 import com.github.appreciated.demo.helper.DemoHelperView;
-import com.github.appreciated.demo.helper.entitiy.CodeExample;
+import com.github.appreciated.demo.helper.entity.CodeExample;
 import com.github.appreciated.demo.helper.view.devices.Orientation;
 import com.github.appreciated.demo.helper.view.devices.TabletView;
 import com.github.appreciated.prism.element.Language;

@@ -6,7 +6,7 @@ import com.github.appreciated.collection.demo.masterdetail.demo.MasterDemoView;
 import com.github.appreciated.collection.maven.AppreciatedDependencyReader;
 import com.github.appreciated.demo.helper.DemoHelperView;
 import com.github.appreciated.demo.helper.component.browser.HasParameterRouteBrowser;
-import com.github.appreciated.demo.helper.entitiy.CodeExample;
+import com.github.appreciated.demo.helper.entity.CodeExample;
 import com.github.appreciated.demo.helper.view.devices.DeviceType;
 import com.github.appreciated.prism.element.Language;
 import com.vaadin.flow.component.page.BodySize;

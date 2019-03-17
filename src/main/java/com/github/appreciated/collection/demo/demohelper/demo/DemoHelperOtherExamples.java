@@ -2,10 +2,10 @@ package com.github.appreciated.collection.demo.demohelper.demo;
 
 import com.github.appreciated.demo.helper.DemoHelperView;
 import com.github.appreciated.demo.helper.component.browser.RouteBrowser;
-import com.github.appreciated.demo.helper.entitiy.CodeExample;
-import com.github.appreciated.demo.helper.entitiy.CssVariable;
-import com.github.appreciated.demo.helper.entitiy.GithubDependencies;
-import com.github.appreciated.demo.helper.entitiy.GithubUrl;
+import com.github.appreciated.demo.helper.entity.CodeExample;
+import com.github.appreciated.demo.helper.entity.CssVariable;
+import com.github.appreciated.demo.helper.entity.GithubDependencies;
+import com.github.appreciated.demo.helper.entity.GithubUrl;
 import com.github.appreciated.demo.helper.view.devices.LaptopView;
 import com.github.appreciated.demo.helper.view.devices.PhoneView;
 import com.github.appreciated.demo.helper.view.devices.TabletView;
@@ -53,7 +53,7 @@ public class DemoHelperOtherExamples extends DemoHelperView {
                         new CodeExample("clean install", Language.markup, "Maven")
                 )
                 .withParagraph("The following is a Thanks View")
-                .withThanks()
+                .withContributorNotice()
                 .withParagraph("The following is a Dependency View")
                 .withDependencyNotice();
     }
