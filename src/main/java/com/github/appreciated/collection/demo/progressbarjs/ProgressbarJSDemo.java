@@ -19,8 +19,8 @@ public class ProgressbarJSDemo extends DemoHelperView {
 
     public ProgressbarJSDemo() {
         super(new GithubUrl("https://github.com/appreciated/progressbar-js"), new GithubDependencies("https://github.com/kimmobrunfeldt/progressbar.js"));
-        withHorizontalHeader("ProgressbarJS integration",
-                "Allows to present customizable and animated progressbars to the user",
+        withHorizontalHeader("Progressbar.js integration",
+                "Allows to present a customizable and animated progressbar to the user",
                 "./frontend/images/progressbarjs/logo.png")
                 .withDevice(new TabletView(new CircleProgressbarExample()).withOrientation(Orientation.PORTRAIT), "Some examples")
                 .withStep("Add dependency", "Add the dependency by adding it to your POM",
