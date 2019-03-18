@@ -46,6 +46,7 @@ public class CircleProgressbarExample extends VerticalLayout {
         circle5.setToStrokeWidth(3.0); // set the stroke width on 100% percent
 
         setAlignItems(Alignment.CENTER);
+        setJustifyContentMode(JustifyContentMode.CENTER);
         add(circle1, circle2, circle3, circle4, circle5);
     }
 }
