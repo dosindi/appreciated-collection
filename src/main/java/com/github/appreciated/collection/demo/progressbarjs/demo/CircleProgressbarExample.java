@@ -17,6 +17,13 @@ public class CircleProgressbarExample extends VerticalLayout {
         circle3.setWidth("150px");
         circle4.setWidth("150px");
         circle5.setWidth("150px");
+
+        circle1.setHeight("150px");
+        circle2.setHeight("150px");
+        circle3.setHeight("150px");
+        circle4.setHeight("150px");
+        circle5.setHeight("150px");
+
         // Circle 1
         circle1.setProgress(0);  // set the progress of the circle
         // Circle 2
@@ -40,5 +47,7 @@ public class CircleProgressbarExample extends VerticalLayout {
 
         setAlignItems(Alignment.CENTER);
         add(circle1, circle2, circle3, circle4, circle5);
+
+        setSpacing(false);
     }
 }
