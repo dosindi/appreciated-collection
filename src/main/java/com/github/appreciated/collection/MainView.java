@@ -13,6 +13,7 @@ import com.github.appreciated.collection.demo.papercolor.PaperColorDemo;
 import com.github.appreciated.collection.demo.papermenubutton.PaperMenuButtonDemo;
 import com.github.appreciated.collection.demo.paperripple.PaperRippleDemo;
 import com.github.appreciated.collection.demo.prismelement.PrismElementDemo;
+import com.github.appreciated.collection.demo.progressbarjs.ProgressbarJSDemo;
 import com.github.appreciated.css.grid.GridLayoutComponent;
 import com.github.appreciated.css.grid.sizes.Flex;
 import com.github.appreciated.css.grid.sizes.Length;
@@ -42,6 +43,7 @@ public class MainView extends VerticalLayout {
                         getCard("./frontend/images/demohelper/logo.png", "Demo Helper Addon", "A addon that helps you creating beautiful addon demos in no time", DemoHelperDemoView.class),
                         getCard("./frontend/images/gridlayout/logo.png", "Css Grid Layout Addon", "A addon that brings css grid to Vaadin Flow", GridLayoutDemo.class),
                         getCard("./frontend/images/card/logo.png", "Card Addon", "A addon that brings cards to Vaadin Flow", CardDemo.class),
+                        getCard("./frontend/images/progressbarjs/logo.png", "Progressbar.js Addon", "A addon that brings Progressbar.js to Vaadin Flow", ProgressbarJSDemo.class),
                         getCard("./frontend/images/masterdetail/logo.png", "Master/Detail View Addon", "A addon that brings the Master/Detail Pattern to Vaadin Flow", MasterDetailDemo.class),
                         getCard("./frontend/images/color/logo.png", "Paper Color Addon", "A color picker addon for Vaadin Flow", PaperColorDemo.class),
                         getCard("./frontend/images/menubutton/logo.png", "PaperMenuButton", "A addon that can open a popup on click", PaperMenuButtonDemo.class),
