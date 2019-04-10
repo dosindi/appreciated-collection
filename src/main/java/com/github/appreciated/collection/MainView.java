@@ -40,19 +40,19 @@ public class MainView extends VerticalLayout {
                 .withColumns(Repeat.RepeatMode.AUTO_FILL, new MinMax(new Length("320px"), new Flex(1)))
                 .withAutoRows(new Length("131px"))
                 .withItems(
-                        getCard("./frontend/images/applayout/logo.png", "App Layout Addon", "A addon that allows you building responsive applications easily", AppLayoutDemo.class),
-                        getCard("./frontend/images/no-logo.png", "ApexCharts.js Addon", "A ApexCharts.js wrapper to build interactive charts and visualizations", ApexChartsDemo.class),
-                        getCard("./frontend/images/demohelper/logo.png", "Demo Helper Addon", "A addon that helps you creating beautiful addon demos in no time", DemoHelperViewDemo.class),
-                        getCard("./frontend/images/gridlayout/logo.png", "Css Grid Layout Addon", "A addon that brings css grid to Vaadin Flow", GridLayoutDemo.class),
-                        getCard("./frontend/images/card/logo.png", "Card Addon", "A addon that brings cards to Vaadin Flow", CardDemo.class),
-                        getCard("./frontend/images/progressbarjs/logo.png", "Progressbar.js Addon", "A addon that brings Progressbar.js to Vaadin Flow", ProgressbarJSDemo.class),
-                        getCard("./frontend/images/masterdetail/logo.png", "Master/Detail View Addon", "A addon that brings the Master/Detail Pattern to Vaadin Flow", MasterDetailDemo.class),
+                        getCard("./frontend/images/applayout/logo.png", "App Layout Addon", "A maddon that allows you building responsive applications easily", AppLayoutDemo.class),
+                        getCard("./frontend/images/no-logo.png", "ApexCharts.js Addon", "An ApexCharts.js wrapper to build interactive charts and visualizations", ApexChartsDemo.class),
+                        getCard("./frontend/images/demohelper/logo.png", "Demo Helper Addon", "An addon that helps you creating beautiful addon demos in no time", DemoHelperViewDemo.class),
+                        getCard("./frontend/images/gridlayout/logo.png", "Css Grid Layout Addon", "An addon that brings css grid to Vaadin Flow", GridLayoutDemo.class),
+                        getCard("./frontend/images/card/logo.png", "Card Addon", "An addon that brings cards to Vaadin Flow", CardDemo.class),
+                        getCard("./frontend/images/progressbarjs/logo.png", "Progressbar.js Addon", "An addon that brings Progressbar.js to Vaadin Flow", ProgressbarJSDemo.class),
+                        getCard("./frontend/images/masterdetail/logo.png", "Master/Detail View Addon", "An addon that brings the Master/Detail Pattern to Vaadin Flow", MasterDetailDemo.class),
                         getCard("./frontend/images/color/logo.png", "Paper Color Addon", "A color picker addon for Vaadin Flow", PaperColorDemo.class),
-                        getCard("./frontend/images/menubutton/logo.png", "PaperMenuButton", "A addon that can open a popup on click", PaperMenuButtonDemo.class),
+                        getCard("./frontend/images/menubutton/logo.png", "PaperMenuButton", "An addon that can open a popup on click", PaperMenuButtonDemo.class),
                         getCard("./frontend/images/ripple/logo.png", "PaperRipple", "Gives feedback if an area was clicked", PaperRippleDemo.class),
                         getCard("./frontend/images/prism/logo.png", "Prism-Element Addon", "A code/syntax highlighter addon for Vaadin Flow", PrismElementDemo.class),
-                        getCard("./frontend/images/ironcollapse/logo.png", "Iron Collapse Addon", "A addon that brings Iron Collapse to Vaadin Flow", IronCollapseDemo.class),
-                        getCard("./frontend/images/colorhelper/logo.png", "Calculated Color Helper Addon", "A addon that brings control over the css variables in Vaadin Flow", CalculatedColorHelperDemo.class)
+                        getCard("./frontend/images/ironcollapse/logo.png", "Iron Collapse Addon", "An addon that brings Iron Collapse to Vaadin Flow", IronCollapseDemo.class),
+                        getCard("./frontend/images/colorhelper/logo.png", "Calculated Color Helper Addon", "An addon that brings control over the css variables in Vaadin Flow", CalculatedColorHelperDemo.class)
                 )
                 .withPadding(true)
                 .withSpacing(true)
