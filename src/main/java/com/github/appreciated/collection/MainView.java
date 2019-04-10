@@ -2,10 +2,11 @@ package com.github.appreciated.collection;
 
 import com.github.appreciated.card.RippleClickableCard;
 import com.github.appreciated.card.content.IconItem;
+import com.github.appreciated.collection.demo.apexcharts.ApexChartsDemo;
 import com.github.appreciated.collection.demo.applayout.AppLayoutDemo;
 import com.github.appreciated.collection.demo.calculatedcolorhelper.CalculatedColorHelperDemo;
 import com.github.appreciated.collection.demo.card.CardDemo;
-import com.github.appreciated.collection.demo.demohelper.DemoHelperDemoView;
+import com.github.appreciated.collection.demo.demohelper.DemoHelperViewDemo;
 import com.github.appreciated.collection.demo.gridlayout.GridLayoutDemo;
 import com.github.appreciated.collection.demo.ironcollapse.IronCollapseDemo;
 import com.github.appreciated.collection.demo.masterdetail.MasterDetailDemo;
@@ -40,7 +41,8 @@ public class MainView extends VerticalLayout {
                 .withAutoRows(new Length("131px"))
                 .withItems(
                         getCard("./frontend/images/applayout/logo.png", "App Layout Addon", "A addon that allows you building responsive applications easily", AppLayoutDemo.class),
-                        getCard("./frontend/images/demohelper/logo.png", "Demo Helper Addon", "A addon that helps you creating beautiful addon demos in no time", DemoHelperDemoView.class),
+                        getCard("./frontend/images/no-logo.png", "ApexCharts.js Addon", "A ApexCharts.js wrapper to build interactive charts and visualizations", ApexChartsDemo.class),
+                        getCard("./frontend/images/demohelper/logo.png", "Demo Helper Addon", "A addon that helps you creating beautiful addon demos in no time", DemoHelperViewDemo.class),
                         getCard("./frontend/images/gridlayout/logo.png", "Css Grid Layout Addon", "A addon that brings css grid to Vaadin Flow", GridLayoutDemo.class),
                         getCard("./frontend/images/card/logo.png", "Card Addon", "A addon that brings cards to Vaadin Flow", CardDemo.class),
                         getCard("./frontend/images/progressbarjs/logo.png", "Progressbar.js Addon", "A addon that brings Progressbar.js to Vaadin Flow", ProgressbarJSDemo.class),

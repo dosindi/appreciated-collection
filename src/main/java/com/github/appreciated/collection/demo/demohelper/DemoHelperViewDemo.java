@@ -21,9 +21,9 @@ import com.vaadin.flow.component.radiobutton.RadioButtonGroup;
 import com.vaadin.flow.router.Route;
 
 @Route("demo-helper/")
-public class DemoHelperDemoView extends DemoHelperView {
+public class DemoHelperViewDemo extends DemoHelperView {
 
-    public DemoHelperDemoView() {
+    public DemoHelperViewDemo() {
         super(new GithubUrl("https://github.com/appreciated/demo-helper-view"),
                 new GithubDependencies(
                         "https://github.com/OlliTietavainenVaadin/clipboardhelper",
