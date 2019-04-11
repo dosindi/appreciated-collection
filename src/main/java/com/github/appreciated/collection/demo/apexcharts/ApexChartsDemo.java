@@ -1,7 +1,7 @@
 package com.github.appreciated.collection.demo.apexcharts;
 
 
-import com.github.appreciated.collection.demo.apexcharts.demo.ApexChartsExample;
+import com.github.appreciated.collection.demo.apexcharts.demo.*;
 import com.github.appreciated.collection.maven.AppreciatedDependencyReader;
 import com.github.appreciated.demo.helper.DemoHelperView;
 import com.github.appreciated.demo.helper.entity.CodeExample;
@@ -26,12 +26,28 @@ public class ApexChartsDemo extends DemoHelperView {
                 .withStep("Add dependency", "Add the dependency by adding it to your POM",
                         new CodeExample(new AppreciatedDependencyReader("apexcharts")))
                 .withStep("Install dependency", "Install the dependency by running the following Maven goal",
-                        new CodeExample("install", Language.markup, "Maven")
-                )
+                        new CodeExample("install", Language.markup, "Maven"))
                 .resetCounterStep()
-                .withStep("Some code examples", "Add ApexCharts.js to your View",
-                        new CodeExample(ApexChartsExample.class)
-                )
+                .withStep("Area Chart code example", "This is how you add a Area Chart to your View",
+                        new CodeExample(AreaChartExample.class))
+                .withStep("Candle Stick Chart code example", "This is how you add a Candle Stick Chart to your View",
+                        new CodeExample(CandleStickChartExample.class))
+                .withStep("Donut Chart code example", "This is how you add a Donut Chart to your View",
+                        new CodeExample(DonutChartExample.class))
+                .withStep("Horizontal Bar Chart code example", "This is how you add a Horizontal Bar Chart to your View",
+                        new CodeExample(HorizontalBarChartExample.class))
+                .withStep("Vertical Bar Chart code example", "This is how you add a hertical Bar Chart to your View",
+                        new CodeExample(VerticalBarChartExample.class))
+                .withStep("Line Chart code example", "This is how you add a Line Chart to your View",
+                        new CodeExample(LineChartExample.class))
+                .withStep("Pie Chart code example", "This is how you add a Pie Chart to your View",
+                        new CodeExample(PieChartExample.class))
+                .withStep("Radar Chart code example", "This is how you add a Radar Chart to your View",
+                        new CodeExample(RadarChartExample.class))
+                .withStep("Radial Bar Chart code example", "This is how you add a Radial Bar Chart to your View",
+                        new CodeExample(RadialBarChartExample.class))
+                .withStep("Scatter Chart code example", "This is how you add a Scatter Chart to your View",
+                        new CodeExample(ScatterChartExample.class))
                 .withDependencyNotice();
     }
 }
