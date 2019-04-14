@@ -32,7 +32,7 @@ public class AppLayoutDemo extends DemoHelperView {
                         "https://github.com/PolymerElements/paper-badge",
                         "https://github.com/appreciated/vaadin-paper-menu-button",
                         "https://github.com/appreciated/paper-ripple",
-                        "https://github.com/oyeharry/app-menu"
+                        "https://github.com/appreciated/iron-collapse"
                 )
         );
         withHorizontalHeader("AppLayout", "A responsive layout that allows you to create modern Menus quickly", "./frontend/images/applayout/logo.png")
@@ -42,14 +42,14 @@ public class AppLayoutDemo extends DemoHelperView {
                 .withStep("Add dependency", "Add the dependency by adding it to your POM",
                         new CodeExample(new AppreciatedDependencyReader("app-layout-addon")))
                 .withStep("Install dependency", "Install the dependency by running the following Maven goal",
-                        new CodeExample("install", Language.markup, "Maven")
-                )
+                        new CodeExample("install", Language.markup, "Maven"))
                 .withStep("Add App-Layout-Router-Layout Class", "Create a Class that extends AppLayoutRouterLayout and implement the missing methods as shown in the example. The AppLayoutRouterLayout can then be reused in every View by setting it in the Route annotation.",
-                        new CodeExample(MyAppLayoutRouterLayout.class)
-                ).withStep("Create a View with a @Route Annotation", "Create a View that contains a @Route Annotation that leads to a specific Path and also has the Class that was created above as \"layout=...\". If you now redeploy your application to the path set in the Annotation this view will be wrapped by the AppLayout",
-                new CodeExample(View1.class),
-                new CodeExample(View2.class)
-        )
+                        new CodeExample(MyAppLayoutRouterLayout.class))
+                .withStep(
+                        "Create a View with a @Route Annotation",
+                        "Create a View that contains a @Route Annotation that leads to a specific Path and also has the Class that was created above as \"layout=...\". If you now redeploy your application to the path set in the Annotation this view will be wrapped by the AppLayout",
+                        new CodeExample(View1.class),
+                        new CodeExample(View2.class))
                 .withContributorNotice()
                 .withDependencyNotice();
     }
