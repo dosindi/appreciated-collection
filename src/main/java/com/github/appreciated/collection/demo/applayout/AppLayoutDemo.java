@@ -28,11 +28,11 @@ public class AppLayoutDemo extends DemoHelperView {
                         "https://github.com/PolymerElements/iron-icons",
                         "https://github.com/PolymerElements/paper-icon-button",
                         "https://github.com/PolymerElements/paper-tabs",
-                        "https://github.com/PolymerElements/paper-card",
                         "https://github.com/PolymerElements/paper-badge",
                         "https://github.com/appreciated/vaadin-paper-menu-button",
                         "https://github.com/appreciated/paper-ripple",
-                        "https://github.com/appreciated/iron-collapse"
+                        "https://github.com/appreciated/iron-collapse",
+                        "https://github.com/appreciated/card"
                 )
         );
         withHorizontalHeader("AppLayout", "A responsive layout that allows you to create modern Menus quickly", "./frontend/images/applayout/logo.png")
