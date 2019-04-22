@@ -35,7 +35,7 @@ public class AppLayoutDemo extends DemoHelperView {
                         "https://github.com/appreciated/card"
                 )
         );
-        withHorizontalHeader("AppLayout", "A responsive layout that allows you to create modern Menus quickly", "./frontend/images/applayout/logo.png")
+        withHorizontalHeader("App Layout", "A responsive layout that allows you to create modern Menus quickly", "./frontend/images/applayout/logo.png")
                 .withDevice(new PhoneView(new RouteIFrame(MainView.class).withFullSize()), "Optimized for small screens")
                 .withParagraph("Behaviours", "The AppLayout has by default multiple Behaviours available. Try to set them via the menu in the demo above and below")
                 .withStylableDevice(new RouteIFrame(MainView.class).withFullSize(), DeviceType.TABLET_LANDSCAPE)
