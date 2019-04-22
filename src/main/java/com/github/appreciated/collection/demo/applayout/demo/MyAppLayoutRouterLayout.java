@@ -50,7 +50,7 @@ public class MyAppLayoutRouterLayout extends AppLayoutRouterLayout {
                 .get(Behaviour.LEFT_RESPONSIVE_HYBRID)
                 .withTitle("App Layout")
                 .withAppBar(AppBarBuilder.get()
-                        .add(new AppBarNotificationButton(VaadinIcon.BELL, notifications))
+                        .add(new AppBarNotificationButton<>(VaadinIcon.BELL, notifications))
                         .build())
                 .withAppMenu(LeftAppMenuBuilder.get()
                         .addToSection(new LeftHeaderItem("Menu-Header", "APP_LAYOUT_VERSION", "path/to/your/image"), HEADER)
