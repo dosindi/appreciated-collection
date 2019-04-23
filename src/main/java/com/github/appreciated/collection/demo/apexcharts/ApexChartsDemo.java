@@ -46,8 +46,16 @@ public class ApexChartsDemo extends DemoHelperView {
                         new CodeExample(RadarChartExample.class))
                 .withStep("Radial Bar Chart code example", "This is how you add a Radial Bar Chart to your View",
                         new CodeExample(RadialBarChartExample.class))
+                .withStep("Multi Radial Bar Chart code example", "This is how you add a Multi Radial Bar Chart to your View",
+                        new CodeExample(MultiRadialBarChartExample.class))
+                .withStep("Radial Gradient Bar Chart code example", "This is how you add a Radial Gradient Bar Chart to your View",
+                        new CodeExample(GradientRadialBarChartExample.class))
                 .withStep("Scatter Chart code example", "This is how you add a Scatter Chart to your View",
                         new CodeExample(ScatterChartExample.class))
+                .withStep("Heatmap Chart code example", "This is how you add a Heatmap Chart to your View",
+                        new CodeExample(HeatmapChartExample.class))
+                .withStep("Bubble Chart code example", "This is how you add a Bubble Chart to your View",
+                        new CodeExample(BubbleChartExample.class))
                 .withDependencyNotice();
     }
 }
