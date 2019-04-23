@@ -8,9 +8,9 @@ import com.github.appreciated.apexcharts.config.grid.builder.RowBuilder;
 import com.github.appreciated.apexcharts.config.stroke.Curve;
 import com.github.appreciated.apexcharts.config.subtitle.Align;
 import com.github.appreciated.apexcharts.helper.Series;
-import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.component.html.Div;
 
-public class LineChartExample extends VerticalLayout {
+public class LineChartExample extends Div {
     public LineChartExample() {
         ApexCharts lineChart = new ApexCharts()
                 .withChart(ChartBuilder.get()
@@ -36,5 +36,6 @@ public class LineChartExample extends VerticalLayout {
                         .build())
                 .withSeries(new Series("Desktops", 10.0, 41.0, 35.0, 51.0, 49.0, 62.0, 69.0, 91.0, 148.0));
         add(lineChart);
+        setWidth("100%");
     }
 }

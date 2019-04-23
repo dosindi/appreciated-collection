@@ -13,9 +13,9 @@ import com.github.appreciated.apexcharts.config.plotoptions.builder.RadialBarBui
 import com.github.appreciated.apexcharts.config.plotoptions.hollow.HollowPosition;
 import com.github.appreciated.apexcharts.config.plotoptions.radialbar.builder.*;
 import com.github.appreciated.apexcharts.config.stroke.LineCap;
-import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.component.html.Div;
 
-public class GradientRadialBarChartExample extends VerticalLayout {
+public class GradientRadialBarChartExample extends Div {
     public GradientRadialBarChartExample() {
         ApexCharts gradientRadialBarChart = new ApexCharts()
                 .withChart(ChartBuilder.get()
@@ -83,5 +83,6 @@ public class GradientRadialBarChartExample extends VerticalLayout {
                         .build())
                 .withLabels("Percent");
         add(gradientRadialBarChart);
+        setWidth("100%");
     }
 }

@@ -7,9 +7,9 @@ import com.github.appreciated.apexcharts.config.plotoptions.builder.BarBuilder;
 import com.github.appreciated.apexcharts.config.tooltip.builder.YBuilder;
 import com.github.appreciated.apexcharts.config.yaxis.builder.TitleBuilder;
 import com.github.appreciated.apexcharts.helper.Series;
-import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.component.html.Div;
 
-public class VerticalBarChartExample extends VerticalLayout {
+public class VerticalBarChartExample extends Div {
     public VerticalBarChartExample() {
         ApexCharts barChart = new ApexCharts()
                 .withChart(ChartBuilder.get()
@@ -46,5 +46,6 @@ public class VerticalBarChartExample extends VerticalLayout {
                                         "}").build())
                         .build());
         add(barChart);
+        setWidth("100%");
     }
 }

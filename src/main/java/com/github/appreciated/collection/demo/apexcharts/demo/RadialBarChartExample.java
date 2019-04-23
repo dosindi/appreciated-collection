@@ -6,9 +6,9 @@ import com.github.appreciated.apexcharts.config.builder.PlotOptionsBuilder;
 import com.github.appreciated.apexcharts.config.chart.Type;
 import com.github.appreciated.apexcharts.config.plotoptions.builder.RadialBarBuilder;
 import com.github.appreciated.apexcharts.config.plotoptions.radialbar.builder.HollowBuilder;
-import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.component.html.Div;
 
-public class RadialBarChartExample extends VerticalLayout {
+public class RadialBarChartExample extends Div {
     public RadialBarChartExample() {
         ApexCharts radialBarChart = new ApexCharts()
                 .withChart(ChartBuilder.get()
@@ -24,5 +24,6 @@ public class RadialBarChartExample extends VerticalLayout {
                 .withSeries(70.0)
                 .withLabels("Cricket");
         add(radialBarChart);
+        setWidth("100%");
     }
 }

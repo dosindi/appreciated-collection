@@ -9,12 +9,12 @@ import com.github.appreciated.apexcharts.config.stroke.Curve;
 import com.github.appreciated.apexcharts.config.subtitle.Align;
 import com.github.appreciated.apexcharts.config.xaxis.XAxisType;
 import com.github.appreciated.apexcharts.helper.Series;
-import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.component.html.Div;
 
 import java.time.LocalDate;
 import java.util.stream.IntStream;
 
-public class AreaChartExample extends VerticalLayout {
+public class AreaChartExample extends Div {
     public AreaChartExample() {
         ApexCharts areaChart = new ApexCharts()
                 .withChart(
@@ -42,5 +42,6 @@ public class AreaChartExample extends VerticalLayout {
                         .withOpposite(true).build())
                 .withLegend(LegendBuilder.get().withHorizontalAlign(HorizontalAlign.left).build());
         add(areaChart);
+        setWidth("100%");
     }
 }

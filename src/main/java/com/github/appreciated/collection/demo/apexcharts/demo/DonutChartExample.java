@@ -2,14 +2,30 @@ package com.github.appreciated.collection.demo.apexcharts.demo;
 
 import com.github.appreciated.apexcharts.ApexCharts;
 import com.github.appreciated.apexcharts.config.builder.ChartBuilder;
+import com.github.appreciated.apexcharts.config.builder.LegendBuilder;
+import com.github.appreciated.apexcharts.config.builder.ResponsiveBuilder;
 import com.github.appreciated.apexcharts.config.chart.Type;
-import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.github.appreciated.apexcharts.config.legend.Position;
+import com.github.appreciated.apexcharts.config.responsive.builder.OptionsBuilder;
+import com.vaadin.flow.component.html.Div;
 
-public class DonutChartExample extends VerticalLayout {
+public class DonutChartExample extends Div {
     public DonutChartExample() {
         ApexCharts donutChart = new ApexCharts()
                 .withChart(ChartBuilder.get().withType(Type.donut).build())
-                .withSeries(44.0, 55.0, 41.0, 17.0, 15.0);
+                .withLegend(LegendBuilder.get()
+                        .withPosition(Position.right)
+                        .build())
+                .withSeries(44.0, 55.0, 41.0, 17.0, 15.0)
+                .withResponsive(ResponsiveBuilder.get()
+                        .withBreakpoint(480.0)
+                        .withOptions(OptionsBuilder.get()
+                                .withLegend(LegendBuilder.get()
+                                        .withPosition(Position.bottom)
+                                        .build())
+                                .build())
+                        .build());
         add(donutChart);
+        setWidth("100%");
     }
 }

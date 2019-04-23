@@ -8,9 +8,9 @@ import com.github.appreciated.apexcharts.config.builder.XAxisBuilder;
 import com.github.appreciated.apexcharts.config.chart.Type;
 import com.github.appreciated.apexcharts.config.plotoptions.builder.BarBuilder;
 import com.github.appreciated.apexcharts.helper.Series;
-import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.component.html.Div;
 
-public class HorizontalBarChartExample extends VerticalLayout {
+public class HorizontalBarChartExample extends Div {
     public HorizontalBarChartExample() {
         ApexCharts barChart = new ApexCharts()
                 .withChart(ChartBuilder.get()
@@ -29,5 +29,6 @@ public class HorizontalBarChartExample extends VerticalLayout {
                         .withCategories()
                         .build());
         add(barChart);
+        setWidth("100%");
     }
 }

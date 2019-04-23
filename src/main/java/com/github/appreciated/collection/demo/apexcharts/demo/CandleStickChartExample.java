@@ -7,14 +7,14 @@ import com.github.appreciated.apexcharts.config.subtitle.Align;
 import com.github.appreciated.apexcharts.config.xaxis.XAxisType;
 import com.github.appreciated.apexcharts.helper.Coordinate;
 import com.github.appreciated.apexcharts.helper.Series;
-import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.component.html.Div;
 
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 
-public class CandleStickChartExample extends VerticalLayout {
+public class CandleStickChartExample extends Div {
     public CandleStickChartExample() {
         ApexCharts barChart = new ApexCharts()
                 .withChart(ChartBuilder.get()
@@ -55,6 +55,7 @@ public class CandleStickChartExample extends VerticalLayout {
                                 .build())
                         .build());
         add(barChart);
+        setWidth("100%");
     }
 
     private String getISOString(long l) {

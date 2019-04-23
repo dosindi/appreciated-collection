@@ -6,9 +6,9 @@ import com.github.appreciated.apexcharts.config.chart.Type;
 import com.github.appreciated.apexcharts.config.xaxis.XAxisType;
 import com.github.appreciated.apexcharts.helper.Coordinate;
 import com.github.appreciated.apexcharts.helper.Series;
-import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.component.html.Div;
 
-public class HeatmapChartExample extends VerticalLayout {
+public class HeatmapChartExample extends Div {
     public HeatmapChartExample() {
         ApexCharts heatmapChart = new ApexCharts()
                 .withChart(
@@ -36,5 +36,6 @@ public class HeatmapChartExample extends VerticalLayout {
                 .withXaxis(XAxisBuilder.get().withType(XAxisType.numeric).build())
                 .withYaxis(YAxisBuilder.get().withMax(70.0).build());
         add(heatmapChart);
+        setWidth("100%");
     }
 }

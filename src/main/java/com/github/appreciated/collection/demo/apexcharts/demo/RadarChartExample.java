@@ -5,9 +5,9 @@ import com.github.appreciated.apexcharts.config.builder.ChartBuilder;
 import com.github.appreciated.apexcharts.config.builder.TitleSubtitleBuilder;
 import com.github.appreciated.apexcharts.config.chart.Type;
 import com.github.appreciated.apexcharts.helper.Series;
-import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.component.html.Div;
 
-public class RadarChartExample extends VerticalLayout {
+public class RadarChartExample extends Div {
     public RadarChartExample() {
         ApexCharts radarChart = new ApexCharts()
                 .withChart(ChartBuilder.get()
@@ -19,5 +19,6 @@ public class RadarChartExample extends VerticalLayout {
                         .build())
                 .withLabels("January", "February", "March", "April", "May", "June");
         add(radarChart);
+        setWidth("100%");
     }
 }

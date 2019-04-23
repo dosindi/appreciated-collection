@@ -8,9 +8,9 @@ import com.github.appreciated.apexcharts.config.chart.Type;
 import com.github.appreciated.apexcharts.config.chart.builder.ZoomBuilder;
 import com.github.appreciated.apexcharts.config.chart.zoom.ZoomType;
 import com.github.appreciated.apexcharts.helper.Series;
-import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.component.html.Div;
 
-public class ScatterChartExample extends VerticalLayout {
+public class ScatterChartExample extends Div {
     public ScatterChartExample() {
         ApexCharts scatterChart = new ApexCharts()
                 .withChart(ChartBuilder.get()
@@ -49,5 +49,6 @@ public class ScatterChartExample extends VerticalLayout {
                         .withTickAmount(7.0)
                         .build());
         add(scatterChart);
+        setWidth("100%");
     }
 }
