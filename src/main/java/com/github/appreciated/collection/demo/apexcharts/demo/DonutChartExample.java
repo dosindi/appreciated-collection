@@ -10,7 +10,6 @@ public class DonutChartExample extends VerticalLayout {
         ApexCharts donutChart = new ApexCharts()
                 .withChart(ChartBuilder.get().withType(Type.donut).build())
                 .withSeries(44.0, 55.0, 41.0, 17.0, 15.0);
-        donutChart.setHeight("300px");
         add(donutChart);
     }
 }

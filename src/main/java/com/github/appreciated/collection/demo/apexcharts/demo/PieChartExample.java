@@ -11,7 +11,6 @@ public class PieChartExample extends VerticalLayout {
                 .withChart(ChartBuilder.get().withType(Type.pie).build())
                 .withLabels("Team A", "Team B", "Team C", "Team D", "Team E")
                 .withSeries(44.0, 55.0, 13.0, 43.0, 22.0);
-        pieChart.setHeight("300px");
         add(pieChart);
     }
 }

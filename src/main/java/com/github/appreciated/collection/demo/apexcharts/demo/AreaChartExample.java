@@ -3,7 +3,7 @@ package com.github.appreciated.collection.demo.apexcharts.demo;
 import com.github.appreciated.apexcharts.ApexCharts;
 import com.github.appreciated.apexcharts.config.builder.*;
 import com.github.appreciated.apexcharts.config.chart.Type;
-import com.github.appreciated.apexcharts.config.chart.zoom.builder.ZoomBuilder;
+import com.github.appreciated.apexcharts.config.chart.builder.ZoomBuilder;
 import com.github.appreciated.apexcharts.config.legend.HorizontalAlign;
 import com.github.appreciated.apexcharts.config.stroke.Curve;
 import com.github.appreciated.apexcharts.config.subtitle.Align;
@@ -41,8 +41,6 @@ public class AreaChartExample extends VerticalLayout {
                 .withYaxis(YAxisBuilder.get()
                         .withOpposite(true).build())
                 .withLegend(LegendBuilder.get().withHorizontalAlign(HorizontalAlign.left).build());
-        areaChart.setWidth("550px");
-        areaChart.setHeight("350px");
         add(areaChart);
     }
 }

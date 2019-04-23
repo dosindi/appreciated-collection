@@ -4,8 +4,8 @@ import com.github.appreciated.apexcharts.ApexCharts;
 import com.github.appreciated.apexcharts.config.builder.ChartBuilder;
 import com.github.appreciated.apexcharts.config.builder.PlotOptionsBuilder;
 import com.github.appreciated.apexcharts.config.chart.Type;
-import com.github.appreciated.apexcharts.config.plotoptions.builder.HollowBuilder;
 import com.github.appreciated.apexcharts.config.plotoptions.builder.RadialBarBuilder;
+import com.github.appreciated.apexcharts.config.plotoptions.radialbar.builder.HollowBuilder;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
 public class RadialBarChartExample extends VerticalLayout {
@@ -22,9 +22,7 @@ public class RadialBarChartExample extends VerticalLayout {
                                 .build())
                         .build())
                 .withSeries(70.0)
-                .withLabels("Circket");
-        radialBarChart.setWidth("550px");
-        radialBarChart.setHeight("350px");
+                .withLabels("Cricket");
         add(radialBarChart);
     }
 }

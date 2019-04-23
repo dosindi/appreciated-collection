@@ -45,8 +45,6 @@ public class VerticalBarChartExample extends VerticalLayout {
                                         "return \"$ \" + val + \" thousands\"\n" +
                                         "}").build())
                         .build());
-        barChart.setWidth("550px");
-        barChart.setHeight("350px");
         add(barChart);
     }
 }

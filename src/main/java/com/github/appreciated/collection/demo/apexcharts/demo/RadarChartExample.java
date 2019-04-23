@@ -18,8 +18,6 @@ public class RadarChartExample extends VerticalLayout {
                         .withText("Basic Radar Chart")
                         .build())
                 .withLabels("January", "February", "March", "April", "May", "June");
-        radarChart.setWidth("550px");
-        radarChart.setHeight("350px");
         add(radarChart);
     }
 }

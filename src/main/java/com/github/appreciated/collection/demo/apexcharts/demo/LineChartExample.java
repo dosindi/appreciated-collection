@@ -3,7 +3,7 @@ package com.github.appreciated.collection.demo.apexcharts.demo;
 import com.github.appreciated.apexcharts.ApexCharts;
 import com.github.appreciated.apexcharts.config.builder.*;
 import com.github.appreciated.apexcharts.config.chart.Type;
-import com.github.appreciated.apexcharts.config.chart.zoom.builder.ZoomBuilder;
+import com.github.appreciated.apexcharts.config.chart.builder.ZoomBuilder;
 import com.github.appreciated.apexcharts.config.grid.builder.RowBuilder;
 import com.github.appreciated.apexcharts.config.stroke.Curve;
 import com.github.appreciated.apexcharts.config.subtitle.Align;
@@ -35,8 +35,6 @@ public class LineChartExample extends VerticalLayout {
                         .withCategories("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep")
                         .build())
                 .withSeries(new Series("Desktops", 10.0, 41.0, 35.0, 51.0, 49.0, 62.0, 69.0, 91.0, 148.0));
-        lineChart.setWidth("550px");
-        lineChart.setHeight("350px");
         add(lineChart);
     }
 }

@@ -54,8 +54,6 @@ public class CandleStickChartExample extends VerticalLayout {
                                 .withEnabled(true)
                                 .build())
                         .build());
-        barChart.setWidth("550px");
-        barChart.setHeight("350px");
         add(barChart);
     }
 

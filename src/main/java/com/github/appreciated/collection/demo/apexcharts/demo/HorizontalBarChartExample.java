@@ -28,8 +28,6 @@ public class HorizontalBarChartExample extends VerticalLayout {
                 .withXaxis(XAxisBuilder.get()
                         .withCategories()
                         .build());
-        barChart.setWidth("550px");
-        barChart.setHeight("350px");
         add(barChart);
     }
 }

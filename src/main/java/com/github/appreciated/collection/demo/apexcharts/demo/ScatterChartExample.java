@@ -5,8 +5,8 @@ import com.github.appreciated.apexcharts.config.builder.ChartBuilder;
 import com.github.appreciated.apexcharts.config.builder.XAxisBuilder;
 import com.github.appreciated.apexcharts.config.builder.YAxisBuilder;
 import com.github.appreciated.apexcharts.config.chart.Type;
+import com.github.appreciated.apexcharts.config.chart.builder.ZoomBuilder;
 import com.github.appreciated.apexcharts.config.chart.zoom.ZoomType;
-import com.github.appreciated.apexcharts.config.chart.zoom.builder.ZoomBuilder;
 import com.github.appreciated.apexcharts.helper.Series;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
@@ -48,7 +48,6 @@ public class ScatterChartExample extends VerticalLayout {
                 .withYaxis(YAxisBuilder.get()
                         .withTickAmount(7.0)
                         .build());
-        scatterChart.setWidth("500px");
         add(scatterChart);
     }
 }
