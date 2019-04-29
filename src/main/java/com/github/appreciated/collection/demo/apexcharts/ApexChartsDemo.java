@@ -18,7 +18,7 @@ import com.vaadin.flow.router.Route;
 public class ApexChartsDemo extends DemoHelperView {
 
     public ApexChartsDemo() {
-        super(new GithubUrl("https://github.com/appreciated/apexcharts"), new GithubDependencies("https://github.com/apexcharts/apexcharts.js"));
+        super(new GithubUrl("https://github.com/appreciated/apexcharts-flow"), new GithubDependencies("https://github.com/apexcharts/apexcharts.js"));
         withHorizontalHeader("ApexCharts.js",
                 "A modern JavaScript charting library to build interactive charts and visualizations with simple API.",
                 "./frontend/images/no-logo.png")
