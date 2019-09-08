@@ -24,7 +24,7 @@ public class SwiperDemo extends DemoHelperView {
                 "./frontend/images/no-logo.png")
                 .withDevice(new TabletView(new SwiperExample()).withOrientation(Orientation.PORTRAIT))
                 .withStep("Add dependency", "Add the dependency by adding it to your POM",
-                        new CodeExample(new AppreciatedDependencyReader("paper-ripple")))
+                        new CodeExample(new AppreciatedDependencyReader("swiper-flow")))
                 .withStep("Install dependency", "Install the dependency by running the following Maven goal",
                         new CodeExample("install", Language.markup, "Maven")
                 )
