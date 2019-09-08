@@ -1,7 +1,7 @@
-package com.github.appreciated.collection.demo.swiper;
+package com.github.appreciated.collection.demo.ironoverlaybehavior;
 
 
-import com.github.appreciated.collection.demo.swiper.demo.SwiperExample;
+import com.github.appreciated.collection.demo.ironoverlaybehavior.demo.IronOverlayBehaviorExample;
 import com.github.appreciated.collection.maven.AppreciatedDependencyReader;
 import com.github.appreciated.demo.helper.DemoHelperView;
 import com.github.appreciated.demo.helper.entity.CodeExample;
@@ -13,24 +13,24 @@ import com.github.appreciated.prism.element.Language;
 import com.vaadin.flow.component.page.BodySize;
 import com.vaadin.flow.router.Route;
 
-@Route("swiper/")
+@Route("iron-overlay-behavior/")
 @BodySize(height = "100%", width = "100%")
-public class SwiperDemo extends DemoHelperView {
+public class IronOverlayBehaviorDemo extends DemoHelperView {
 
-    public SwiperDemo() {
-        super(new GithubUrl("https://github.com/appreciated/swiper-flow"), new GithubDependencies("https://github.com/nolimits4web/swiper"));
-        withHorizontalHeader("Swiper for flow",
-                "A mobile touch slider with hardware accelerated transitions and amazing native behavior.",
-                "./frontend/images/no-logo.png")
-                .withDevice(new TabletView(new SwiperExample()).withOrientation(Orientation.PORTRAIT))
+    public IronOverlayBehaviorDemo() {
+        super(new GithubUrl("https://github.com/appreciated/iron-overlay-behavior"), new GithubDependencies("https://www.webcomponents.org/element/@polymer/iron-overlay-behavior"));
+        withHorizontalHeader("IronOverlayBehavior",
+                "Use IronOverlayBehavior to implement an element that can be hidden or shown, and displays on top of other content.",
+                "./frontend/images/ripple/logo.png")
+                .withDevice(new TabletView(new IronOverlayBehaviorExample()).withOrientation(Orientation.PORTRAIT))
                 .withStep("Add dependency", "Add the dependency by adding it to your POM",
                         new CodeExample(new AppreciatedDependencyReader("paper-ripple")))
                 .withStep("Install dependency", "Install the dependency by running the following Maven goal",
                         new CodeExample("install", Language.markup, "Maven")
                 )
                 .resetCounterStep()
-                .withStep("Some code examples", "Add PaperRipple to your View",
-                        new CodeExample(SwiperExample.class)
+                .withStep("Some code examples", "Add IronOverlayBehavior to your View",
+                        new CodeExample(IronOverlayBehaviorExample.class)
                 )
                 .withDependencyNotice();
     }
