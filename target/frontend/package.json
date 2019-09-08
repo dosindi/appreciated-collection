@@ -4,14 +4,15 @@
   "license": "UNLICENSED",
   "dependencies": {
     "@vaadin/vaadin-crud": "1.0.5",
-    "@vaadin/vaadin-icons": "4.3.1",
+    "swiper": "^4.5.0",
     "@vaadin/vaadin-grid": "5.4.8",
+    "@vaadin/vaadin-icons": "4.3.1",
     "@polymer/iron-collapse": "3.0.1",
     "@vaadin/vaadin-combo-box": "5.0.6",
     "@vaadin/vaadin-core-shrinkwrap": "14.0.3",
     "@vaadin/vaadin-upload": "4.2.2",
-    "@polymer/paper-menu-button": "3.0.1",
     "@vaadin/vaadin-select": "2.1.5",
+    "@polymer/paper-menu-button": "3.0.1",
     "@vaadin/vaadin-app-layout": "2.0.2",
     "@polymer/app-layout": "3.1.0",
     "@polymer/prism-element": "3.0.1",
@@ -20,12 +21,13 @@
     "@vaadin/vaadin-progress-bar": "1.1.2",
     "@vaadin/vaadin-login": "1.0.1",
     "@vaadin/vaadin-text-field": "2.4.11",
+    "@vaadin/vaadin-custom-field": "1.0.6",
     "apexcharts": "3.8.4",
-    "@polymer/paper-tabs": "3.1.0",
     "@vaadin/vaadin-form-layout": "2.1.6",
-    "@polymer/iron-list": "3.0.2",
-    "@vaadin/vaadin-confirm-dialog": "1.1.4",
+    "@polymer/paper-tabs": "3.1.0",
     "@vaadin/vaadin-accordion": "1.0.1",
+    "@vaadin/vaadin-confirm-dialog": "1.1.4",
+    "@polymer/iron-list": "3.0.2",
     "@polymer/paper-badge": "3.0.1",
     "onecolor": "3.0.5",
     "@vaadin/vaadin-checkbox": "2.2.10",
@@ -52,7 +54,6 @@
     "@polymer/iron-icon": "3.0.1",
     "@vaadin/vaadin-radio-button": "1.2.3",
     "@vaadin/vaadin-lumo-styles": "1.5.0",
-    "@vaadin/vaadin-rich-text-editor": "1.0.4",
-    "swiper": "^4.5.0"
+    "@vaadin/vaadin-rich-text-editor": "1.0.4"
   }
 }
