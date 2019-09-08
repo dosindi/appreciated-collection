@@ -22,7 +22,7 @@ import com.github.appreciated.demo.helper.DemoHelperView;
 import com.github.appreciated.layout.FlexibleGridLayout;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.html.Image;
-import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.component.page.BodySize;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.PWA;
 
@@ -31,7 +31,8 @@ import com.vaadin.flow.server.PWA;
  */
 @Route
 @PWA(name = "Appreciated Addon Collection", shortName = "Appreciated Collection")
-public class MainView extends VerticalLayout {
+@BodySize(height = "100%", width = "100%")
+public class MainView extends DemoHelperView {
 
     public MainView() {
         FlexibleGridLayout layout = new FlexibleGridLayout()
@@ -55,12 +56,11 @@ public class MainView extends VerticalLayout {
                 .withAutoFlow(GridLayoutComponent.AutoFlow.ROW_DENSE)
                 .withOverflow(GridLayoutComponent.Overflow.AUTO);
         layout.setWidth("100%");
-        add(new DemoHelperView()
-                .withVerticalHeader("Appreciated Collection",
-                        "Welcome to the Appreciated Collection",
-                        "./frontend/images/collection/logo.png"
-                ).with(layout)
-        );
+
+        withVerticalHeader("Appreciated Collection",
+                "Welcome to the Appreciated Collection",
+                "./frontend/images/collection/logo.png")
+                .with(layout);
     }
 
     private Component getCard(String imagePath, String title, String description, Class<? extends Component> route) {
