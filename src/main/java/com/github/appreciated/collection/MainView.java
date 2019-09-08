@@ -10,11 +10,9 @@ import com.github.appreciated.collection.demo.demohelper.DemoHelperViewDemo;
 import com.github.appreciated.collection.demo.gridlayout.GridLayoutDemo;
 import com.github.appreciated.collection.demo.ironcollapse.IronCollapseDemo;
 import com.github.appreciated.collection.demo.masterdetail.MasterDetailDemo;
-import com.github.appreciated.collection.demo.papercolor.PaperColorDemo;
 import com.github.appreciated.collection.demo.papermenubutton.PaperMenuButtonDemo;
 import com.github.appreciated.collection.demo.paperripple.PaperRippleDemo;
 import com.github.appreciated.collection.demo.prismelement.PrismElementDemo;
-import com.github.appreciated.collection.demo.progressbarjs.ProgressbarJSDemo;
 import com.github.appreciated.css.grid.GridLayoutComponent;
 import com.github.appreciated.css.grid.sizes.Flex;
 import com.github.appreciated.css.grid.sizes.Length;
@@ -45,9 +43,7 @@ public class MainView extends VerticalLayout {
                         getCard("./frontend/images/demohelper/logo.png", "Demo Helper Addon", "An addon that helps you creating beautiful addon demos in no time", DemoHelperViewDemo.class),
                         getCard("./frontend/images/gridlayout/logo.png", "Css Grid Layout Addon", "An addon that brings css grid to Vaadin Flow", GridLayoutDemo.class),
                         getCard("./frontend/images/card/logo.png", "Card Addon", "An addon that brings cards to Vaadin Flow", CardDemo.class),
-                        getCard("./frontend/images/progressbarjs/logo.png", "Progressbar.js Addon", "An addon that brings Progressbar.js to Vaadin Flow", ProgressbarJSDemo.class),
                         getCard("./frontend/images/masterdetail/logo.png", "Master/Detail View Addon", "An addon that brings the Master/Detail Pattern to Vaadin Flow", MasterDetailDemo.class),
-                        getCard("./frontend/images/color/logo.png", "Paper Color Addon", "A color picker addon for Vaadin Flow", PaperColorDemo.class),
                         getCard("./frontend/images/menubutton/logo.png", "PaperMenuButton", "An addon that can open a popup on click", PaperMenuButtonDemo.class),
                         getCard("./frontend/images/ripple/logo.png", "PaperRipple", "Gives feedback if an area was clicked", PaperRippleDemo.class),
                         getCard("./frontend/images/prism/logo.png", "Prism-Element Addon", "A code/syntax highlighter addon for Vaadin Flow", PrismElementDemo.class),
