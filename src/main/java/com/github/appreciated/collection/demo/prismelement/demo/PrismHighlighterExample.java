@@ -15,7 +15,7 @@ public class PrismHighlighterExample extends VerticalLayout {
         PrismHighlighter xml = new PrismHighlighter("<dependency>\n" +
                 "    <groupId>com.github.appreciated</groupId>\n" +
                 "    <artifactId>prism-element</artifactId>\n" +
-                "    <version>0.7</version>\n" +
+                "    <version>LATEST</version>\n" +
                 "</dependency>", Language.markup);
 
         add(new Label("Java Highlighting"), javaCode, new Label("XML Highlighting"), xml);
