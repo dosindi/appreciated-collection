@@ -226,22 +226,12 @@
                 <groupId>com.vaadin</groupId>
                 <artifactId>vaadin-maven-plugin</artifactId>
                 <version>${vaadin.version}</version>
-                <configuration>
-                    <compatibilityMode>false</compatibilityMode>
-                </configuration>
                 <executions>
                     <execution>
-                        <id>first</id>
                         <goals>
                             <goal>prepare-frontend</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>second</id>
-                        <goals>
                             <goal>build-frontend</goal>
                         </goals>
-                        <phase>compile</phase>
                     </execution>
                 </executions>
             </plugin>
