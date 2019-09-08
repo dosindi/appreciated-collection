@@ -13,6 +13,7 @@ import com.github.appreciated.collection.demo.masterdetail.MasterDetailDemo;
 import com.github.appreciated.collection.demo.papermenubutton.PaperMenuButtonDemo;
 import com.github.appreciated.collection.demo.paperripple.PaperRippleDemo;
 import com.github.appreciated.collection.demo.prismelement.PrismElementDemo;
+import com.github.appreciated.collection.demo.swiper.SwiperDemo;
 import com.github.appreciated.css.grid.GridLayoutComponent;
 import com.github.appreciated.css.grid.sizes.Flex;
 import com.github.appreciated.css.grid.sizes.Length;
@@ -41,6 +42,7 @@ public class MainView extends DemoHelperView {
                 .withItems(
                         getCard("./frontend/images/applayout/logo.png", "App Layout Addon", "A maddon that allows you building responsive applications easily", AppLayoutDemo.class),
                         getCard("./frontend/images/no-logo.png", "ApexCharts.js Addon", "An ApexCharts.js wrapper to build interactive charts and visualizations", ApexChartsDemo.class),
+                        getCard("./frontend/images/no-logo.png", "Swiper Addon", "A component to build horizontally and vertically scrollable containers with stops", SwiperDemo.class),
                         getCard("./frontend/images/demohelper/logo.png", "Demo Helper Addon", "An addon that helps you creating beautiful addon demos in no time", DemoHelperViewDemo.class),
                         getCard("./frontend/images/gridlayout/logo.png", "Css Grid Layout Addon", "An addon that brings css grid to Vaadin Flow", GridLayoutDemo.class),
                         getCard("./frontend/images/card/logo.png", "Card Addon", "An addon that brings cards to Vaadin Flow", CardDemo.class),
