@@ -18,5 +18,6 @@
   },
   "engines": {
     "npm": "6.x"
-  }
+  },
+  "vaadinAppPackageHash": "ca532e567a57200b8978d02f38f553d19875c2b11e8f30cc74672883f26c5eed"
 }

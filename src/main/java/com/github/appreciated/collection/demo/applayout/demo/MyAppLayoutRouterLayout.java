@@ -1,10 +1,10 @@
 package com.github.appreciated.collection.demo.applayout.demo;
 
 import com.github.appreciated.app.layout.addons.notification.DefaultNotificationHolder;
-import com.github.appreciated.app.layout.addons.notification.component.AppBarNotificationButton;
+import com.github.appreciated.app.layout.addons.notification.component.NotificationButton;
 import com.github.appreciated.app.layout.addons.notification.entity.DefaultNotification;
 import com.github.appreciated.app.layout.component.appbar.AppBarBuilder;
-import com.github.appreciated.app.layout.component.applayout.Behaviour;
+import com.github.appreciated.app.layout.component.applayout.LeftLayouts;
 import com.github.appreciated.app.layout.component.builder.AppLayoutBuilder;
 import com.github.appreciated.app.layout.component.menu.left.builder.LeftAppMenuBuilder;
 import com.github.appreciated.app.layout.component.menu.left.builder.LeftSubMenuBuilder;
@@ -25,7 +25,7 @@ import static com.github.appreciated.app.layout.entity.Section.FOOTER;
 import static com.github.appreciated.app.layout.entity.Section.HEADER;
 
 @Push
-public class MyAppLayoutRouterLayout extends AppLayoutRouterLayout {
+public class MyAppLayoutRouterLayout extends AppLayoutRouterLayout<LeftLayouts.LeftResponsiveHybrid> {
     /**
      * Do not initialize here. This will lead to NPEs
      */
@@ -35,38 +35,38 @@ public class MyAppLayoutRouterLayout extends AppLayoutRouterLayout {
 
     public MyAppLayoutRouterLayout() {
 
-
         notifications = new DefaultNotificationHolder(newStatus -> {
         });
         badge = new DefaultBadgeHolder(5);
         for (int i = 1; i < 6; i++) {
-            notifications.addNotification(new DefaultNotification("Test title" + i, "A rather long test description ..............." + i));
+            notifications.add(new DefaultNotification("Test title" + i, "A rather long test description ..............." + i));
         }
 
         LeftNavigationItem menuEntry = new LeftNavigationItem("Menu", VaadinIcon.MENU.create(), View6.class);
         badge.bind(menuEntry.getBadge());
 
-        init(AppLayoutBuilder
-                .get(Behaviour.LEFT_RESPONSIVE_HYBRID)
+        init(AppLayoutBuilder.get(LeftLayouts.LeftResponsiveHybrid.class)
                 .withTitle("App Layout")
                 .withAppBar(AppBarBuilder.get()
-                        .add(new AppBarNotificationButton<>(VaadinIcon.BELL, notifications))
+                        .add(new NotificationButton<>(VaadinIcon.BELL, notifications))
                         .build())
                 .withAppMenu(LeftAppMenuBuilder.get()
-                        .addToSection(new LeftHeaderItem("Menu-Header", "APP_LAYOUT_VERSION", "path/to/your/image"), HEADER)
-                        .addToSection(new LeftClickableItem("Clickable Entry", VaadinIcon.COG.create(), clickEvent -> Notification.show("onClick ...")), HEADER)
-                        .add(new LeftNavigationItem("Home", VaadinIcon.HOME.create(), View1.class))
-                        .add(LeftSubMenuBuilder.get("My Submenu", VaadinIcon.PLUS.create())
-                                .add(LeftSubMenuBuilder.get("My Submenu", VaadinIcon.PLUS.create())
-                                        .add(new LeftNavigationItem("Charts", VaadinIcon.SPLINE_CHART.create(), View2.class))
-                                        .add(new LeftNavigationItem("Contact", VaadinIcon.CONNECT.create(), View3.class))
-                                        .add(new LeftNavigationItem("More", VaadinIcon.COG.create(), View4.class))
-                                        .build())
-                                .add(new LeftNavigationItem("Contact1", VaadinIcon.CONNECT.create(), View3.class))
-                                .add(new LeftNavigationItem("More1", VaadinIcon.COG.create(), View5.class))
-                                .build())
-                        .add(menuEntry)
-                        .addToSection(new LeftClickableItem("Clickable Entry", VaadinIcon.COG.create(), clickEvent -> Notification.show("onClick ...")), FOOTER)
+                        .addToSection(HEADER,
+                                new LeftHeaderItem("Menu-Header", "APP_LAYOUT_VERSION", "path/to/your/image"),
+                                new LeftClickableItem("Clickable Entry", VaadinIcon.COG.create(), clickEvent -> Notification.show("onClick ..."))
+                        )
+                        .add(new LeftNavigationItem("Home", VaadinIcon.HOME.create(), View1.class),
+                                LeftSubMenuBuilder.get("My Submenu", VaadinIcon.PLUS.create())
+                                        .add(LeftSubMenuBuilder.get("My Submenu", VaadinIcon.PLUS.create())
+                                                        .add(new LeftNavigationItem("Charts", VaadinIcon.SPLINE_CHART.create(), View2.class),
+                                                                new LeftNavigationItem("Contact", VaadinIcon.CONNECT.create(), View3.class),
+                                                                new LeftNavigationItem("More", VaadinIcon.COG.create(), View4.class))
+                                                        .build(),
+                                                new LeftNavigationItem("Contact1", VaadinIcon.CONNECT.create(), View3.class),
+                                                new LeftNavigationItem("More1", VaadinIcon.COG.create(), View5.class))
+                                        .build(),
+                                menuEntry)
+                        .addToSection(FOOTER, new LeftClickableItem("Clickable Entry", VaadinIcon.COG.create(), clickEvent -> Notification.show("onClick ...")))
                         .build())
                 .build());
     }
