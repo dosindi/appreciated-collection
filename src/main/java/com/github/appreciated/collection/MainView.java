@@ -24,6 +24,7 @@ import com.github.appreciated.layout.FlexibleGridLayout;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.page.BodySize;
+import com.vaadin.flow.component.page.Push;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.PWA;
 
@@ -31,6 +32,7 @@ import com.vaadin.flow.server.PWA;
  * The main view contains a button and a click listener.
  */
 @Route
+@Push
 @PWA(name = "Appreciated Addon Collection", shortName = "Appreciated Collection")
 @BodySize(height = "100%", width = "100%")
 public class MainView extends DemoHelperView {

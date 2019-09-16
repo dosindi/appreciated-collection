@@ -11,8 +11,10 @@ import com.github.appreciated.demo.helper.view.devices.Orientation;
 import com.github.appreciated.demo.helper.view.devices.TabletView;
 import com.github.appreciated.prism.element.Language;
 import com.vaadin.flow.component.page.BodySize;
+import com.vaadin.flow.component.page.Push;
 import com.vaadin.flow.router.Route;
 
+@Push
 @Route("apexcharts/")
 @BodySize(height = "100%", width = "100%")
 public class ApexChartsDemo extends DemoHelperView {

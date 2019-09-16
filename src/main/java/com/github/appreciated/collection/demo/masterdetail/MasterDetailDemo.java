@@ -10,8 +10,10 @@ import com.github.appreciated.demo.helper.entity.CodeExample;
 import com.github.appreciated.demo.helper.view.devices.DeviceType;
 import com.github.appreciated.prism.element.Language;
 import com.vaadin.flow.component.page.BodySize;
+import com.vaadin.flow.component.page.Push;
 import com.vaadin.flow.router.Route;
 
+@Push
 @Route("masterdetail/")
 @BodySize(height = "100%", width = "100%")
 public class MasterDetailDemo extends DemoHelperView {

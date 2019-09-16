@@ -12,8 +12,10 @@ import com.github.appreciated.prism.element.Language;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.page.BodySize;
+import com.vaadin.flow.component.page.Push;
 import com.vaadin.flow.router.Route;
 
+@Push
 @Route("card/")
 @BodySize(height = "100%", width = "100%")
 public class CardDemo extends DemoHelperView {
