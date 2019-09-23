@@ -21,10 +21,11 @@
     "webpack-babel-multi-target-plugin": "2.1.0",
     "copy-webpack-plugin": "5.0.3",
     "webpack-merge": "4.2.1",
-    "raw-loader": "3.0.0"
+    "raw-loader": "3.0.0",
+    "compression-webpack-plugin": "3.0.0"
   },
   "engines": {
     "npm": "6.x"
   },
-  "vaadinAppPackageHash": "ca532e567a57200b8978d02f38f553d19875c2b11e8f30cc74672883f26c5eed"
+  "vaadinAppPackageHash": "4d16167bf56464a02cd0bd8dfd12e0e7a0e7fb0f61c5b9d4a9d1f00014df8f9c"
 }

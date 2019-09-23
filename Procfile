@@ -1,0 +1,1 @@
+web: mvn jetty:run-war -Pproduction $PORT
