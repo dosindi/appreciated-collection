@@ -256,17 +256,6 @@
                     <execution>
                         <goals>
                             <goal>prepare-frontend</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-
-            <plugin>
-                <groupId>com.vaadin</groupId>
-                <artifactId>vaadin-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <goals>
                             <goal>build-frontend</goal>
                         </goals>
                         <phase>compile</phase>
