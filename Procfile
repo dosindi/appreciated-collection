@@ -1,1 +1,1 @@
-web: mvn jetty:run-war -Pproduction $PORT
+web: java -jar target/dependency/webapp-runner.jar target/*.war
