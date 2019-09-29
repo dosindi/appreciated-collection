@@ -112,9 +112,9 @@ public class SwiperExample extends VerticalLayout {
         slide.setElevationOnActionEnabled(true);
         slide.getTemplateDiv().setWidth("300px");
         slide.getTemplateDiv().setHeight("150px");
-        slide.add(new Label("Meow"));
-        slide.setAlignItems(FlexComponent.Alignment.CENTER);
-        slide.setJustifyContentMode(FlexComponent.JustifyContentMode.CENTER);
+        slide.add(new Label("Foobar"));
+        slide.getContent().setAlignItems(FlexComponent.Alignment.CENTER);
+        slide.getContent().setJustifyContentMode(FlexComponent.JustifyContentMode.CENTER);
         return slide;
     }
 
