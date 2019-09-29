@@ -23,7 +23,7 @@ public class SwiperDemo extends DemoHelperView {
         super(new GithubUrl("https://github.com/appreciated/swiper-flow"), new GithubDependencies("https://github.com/nolimits4web/swiper"));
         withHorizontalHeader("Swiper for flow",
                 "A mobile touch slider with hardware accelerated transitions and amazing native behavior.",
-                "./frontend/images/no-logo.png")
+                "./frontend/images/swiper/logo.png")
                 .withDevice(new TabletView(new SwiperExample()).withOrientation(Orientation.PORTRAIT))
                 .withStep("Add dependency", "Add the dependency by adding it to your POM",
                         new CodeExample(new AppreciatedDependencyReader("swiper-flow")))

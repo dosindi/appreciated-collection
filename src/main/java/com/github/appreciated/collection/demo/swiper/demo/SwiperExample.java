@@ -26,7 +26,7 @@ public class SwiperExample extends VerticalLayout {
         addVertical();
         setPadding(false);
         setMargin(false);
-        getChildren().forEach(component -> component.getElement().getStyle().set("flex-shrink;", "0"));
+        getChildren().forEach(component -> component.getElement().getStyle().set("flex-shrink", "0"));
         getStyle().set("overflow", "auto");
     }
 
