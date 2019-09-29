@@ -20,7 +20,7 @@ import com.vaadin.flow.router.Route;
 public class ColorPickerFieldDemo extends DemoHelperView {
 
     public ColorPickerFieldDemo() {
-        super(new GithubUrl("https://github.com/Juchar/color-picker-field-flow"), new GithubDependencies("https://github.com/Juchar/color-picker-field"));
+        super(new GithubUrl("https://github.com/Juchar/color-picker-field-flow"), new GithubDependencies("https://github.com/Juchar/color-picker-field", "https://github.com/Juchar/color-picker-flow"));
         withHorizontalHeader("Color Picker Field",
                 "A Component that allows to pick a color in an Input field and switch between common color schemas",
                 "./frontend/images/no-logo.png")

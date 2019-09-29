@@ -20,7 +20,7 @@ import com.vaadin.flow.router.Route;
 public class ColorPickerDemo extends DemoHelperView {
 
     public ColorPickerDemo() {
-        super(new GithubUrl("https://github.com/Juchar/color-picker-flow"), new GithubDependencies("https://github.com/Juchar/color-picker"));
+        super(new GithubUrl("https://github.com/Juchar/color-picker-flow"), new GithubDependencies("https://github.com/Juchar/color-picker", "https://github.com/thebespokepixel/es-tinycolor"));
         withHorizontalHeader("Color Picker",
                 "A Component that allows to pick a color and switch between common color schemas",
                 "./frontend/images/no-logo.png")
