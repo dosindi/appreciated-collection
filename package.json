@@ -4,15 +4,15 @@
   "version": "1.0.0",
   "dependencies": {
     "@polymer/polymer": "3.2.0",
-    "@webcomponents/webcomponentsjs": "^2.2.10",
     "@vaadin/flow-deps": "./target/frontend",
+    "@webcomponents/webcomponentsjs": "^2.2.10",
+    "copy-webpack-plugin": "5.0.3",
+    "raw-loader": "3.0.0",
     "webpack": "4.30.0",
+    "webpack-babel-multi-target-plugin": "2.1.0",
     "webpack-cli": "3.3.0",
     "webpack-dev-server": "3.3.0",
-    "webpack-babel-multi-target-plugin": "2.1.0",
-    "copy-webpack-plugin": "5.0.3",
-    "webpack-merge": "4.2.1",
-    "raw-loader": "3.0.0"
+    "webpack-merge": "4.2.1"
   },
   "devDependencies": {
     "webpack": "4.30.0",
@@ -27,5 +27,5 @@
   "engines": {
     "npm": "6.x"
   },
-  "vaadinAppPackageHash": "43375d9fd418e937a650eb674564433ec33f549c3387a3f019dbabbe296aecfd"
+  "vaadinAppPackageHash": "75b9c7f8244f33ca1ba81131bc5e54e71f73e31858bbb9eacee46d6ae032dedc"
 }
