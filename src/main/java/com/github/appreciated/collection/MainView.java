@@ -6,6 +6,8 @@ import com.github.appreciated.collection.demo.apexcharts.ApexChartsDemo;
 import com.github.appreciated.collection.demo.applayout.AppLayoutDemo;
 import com.github.appreciated.collection.demo.calculatedcolorhelper.CalculatedColorHelperDemo;
 import com.github.appreciated.collection.demo.card.CardDemo;
+import com.github.appreciated.collection.demo.colorpicker.ColorPickerDemo;
+import com.github.appreciated.collection.demo.colorpickerfield.ColorPickerFieldDemo;
 import com.github.appreciated.collection.demo.demohelper.DemoHelperViewDemo;
 import com.github.appreciated.collection.demo.gridlayout.GridLayoutDemo;
 import com.github.appreciated.collection.demo.ironcollapse.IronCollapseDemo;
@@ -49,6 +51,8 @@ public class MainView extends DemoHelperView {
                             getCard("./frontend/images/demohelper/logo.png", "Demo Helper Addon", "An addon that helps you creating beautiful addon demos in no time", DemoHelperViewDemo.class),
                             getCard("./frontend/images/gridlayout/logo.png", "Css Grid Layout Addon", "An addon that brings css grid to Vaadin Flow", GridLayoutDemo.class),
                             getCard("./frontend/images/card/logo.png", "Card Addon", "An addon that brings cards to Vaadin Flow", CardDemo.class),
+                            getCard("./frontend/images/no-logo.png", "Color Picker Field", "A Component that allows to pick a color in an Input field and switch between common color schemas", ColorPickerFieldDemo.class),
+                            getCard("./frontend/images/no-logo.png", "Color Picker", "A Component that allows to pick a color and switch between common color schemas", ColorPickerDemo.class),
                             getCard("./frontend/images/masterdetail/logo.png", "Master/Detail View Addon", "An addon that brings the Master/Detail Pattern to Vaadin Flow", MasterDetailDemo.class),
                             getCard("./frontend/images/menubutton/logo.png", "PaperMenuButton", "An addon that can open a popup on click", PaperMenuButtonDemo.class),
                             getCard("./frontend/images/ripple/logo.png", "PaperRipple", "Gives feedback if an area was clicked", PaperRippleDemo.class),
