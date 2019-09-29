@@ -54,6 +54,8 @@
     "@polymer/iron-icon": "3.0.1",
     "@vaadin/vaadin-radio-button": "1.2.3",
     "@vaadin/vaadin-lumo-styles": "1.5.0",
-    "@vaadin/vaadin-rich-text-editor": "1.0.4"
+    "@vaadin/vaadin-rich-text-editor": "1.0.4",
+    "@appreciated/color-picker": "2.0.0-beta.1",
+    "@appreciated/color-picker-field": "2.0.0-alpha.8"
   }
 }
