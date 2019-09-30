@@ -18,7 +18,7 @@ public class ColorPickerFieldExample extends VerticalLayout {
         colorPickerField.setPinnedPalettes(true);
         colorPickerField.setHexEnabled(false);
         colorPickerField.setPalette(Color.RED, Color.GREEN, Color.BLUE);
-        colorPickerField.addValueChangeListener(event -> System.out.println(event.getValue()));
+        colorPickerField.getTextField().addValueChangeListener(event -> System.out.println(event.getValue()));
         colorPickerField.setChangeFormatButtonVisible(true);
         colorPickerField.setWidth("400px");
         add(colorPickerField);
@@ -28,7 +28,7 @@ public class ColorPickerFieldExample extends VerticalLayout {
         colorPickerFieldRaw.setPinnedPalettes(true);
         colorPickerFieldRaw.setHexEnabled(false);
         colorPickerFieldRaw.setPalette("#ff0000", "#00ff00", "#0000ff", "--lumo-contrast");
-        colorPickerFieldRaw.addValueChangeListener(event -> System.out.println(event.getValue()));
+        colorPickerFieldRaw.getTextField().addValueChangeListener(event -> System.out.println(event.getValue()));
         colorPickerFieldRaw.setChangeFormatButtonVisible(true);
         colorPickerFieldRaw.setWidth("400px");
         colorPickerFieldRaw.setCssCustomPropertiesEnabled(true);
