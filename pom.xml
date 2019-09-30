@@ -85,7 +85,7 @@
         <dependency>
             <groupId>com.github.appreciated</groupId>
             <artifactId>app-layout-addon</artifactId>
-            <version>4.0.0.beta7</version>
+            <version>4.0.0.beta8</version>
         </dependency>
         <dependency>
             <groupId>com.github.appreciated</groupId>
@@ -115,7 +115,7 @@
         <dependency>
             <groupId>com.github.appreciated</groupId>
             <artifactId>vaadin-paper-menu-button</artifactId>
-            <version>2.0.0</version>
+            <version>2.0.1</version>
         </dependency>
         <dependency>
             <groupId>com.github.appreciated</groupId>
@@ -145,7 +145,7 @@
         <dependency>
             <groupId>com.github.appreciated</groupId>
             <artifactId>swiper-flow</artifactId>
-            <version>2.0.0.alpha1</version>
+            <version>2.0.0.alpha2</version>
         </dependency>
         <dependency>
             <groupId>com.github.appreciated</groupId>
