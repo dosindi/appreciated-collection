@@ -7,8 +7,8 @@ import com.github.appreciated.demo.helper.DemoHelperView;
 import com.github.appreciated.demo.helper.entity.CodeExample;
 import com.github.appreciated.demo.helper.entity.GithubDependencies;
 import com.github.appreciated.demo.helper.entity.GithubUrl;
+import com.github.appreciated.demo.helper.view.devices.IPadMiniView;
 import com.github.appreciated.demo.helper.view.devices.Orientation;
-import com.github.appreciated.demo.helper.view.devices.TabletView;
 import com.github.appreciated.prism.element.Language;
 import com.vaadin.flow.component.page.BodySize;
 import com.vaadin.flow.component.page.Push;
@@ -24,7 +24,7 @@ public class PaperMenuButtonDemo extends DemoHelperView {
         withHorizontalHeader("PaperMenuButton",
                 "Allows to open a popup on the click of a trigger Component. Similar to the PopupView",
                 "./frontend/images/menubutton/logo.png")
-                .withDevice(new TabletView(new PaperMenuButtonExample()).withOrientation(Orientation.PORTRAIT), "Some  examples")
+                .withDevice(new IPadMiniView(new PaperMenuButtonExample()).withOrientation(Orientation.PORTRAIT), "Some  examples")
                 .withStep("Add dependency", "Add the dependency by adding it to your POM",
                         new CodeExample(new AppreciatedDependencyReader("vaadin-paper-menu-button")))
                 .withStep("Install dependency", "Install the dependency by running the following Maven goal",

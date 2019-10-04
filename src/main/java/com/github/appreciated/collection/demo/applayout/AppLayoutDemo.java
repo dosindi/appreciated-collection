@@ -11,8 +11,8 @@ import com.github.appreciated.demo.helper.component.iframe.RouteIFrame;
 import com.github.appreciated.demo.helper.entity.CodeExample;
 import com.github.appreciated.demo.helper.entity.GithubDependencies;
 import com.github.appreciated.demo.helper.entity.GithubUrl;
-import com.github.appreciated.demo.helper.view.devices.DeviceType;
-import com.github.appreciated.demo.helper.view.devices.PhoneView;
+import com.github.appreciated.demo.helper.view.devices.IPadMiniView;
+import com.github.appreciated.demo.helper.view.devices.IPhoneXView;
 import com.github.appreciated.prism.element.Language;
 import com.vaadin.flow.component.page.BodySize;
 import com.vaadin.flow.router.Route;
@@ -36,9 +36,9 @@ public class AppLayoutDemo extends DemoHelperView {
                 )
         );
         withHorizontalHeader("App Layout", "A responsive layout that allows you to create modern Menus quickly", "./frontend/images/applayout/logo.png")
-                .withDevice(new PhoneView(new RouteIFrame(MainView.class).withFullSize()), "Optimized for small screens")
+                .withDevice(new IPhoneXView(new RouteIFrame(MainView.class).withFullSize()), "Optimized for small screens")
                 .withParagraph("Behaviours", "The AppLayout has by default multiple Behaviours available. Try to set them via the menu in the demo above and below")
-                .withStylableDevice(new RouteIFrame(MainView.class).withFullSize(), DeviceType.TABLET_LANDSCAPE)
+                .withStylableDevice(new IPadMiniView(new RouteIFrame(MainView.class).withFullSize()))
                 .withStep("Add dependency", "Add the dependency by adding it to your POM",
                         new CodeExample(new AppreciatedDependencyReader("app-layout-addon")))
                 .withStep("Install dependency", "Install the dependency by running the following Maven goal",

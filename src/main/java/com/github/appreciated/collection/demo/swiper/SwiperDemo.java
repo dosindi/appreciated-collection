@@ -7,8 +7,8 @@ import com.github.appreciated.demo.helper.DemoHelperView;
 import com.github.appreciated.demo.helper.entity.CodeExample;
 import com.github.appreciated.demo.helper.entity.GithubDependencies;
 import com.github.appreciated.demo.helper.entity.GithubUrl;
+import com.github.appreciated.demo.helper.view.devices.IPadMiniView;
 import com.github.appreciated.demo.helper.view.devices.Orientation;
-import com.github.appreciated.demo.helper.view.devices.TabletView;
 import com.github.appreciated.prism.element.Language;
 import com.vaadin.flow.component.page.BodySize;
 import com.vaadin.flow.component.page.Push;
@@ -24,7 +24,7 @@ public class SwiperDemo extends DemoHelperView {
         withHorizontalHeader("Swiper for flow",
                 "A mobile touch slider with hardware accelerated transitions and amazing native behavior.",
                 "./frontend/images/swiper/logo.png")
-                .withDevice(new TabletView(new SwiperExample()).withOrientation(Orientation.PORTRAIT))
+                .withDevice(new IPadMiniView(new SwiperExample()).withOrientation(Orientation.PORTRAIT))
                 .withStep("Add dependency", "Add the dependency by adding it to your POM",
                         new CodeExample(new AppreciatedDependencyReader("swiper-flow")))
                 .withStep("Install dependency", "Install the dependency by running the following Maven goal",

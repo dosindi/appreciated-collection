@@ -10,7 +10,7 @@ import com.github.appreciated.demo.helper.DemoHelperView;
 import com.github.appreciated.demo.helper.entity.CodeExample;
 import com.github.appreciated.demo.helper.entity.GithubDependencies;
 import com.github.appreciated.demo.helper.entity.GithubUrl;
-import com.github.appreciated.demo.helper.view.devices.DeviceType;
+import com.github.appreciated.demo.helper.view.devices.IPadMiniView;
 import com.github.appreciated.prism.element.Language;
 import com.vaadin.flow.component.page.BodySize;
 import com.vaadin.flow.component.page.Push;
@@ -26,7 +26,7 @@ public class GridLayoutDemo extends DemoHelperView {
         withHorizontalHeader("Css Grid Layout",
                 "Create flexible layouts easily by using an advanced api",
                 "./frontend/images/gridlayout/logo.png"
-        ).withThemeableAndStylableDevice(new FlexibleGridLayoutExample(), DeviceType.TABLET_LANDSCAPE)
+        ).withThemeableAndStylableDevice(new IPadMiniView(new FlexibleGridLayoutExample()))
                 .withStep("Add dependency", "Add the dependency to your POM",
                         new CodeExample(new AppreciatedDependencyReader("vaadin-css-grid")))
                 .withStep("Add dependency", "Add the dependency to your POM",

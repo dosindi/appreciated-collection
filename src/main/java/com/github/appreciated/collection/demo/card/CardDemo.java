@@ -7,7 +7,7 @@ import com.github.appreciated.collection.demo.card.demo.RippleClickableCardExamp
 import com.github.appreciated.collection.maven.AppreciatedDependencyReader;
 import com.github.appreciated.demo.helper.DemoHelperView;
 import com.github.appreciated.demo.helper.entity.CodeExample;
-import com.github.appreciated.demo.helper.view.devices.PhoneView;
+import com.github.appreciated.demo.helper.view.devices.IPhoneXView;
 import com.github.appreciated.prism.element.Language;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
@@ -28,7 +28,7 @@ public class CardDemo extends DemoHelperView {
                         "- material.io",
                 "./frontend/images/card/logo.png"
         ).withDevice(
-                new PhoneView(getExampleCards()),
+                new IPhoneXView(getExampleCards()),
                 "Bring Material Cards to your application")
                 .withStep("Add dependency", "Add the dependency to your POM",
                         new CodeExample(new AppreciatedDependencyReader("card")))

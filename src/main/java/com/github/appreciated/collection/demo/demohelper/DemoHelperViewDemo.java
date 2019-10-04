@@ -10,9 +10,9 @@ import com.github.appreciated.demo.helper.entity.CodeExample;
 import com.github.appreciated.demo.helper.entity.CssVariable;
 import com.github.appreciated.demo.helper.entity.GithubDependencies;
 import com.github.appreciated.demo.helper.entity.GithubUrl;
-import com.github.appreciated.demo.helper.view.devices.LaptopView;
-import com.github.appreciated.demo.helper.view.devices.PhoneView;
-import com.github.appreciated.demo.helper.view.devices.TabletView;
+import com.github.appreciated.demo.helper.view.devices.IPadMiniView;
+import com.github.appreciated.demo.helper.view.devices.IPhoneXView;
+import com.github.appreciated.demo.helper.view.devices.MacBookProView;
 import com.github.appreciated.prism.element.Language;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.Label;
@@ -50,22 +50,22 @@ public class DemoHelperViewDemo extends DemoHelperView {
                 .withStylableDevice(new RouteBrowser(OtherContent.class), new CssVariable("--lumo-primary-text-color"), new CssVariable("--lumo-primary-color"))
                 .withThemeableAndStylableDevice(getDeviceContent("< I'm a ThemeableAndStylableDevice my theme can be switch by pressing the switch above. I display content and my css variables can be edited beside me >"), new CssVariable("--lumo-primary-text-color"), new CssVariable("--lumo-primary-color"))
                 .withDevices(
-                        new TabletView(getDeviceContent("< I belong to a TabletView an display content inside a css rendered tablet >")),
-                        new PhoneView(getDeviceContent("< I also belong to a PhoneView an display content inside a css rendered phone >"))
+                        new IPadMiniView(getDeviceContent("< I belong to a TabletView an display content inside a css rendered tablet >")),
+                        new IPhoneXView(getDeviceContent("< I also belong to a PhoneView an display content inside a css rendered phone >"))
                 )
-                .withDevice(new PhoneView(
+                .withDevice(new IPhoneXView(
                                 getDeviceContent("< I belong to a PhoneView I display content inside a css rendered phone >")),
                         "Also I can show a optional message beside the PhoneView"
                 )
                 .withImage("I am a ImageParagraphView", "I can display a header, a description and an image", "frontend://images/demohelper/phone.png")
-                .withDevice(new TabletView(getDeviceContent("< I belong to a TabletView I display content inside a css rendered tablet >")))
+                .withDevice(new IPadMiniView(getDeviceContent("< I belong to a TabletView I display content inside a css rendered tablet >")))
                 .withParagraph("I am a ParagraphView",
                         "I display a header and optionally a description. Also you can add components below the description",
                         new Button("Click Me!")
                 )
                 .withParagraph("I am a ParagraphView without description")
                 .withParagraph("I am a ParagraphView without description but with a Component", new Button("Click Me"))
-                .withDevice(new LaptopView(getDeviceContent("< I belong to a LaptopView I display content inside a css rendered laptop >")))
+                .withDevice(new MacBookProView(getDeviceContent("< I belong to a LaptopView I display content inside a css rendered laptop >")))
                 .withStep("I am a StepView",
                         "I display a header step number (1,2,3,4,5) which is automatically generated, also a description and one or multiple code examples",
                         new CodeExample(new AppreciatedDependencyReader("demo-helper-view"))
