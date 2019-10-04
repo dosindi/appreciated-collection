@@ -1,6 +1,5 @@
 package com.github.appreciated.collection.demo.colorpickerfield;
 
-
 import com.github.appreciated.collection.demo.colorpickerfield.demo.ColorPickerFieldExample;
 import com.github.appreciated.collection.maven.AppreciatedDependencyReader;
 import com.github.appreciated.demo.helper.DemoHelperView;
