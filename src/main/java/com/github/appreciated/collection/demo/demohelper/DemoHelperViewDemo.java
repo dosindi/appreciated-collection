@@ -28,11 +28,11 @@ public class DemoHelperViewDemo extends DemoHelperView {
     public DemoHelperViewDemo() {
         super(new GithubUrl("https://github.com/appreciated/demo-helper-view"),
                 new GithubDependencies(
-                        "https://github.com/OlliTietavainenVaadin/clipboardhelper",
+                        "https://github.com/LostInBrittany/granite-clipboard",
                         "https://github.com/appreciated/grid-layout",
                         "https://github.com/appreciated/card",
                         "https://github.com/appreciated/prism-element",
-                        "https://github.com/appreciated/paper-color",
+                        "https://github.com/Juchar/color-picker-field",
                         "https://github.com/appreciated/iron-collapse",
                         "https://github.com/appreciated/calculated-color-helper")
         );
