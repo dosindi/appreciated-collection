@@ -1,3 +1,5 @@
 # Created by .ignore support plugin (hsz.mobi)
 /.idea/
 /src/main/resources/pom.xml
+/webpack.generated.js
+/webpack.config.js
