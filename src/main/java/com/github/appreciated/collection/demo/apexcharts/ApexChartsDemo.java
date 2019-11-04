@@ -47,7 +47,8 @@ public class ApexChartsDemo extends DemoHelperView {
                 .withCodeExample(wrap(new ScatterChartExample()), new CodeExample(ScatterChartExample.class))
                 .withCodeExample(wrap(new HeatmapChartExample()), new CodeExample(HeatmapChartExample.class))
                 .withCodeExample(wrap(new BubbleChartExample()), new CodeExample(BubbleChartExample.class))
-                .withDependencyNotice();
+                .withDependencyNotice()
+                .withContributorNotice();
     }
 
     private HorizontalLayout wrap(Component chart) {
