@@ -10,9 +10,13 @@ import com.github.appreciated.demo.helper.entity.GithubUrl;
 import com.github.appreciated.demo.helper.view.devices.IPadMiniView;
 import com.github.appreciated.demo.helper.view.devices.Orientation;
 import com.github.appreciated.prism.element.Language;
+import com.vaadin.flow.component.Component;
+import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.page.BodySize;
 import com.vaadin.flow.component.page.Push;
 import com.vaadin.flow.router.Route;
+
+import static com.vaadin.flow.component.orderedlayout.FlexComponent.JustifyContentMode.CENTER;
 
 @Push
 @Route("apexcharts/")
@@ -29,35 +33,29 @@ public class ApexChartsDemo extends DemoHelperView {
                         new CodeExample(new AppreciatedDependencyReader("apexcharts")))
                 .withStep("Install dependency", "Install the dependency by running the following Maven goal",
                         new CodeExample("install", Language.markup, "Maven"))
-                .resetCounterStep()
-                .withStep("Area Chart code example", "This is how you add a Area Chart to your View",
-                        new CodeExample(AreaChartExample.class))
-                .withStep("Candle Stick Chart code example", "This is how you add a Candle Stick Chart to your View",
-                        new CodeExample(CandleStickChartExample.class))
-                .withStep("Donut Chart code example", "This is how you add a Donut Chart to your View",
-                        new CodeExample(DonutChartExample.class))
-                .withStep("Horizontal Bar Chart code example", "This is how you add a Horizontal Bar Chart to your View",
-                        new CodeExample(HorizontalBarChartExample.class))
-                .withStep("Vertical Bar Chart code example", "This is how you add a hertical Bar Chart to your View",
-                        new CodeExample(VerticalBarChartExample.class))
-                .withStep("Line Chart code example", "This is how you add a Line Chart to your View",
-                        new CodeExample(LineChartExample.class))
-                .withStep("Pie Chart code example", "This is how you add a Pie Chart to your View",
-                        new CodeExample(PieChartExample.class))
-                .withStep("Radar Chart code example", "This is how you add a Radar Chart to your View",
-                        new CodeExample(RadarChartExample.class))
-                .withStep("Radial Bar Chart code example", "This is how you add a Radial Bar Chart to your View",
-                        new CodeExample(RadialBarChartExample.class))
-                .withStep("Multi Radial Bar Chart code example", "This is how you add a Multi Radial Bar Chart to your View",
-                        new CodeExample(MultiRadialBarChartExample.class))
-                .withStep("Radial Gradient Bar Chart code example", "This is how you add a Radial Gradient Bar Chart to your View",
-                        new CodeExample(GradientRadialBarChartExample.class))
-                .withStep("Scatter Chart code example", "This is how you add a Scatter Chart to your View",
-                        new CodeExample(ScatterChartExample.class))
-                .withStep("Heatmap Chart code example", "This is how you add a Heatmap Chart to your View",
-                        new CodeExample(HeatmapChartExample.class))
-                .withStep("Bubble Chart code example", "This is how you add a Bubble Chart to your View",
-                        new CodeExample(BubbleChartExample.class))
+                .withCodeExample(wrap(new AreaChartExample()), new CodeExample(AreaChartExample.class))
+                .withCodeExample(wrap(new CandleStickChartExample()), new CodeExample(CandleStickChartExample.class))
+                .withCodeExample(wrap(new DonutChartExample()), new CodeExample(DonutChartExample.class))
+                .withCodeExample(wrap(new HorizontalBarChartExample()), new CodeExample(HorizontalBarChartExample.class))
+                .withCodeExample(wrap(new VerticalBarChartExample()), new CodeExample(VerticalBarChartExample.class))
+                .withCodeExample(wrap(new LineChartExample()), new CodeExample(LineChartExample.class))
+                .withCodeExample(wrap(new PieChartExample()), new CodeExample(PieChartExample.class))
+                .withCodeExample(wrap(new RadarChartExample()), new CodeExample(RadarChartExample.class))
+                .withCodeExample(wrap(new RadialBarChartExample()), new CodeExample(RadialBarChartExample.class))
+                .withCodeExample(wrap(new MultiRadialBarChartExample()), new CodeExample(MultiRadialBarChartExample.class))
+                .withCodeExample(wrap(new GradientRadialBarChartExample()), new CodeExample(GradientRadialBarChartExample.class))
+                .withCodeExample(wrap(new ScatterChartExample()), new CodeExample(ScatterChartExample.class))
+                .withCodeExample(wrap(new HeatmapChartExample()), new CodeExample(HeatmapChartExample.class))
+                .withCodeExample(wrap(new BubbleChartExample()), new CodeExample(BubbleChartExample.class))
                 .withDependencyNotice();
+    }
+
+    private HorizontalLayout wrap(Component chart) {
+        HorizontalLayout hl = new HorizontalLayout(chart);
+        hl.setWidth("500px");
+        HorizontalLayout wrapper = new HorizontalLayout(hl);
+        wrapper.setJustifyContentMode(CENTER);
+        wrapper.setWidthFull();
+        return wrapper;
     }
 }

@@ -4,10 +4,10 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
 public class ApexChartsExample extends VerticalLayout {
     public ApexChartsExample() {
-        add(new PieChartExample(),
-                new DonutChartExample(),
+        add(new AreaChartExample(),
                 new LineChartExample(),
-                new AreaChartExample(),
+                new PieChartExample(),
+                new DonutChartExample(),
                 new BubbleChartExample(),
                 new HeatmapChartExample(),
                 new HorizontalBarChartExample(),
