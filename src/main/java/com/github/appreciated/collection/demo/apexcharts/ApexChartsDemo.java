@@ -24,7 +24,7 @@ import static com.vaadin.flow.component.orderedlayout.FlexComponent.JustifyConte
 public class ApexChartsDemo extends DemoHelperView {
 
     public ApexChartsDemo() {
-        super(new GithubUrl("https://github.com/appreciated/apexcharts-flow"), new GithubDependencies("https://github.com/apexcharts/apexcharts.js"));
+        super(new GithubUrl("https://github.com/appreciated/apexcharts-flow"), new GithubDependencies("https://github.com/apexcharts/apexcharts.js", "https://github.com/One-com/one-color"));
         withHorizontalHeader("ApexCharts.js",
                 "A modern JavaScript charting library to build interactive charts and visualizations with simple API.",
                 "./frontend/images/no-logo.png")
