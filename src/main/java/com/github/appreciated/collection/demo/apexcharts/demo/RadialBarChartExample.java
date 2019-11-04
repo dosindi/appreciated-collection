@@ -1,6 +1,7 @@
 package com.github.appreciated.collection.demo.apexcharts.demo;
 
 import com.github.appreciated.apexcharts.ApexCharts;
+import com.github.appreciated.apexcharts.ApexChartsBuilder;
 import com.github.appreciated.apexcharts.config.builder.ChartBuilder;
 import com.github.appreciated.apexcharts.config.builder.PlotOptionsBuilder;
 import com.github.appreciated.apexcharts.config.chart.Type;
@@ -10,7 +11,7 @@ import com.vaadin.flow.component.html.Div;
 
 public class RadialBarChartExample extends Div {
     public RadialBarChartExample() {
-        ApexCharts radialBarChart = new ApexCharts()
+        ApexCharts radialBarChart = ApexChartsBuilder.get()
                 .withChart(ChartBuilder.get()
                         .withType(Type.radialBar)
                         .build())
@@ -22,7 +23,8 @@ public class RadialBarChartExample extends Div {
                                 .build())
                         .build())
                 .withSeries(70.0)
-                .withLabels("Cricket");
+                .withLabels("Cricket")
+                .build();
         add(radialBarChart);
         setWidth("100%");
     }

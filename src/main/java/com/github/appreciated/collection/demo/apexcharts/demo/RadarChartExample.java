@@ -1,6 +1,7 @@
 package com.github.appreciated.collection.demo.apexcharts.demo;
 
 import com.github.appreciated.apexcharts.ApexCharts;
+import com.github.appreciated.apexcharts.ApexChartsBuilder;
 import com.github.appreciated.apexcharts.config.builder.ChartBuilder;
 import com.github.appreciated.apexcharts.config.builder.TitleSubtitleBuilder;
 import com.github.appreciated.apexcharts.config.chart.Type;
@@ -9,15 +10,16 @@ import com.vaadin.flow.component.html.Div;
 
 public class RadarChartExample extends Div {
     public RadarChartExample() {
-        ApexCharts radarChart = new ApexCharts()
+        ApexCharts radarChart = ApexChartsBuilder.get()
                 .withChart(ChartBuilder.get()
                         .withType(Type.radar)
                         .build())
-                .withSeries(new Series("Series 1", 80, 50, 30, 40, 100, 20))
+                .withSeries(new Series<>("Series 1", 80, 50, 30, 40, 100, 20))
                 .withTitle(TitleSubtitleBuilder.get()
                         .withText("Basic Radar Chart")
                         .build())
-                .withLabels("January", "February", "March", "April", "May", "June");
+                .withLabels("January", "February", "March", "April", "May", "June")
+                .build();
         add(radarChart);
         setWidth("100%");
     }

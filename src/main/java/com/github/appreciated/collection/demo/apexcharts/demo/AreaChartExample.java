@@ -1,6 +1,7 @@
 package com.github.appreciated.collection.demo.apexcharts.demo;
 
 import com.github.appreciated.apexcharts.ApexCharts;
+import com.github.appreciated.apexcharts.ApexChartsBuilder;
 import com.github.appreciated.apexcharts.config.builder.*;
 import com.github.appreciated.apexcharts.config.chart.Type;
 import com.github.appreciated.apexcharts.config.chart.builder.ZoomBuilder;
@@ -16,19 +17,18 @@ import java.util.stream.IntStream;
 
 public class AreaChartExample extends Div {
     public AreaChartExample() {
-        ApexCharts areaChart = new ApexCharts()
-                .withChart(
-                        ChartBuilder.get()
-                                .withType(Type.area)
-                                .withZoom(ZoomBuilder.get()
-                                        .withEnabled(false)
-                                        .build())
+        ApexCharts areaChart = ApexChartsBuilder.get()
+                .withChart(ChartBuilder.get()
+                        .withType(Type.area)
+                        .withZoom(ZoomBuilder.get()
+                                .withEnabled(false)
                                 .build())
+                        .build())
                 .withDataLabels(DataLabelsBuilder.get()
                         .withEnabled(false)
                         .build())
                 .withStroke(StrokeBuilder.get().withCurve(Curve.straight).build())
-                .withSeries(new Series("STOCK ABC", 10.0, 41.0, 35.0, 51.0, 49.0, 62.0, 69.0, 91.0, 148.0))
+                .withSeries(new Series<>("STOCK ABC", 10.0, 41.0, 35.0, 51.0, 49.0, 62.0, 69.0, 91.0, 148.0))
                 .withTitle(TitleSubtitleBuilder.get()
                         .withText("Fundamental Analysis of Stocks")
                         .withAlign(Align.left).build())
@@ -40,7 +40,8 @@ public class AreaChartExample extends Div {
                         .withType(XAxisType.datetime).build())
                 .withYaxis(YAxisBuilder.get()
                         .withOpposite(true).build())
-                .withLegend(LegendBuilder.get().withHorizontalAlign(HorizontalAlign.left).build());
+                .withLegend(LegendBuilder.get().withHorizontalAlign(HorizontalAlign.left).build())
+                .build();
         add(areaChart);
         setWidth("100%");
     }

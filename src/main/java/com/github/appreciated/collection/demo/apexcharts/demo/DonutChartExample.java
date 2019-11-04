@@ -1,6 +1,7 @@
 package com.github.appreciated.collection.demo.apexcharts.demo;
 
 import com.github.appreciated.apexcharts.ApexCharts;
+import com.github.appreciated.apexcharts.ApexChartsBuilder;
 import com.github.appreciated.apexcharts.config.builder.ChartBuilder;
 import com.github.appreciated.apexcharts.config.builder.LegendBuilder;
 import com.github.appreciated.apexcharts.config.builder.ResponsiveBuilder;
@@ -11,7 +12,7 @@ import com.vaadin.flow.component.html.Div;
 
 public class DonutChartExample extends Div {
     public DonutChartExample() {
-        ApexCharts donutChart = new ApexCharts()
+        ApexCharts donutChart = ApexChartsBuilder.get()
                 .withChart(ChartBuilder.get().withType(Type.donut).build())
                 .withLegend(LegendBuilder.get()
                         .withPosition(Position.right)
@@ -24,7 +25,8 @@ public class DonutChartExample extends Div {
                                         .withPosition(Position.bottom)
                                         .build())
                                 .build())
-                        .build());
+                        .build())
+                .build();
         add(donutChart);
         setWidth("100%");
     }

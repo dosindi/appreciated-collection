@@ -1,6 +1,7 @@
 package com.github.appreciated.collection.demo.apexcharts.demo;
 
 import com.github.appreciated.apexcharts.ApexCharts;
+import com.github.appreciated.apexcharts.ApexChartsBuilder;
 import com.github.appreciated.apexcharts.config.builder.ChartBuilder;
 import com.github.appreciated.apexcharts.config.builder.LegendBuilder;
 import com.github.appreciated.apexcharts.config.builder.ResponsiveBuilder;
@@ -11,7 +12,7 @@ import com.vaadin.flow.component.html.Div;
 
 public class PieChartExample extends Div {
     public PieChartExample() {
-        ApexCharts pieChart = new ApexCharts()
+        ApexCharts pieChart = ApexChartsBuilder.get()
                 .withChart(ChartBuilder.get().withType(Type.pie).build())
                 .withLabels("Team A", "Team B", "Team C", "Team D", "Team E")
                 .withLegend(LegendBuilder.get()
@@ -25,7 +26,8 @@ public class PieChartExample extends Div {
                                         .withPosition(Position.bottom)
                                         .build())
                                 .build())
-                        .build());
+                        .build())
+                .build();
         add(pieChart);
         setWidth("100%");
     }

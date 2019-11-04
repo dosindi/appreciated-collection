@@ -1,6 +1,7 @@
 package com.github.appreciated.collection.demo.apexcharts.demo;
 
 import com.github.appreciated.apexcharts.ApexCharts;
+import com.github.appreciated.apexcharts.ApexChartsBuilder;
 import com.github.appreciated.apexcharts.config.builder.ChartBuilder;
 import com.github.appreciated.apexcharts.config.builder.FillBuilder;
 import com.github.appreciated.apexcharts.config.builder.PlotOptionsBuilder;
@@ -17,7 +18,7 @@ import com.vaadin.flow.component.html.Div;
 
 public class GradientRadialBarChartExample extends Div {
     public GradientRadialBarChartExample() {
-        ApexCharts gradientRadialBarChart = new ApexCharts()
+        ApexCharts gradientRadialBarChart = ApexChartsBuilder.get()
                 .withChart(ChartBuilder.get()
                         .withType(Type.radialBar)
                         .withToolbar(ToolbarBuilder.get().withShow(true).build())
@@ -81,7 +82,8 @@ public class GradientRadialBarChartExample extends Div {
                 .withStroke(StrokeBuilder.get()
                         .withLineCap(LineCap.round)
                         .build())
-                .withLabels("Percent");
+                .withLabels("Percent")
+                .build();
         add(gradientRadialBarChart);
         setWidth("100%");
     }

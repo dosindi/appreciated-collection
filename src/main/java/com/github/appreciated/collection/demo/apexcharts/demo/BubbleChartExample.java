@@ -1,6 +1,7 @@
 package com.github.appreciated.collection.demo.apexcharts.demo;
 
 import com.github.appreciated.apexcharts.ApexCharts;
+import com.github.appreciated.apexcharts.ApexChartsBuilder;
 import com.github.appreciated.apexcharts.config.builder.*;
 import com.github.appreciated.apexcharts.config.chart.Type;
 import com.github.appreciated.apexcharts.config.chart.builder.ZoomBuilder;
@@ -10,14 +11,13 @@ import com.vaadin.flow.component.html.Div;
 
 public class BubbleChartExample extends Div {
     public BubbleChartExample() {
-        ApexCharts bubbleChart = new ApexCharts()
-                .withChart(
-                        ChartBuilder.get()
-                                .withType(Type.bubble)
-                                .withZoom(ZoomBuilder.get()
-                                        .withEnabled(false)
-                                        .build())
+        ApexCharts bubbleChart = ApexChartsBuilder.get()
+                .withChart(ChartBuilder.get()
+                        .withType(Type.bubble)
+                        .withZoom(ZoomBuilder.get()
+                                .withEnabled(false)
                                 .build())
+                        .build())
                 .withDataLabels(DataLabelsBuilder.get()
                         .withEnabled(false)
                         .build())
@@ -42,7 +42,8 @@ public class BubbleChartExample extends Div {
                                 new Double[]{331.0, 36.0, 53.0},
                                 new Double[]{251.0, 49.0, 25.0}))
                 .withXaxis(XAxisBuilder.get().withType(XAxisType.numeric).build())
-                .withYaxis(YAxisBuilder.get().withMax(70.0).build());
+                .withYaxis(YAxisBuilder.get().withMax(70.0).build())
+                .build();
         add(bubbleChart);
         setWidth("100%");
     }

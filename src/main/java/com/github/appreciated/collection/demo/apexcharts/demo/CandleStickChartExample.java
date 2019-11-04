@@ -1,6 +1,7 @@
 package com.github.appreciated.collection.demo.apexcharts.demo;
 
 import com.github.appreciated.apexcharts.ApexCharts;
+import com.github.appreciated.apexcharts.ApexChartsBuilder;
 import com.github.appreciated.apexcharts.config.builder.*;
 import com.github.appreciated.apexcharts.config.chart.Type;
 import com.github.appreciated.apexcharts.config.subtitle.Align;
@@ -16,7 +17,7 @@ import java.time.format.DateTimeFormatter;
 
 public class CandleStickChartExample extends Div {
     public CandleStickChartExample() {
-        ApexCharts barChart = new ApexCharts()
+        ApexCharts barChart = ApexChartsBuilder.get()
                 .withChart(ChartBuilder.get()
                         .withType(Type.candlestick)
                         .build())
@@ -24,7 +25,7 @@ public class CandleStickChartExample extends Div {
                         .withText("CandleStick Chart")
                         .withAlign(Align.left)
                         .build())
-                .withSeries(new Series<>(
+                .withSeries(new Series<Coordinate>(
                         new Coordinate<>(getISOString(1538778600000L), 6629.81, 6650.5, 6623.04, 6633.33),
                         new Coordinate<>(getISOString(1538780400000L), 6632.01, 6643.59, 6620, 6630.11),
                         new Coordinate<>(getISOString(1538782200000L), 6630.71, 6648.95, 6623.34, 6635.65),
@@ -53,7 +54,8 @@ public class CandleStickChartExample extends Div {
                         .withTooltip(TooltipBuilder.get()
                                 .withEnabled(true)
                                 .build())
-                        .build());
+                        .build())
+                .build();
         add(barChart);
         setWidth("100%");
     }
