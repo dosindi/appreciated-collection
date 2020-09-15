@@ -11,6 +11,8 @@ import com.github.appreciated.apexcharts.config.chart.zoom.ZoomType;
 import com.github.appreciated.apexcharts.helper.Series;
 import com.vaadin.flow.component.html.Div;
 
+import java.math.BigDecimal;
+
 public class ScatterChartExample extends Div {
     public ScatterChartExample() {
         ApexCharts scatterChart = ApexChartsBuilder.get()
@@ -44,7 +46,7 @@ public class ScatterChartExample extends Div {
                                 new double[]{33.4, 0}, new double[]{16.4, 0})
                 )
                 .withXaxis(XAxisBuilder.get()
-                        .withTickAmount(10.0)
+                        .withTickAmount(new BigDecimal("10"))
                         .build())
                 .withYaxis(YAxisBuilder.get()
                         .withTickAmount(7.0)

@@ -16,8 +16,8 @@ public class CalculatedColorHelperExample extends VerticalLayout {
         TextField fieldTextColor = new TextField(LumoVariables.LUMO_PRIMARY_TEXT_COLOR);
         CalculatedColorHelper helper = new CalculatedColorHelper();
 
-        helper.getCalculatedColor(fieldPrimaryColor::setValue, LumoVariables.LUMO_PRIMARY_COLOR);
-        helper.getCalculatedColor(fieldTextColor::setValue, LumoVariables.LUMO_PRIMARY_TEXT_COLOR);
+        helper.getCalculatedColor(LumoVariables.LUMO_PRIMARY_COLOR, result -> fieldPrimaryColor.setValue(result.getValue()));
+        helper.getCalculatedColor(LumoVariables.LUMO_PRIMARY_TEXT_COLOR, result -> fieldTextColor.setValue(result.getValue()));
 
         VerticalLayout testLayout = new VerticalLayout(
                 new Label("This box is the scope of the CalculatedColorHelper"),
