@@ -1,1 +1,1 @@
-web: java -jar target/dependency/webapp-runner.jar target/*.war --port $PORT
+web: java -Dserver.port=$PORT $JAVA_OPTS -jar target/*.jar -Pproduction
