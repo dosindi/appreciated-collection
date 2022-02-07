@@ -1,5 +1,8 @@
 # appreciated-collection
 
+
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/dosindi/appreciated-collection)
+
 ### [Running instance](https://appreciated-collection.herokuapp.com/)
 
 This project can be used as a starting point to create your own Vaadin Flow application with Spring Boot.
